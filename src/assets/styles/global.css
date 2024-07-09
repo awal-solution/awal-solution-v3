@@ -1,0 +1,8 @@
+@layer base {
+  * {
+    @apply box-border;
+  }
+  body {
+    @apply font-sans;
+  }
+}

@@ -14,9 +14,15 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@react-spring/parallax": "^9.7.3",
+    "clsx": "^2.1.1",
     "flowbite-react": "^0.8.0",
+    "framer-motion": "^11.2.13",
+    "lucide-react": "^0.403.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-fast-marquee": "^1.6.5",
+    "react-router-dom": "^6.24.1"
   },
   "devDependencies": {
     "@types/node": "^20.14.10",
