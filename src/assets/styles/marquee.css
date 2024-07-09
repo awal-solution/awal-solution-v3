@@ -16,7 +16,7 @@
   }
 
   .marquee[data-animated='true'] .marquee_inner {
-    @apply w-max flex-nowrap animate-marquee;
+    @apply w-max flex-nowrap ;
   }
 
   .marquee[data-animated='true'] {
