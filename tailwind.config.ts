@@ -1,4 +1,3 @@
-import flowbite from 'flowbite-react/tailwind';
 import {
   animation,
   boxShadow,
@@ -7,7 +6,7 @@ import {
 } from './src/theme';
 
 export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}', flowbite.content()],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
      extend: {
       animation: animation,
@@ -16,5 +15,5 @@ export default {
       backgroundImage: gradiants,
     },
   },
-  plugins: [flowbite.plugin()],
+  plugins: [],
 };
