@@ -15,7 +15,7 @@ module.exports = {
     tailwindcss: {
       callees: ["twMerge", "createTheme"],
       classRegex: "^(class(Name)|theme)?$",
-      whitelist: ["(?!(bg|text)\\-).*"],
+      whitelist: ["(?!()\\-).*"],
     },
   },
   rules: {

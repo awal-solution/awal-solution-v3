@@ -10,29 +10,29 @@ import titleUnderLine from '@src/assets/images/title_bar/shape_title_under_line.
 
 export const Hero = () => {
   return (
-    <section className='bg-[#020842]  text-white pt-24'>
+    <section className='bg-[#020842]  pt-24 text-white'>
       <div className='relative h-[100px]'>
         <img
           src={image01}
           alt='image'
-          className='max-w-[50%] absolute left-0'
+          className='absolute left-0 max-w-[50%]'
         />
-        <img src={image03} alt='image' className='max-w-96 absolute right-0' />
+        <img src={image03} alt='image' className='absolute right-0 max-w-96' />
       </div>
-      <div className='max-w-screen-2xl mx-auto flex justify-center'>
+      <div className='mx-auto flex max-w-screen-2xl justify-center'>
         <div className='w-1/2 pr-28'>
           <h3>PERFECT COMPANY SOLUTION</h3>
           <img src={titleUnderLine} alt='title under line' />
-          <h1 className='text-6xl mt-10'>
+          <h1 className='mt-10 text-6xl'>
             We Help Companies in{' '}
             <span className='text-[#0044EB]'>Digitizing</span> Their Businesses.
           </h1>
-          <p className='text-[#B6B8CA] my-8 leading-7'>
+          <p className='my-8 leading-7 text-[#B6B8CA]'>
             In today's rapidly evolving digital landscape, staying ahead of the
             curve is essential for businesses aiming to thrive and succeed.
           </p>
-          <ul className='text-white relative mb-5'>
-            <div className='flex items-center gap-3 mb-2'>
+          <ul className='relative mb-5 text-white'>
+            <div className='mb-2 flex items-center gap-3'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 width='1em'
@@ -74,10 +74,10 @@ export const Hero = () => {
               </svg>
               <li>Get to the market on time</li>
             </div>
-            <div className='border-l border-[#0044EB] absolute h-10 left-2.5 top-1 -z-0'></div>
+            <div className='absolute left-2.5 top-1 -z-0 h-10 border-l border-[#0044EB]'></div>
           </ul>
           <div className='flex gap-5'>
-            <button className='bg-[#0044EB] px-8 py-3 rounded-full flex items-center gap-1 group/btn'>
+            <button className='group/btn flex items-center gap-1 rounded-full bg-[#0044EB] px-8 py-3'>
               <span className='group-hover/btn:animate-out group-hover/btn:slide-out-to-top group-hover/btn:duration-500'>
                 Contact Us Today!
               </span>
@@ -98,27 +98,27 @@ export const Hero = () => {
             </button>
           </div>
         </div>
-        <div className='w-1/2 flex justify-end'>
+        <div className='flex w-1/2 justify-end'>
           <div className='relative h-[600px] w-[650px]'>
             <img
               src={innerCircle}
               alt='image'
-              className='absolute h-[20%] w-[18%] top-[41.5%] left-[43%] object-cover z-50'
+              className='absolute left-[43%] top-[41.5%] z-50 h-1/5 w-[18%] object-cover'
             />
             <img
               src={middleCircle}
               alt='image'
-              className='absolute h-[67%] w-[62%] top-[18%] left-[21%] object-cover animate-[spinCW_10s_linear_infinite]'
+              className='absolute left-[21%] top-[18%] h-[67%] w-[62%] animate-[spinCW_10s_linear_infinite] object-cover'
             />
             <img
               src={outerCircle}
               alt='image'
-              className='absolute h-[88%] w-[81%] top-[7.5%] left-[11.5%] object-cover animate-[spinAntiCW_10s_linear_infinite]'
+              className='absolute left-[11.5%] top-[7.5%] h-[88%] w-[81%] animate-[spinAntiCW_10s_linear_infinite] object-cover'
             />
             <img
               src={mostOuterCircle}
               alt='image'
-              className='h-full w-full object-cover'
+              className='size-full object-cover'
             />
           </div>
         </div>
@@ -127,12 +127,12 @@ export const Hero = () => {
         <img
           src={image02}
           alt='image'
-          className='max-w-[50%] absolute left-0 bottom-6'
+          className='absolute bottom-6 left-0 max-w-[50%]'
         />
         <img
           src={image04}
           alt='image'
-          className='max-w-96 absolute right-0 bottom-8'
+          className='absolute bottom-8 right-0 max-w-96'
         />
       </div>
     </section>

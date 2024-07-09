@@ -11,15 +11,15 @@ export const About = () => {
           className='w-1/2'
         />
       </div>
-      <div className='max-w-screen-xl mx-auto grid grid-cols-5 gap-14 pt-32'>
-        <div className='flex flex-col col-span-2'>
-          <div className='bg-[url(../../../src/assets/images/title_bar/shape_title_under_line.svg)] bg-no-repeat bg-right-bottom pr-4 pb-2 w-[106px]'>
+      <div className='mx-auto grid max-w-screen-xl grid-cols-5 gap-14 pt-32'>
+        <div className='col-span-2 flex flex-col'>
+          <div className='w-[106px] bg-[url(../../../src/assets/images/title_bar/shape_title_under_line.svg)] bg-right-bottom bg-no-repeat pb-2 pr-4 text-white'>
             {sectionHeading.title}
           </div>
-          <h1 className='text-5xl text-white font-bold py-8'>
+          <h1 className='py-8 text-5xl font-bold text-white'>
             Techco <span className='text-[#0044EB]'>Mission & Goal</span>
           </h1>
-          <p>{aboutData.des}</p>
+          <p className='text-white'>{aboutData.des}</p>
         </div>
         <div className='col-span-3 flex gap-5'>
           <div>
@@ -29,35 +29,35 @@ export const About = () => {
               className='max-w-48 rounded-xl'
             />
           </div>
-          <div className='relative flex-grow rounded-lg'>
+          <div className='relative grow rounded-lg'>
             <img
               src={aboutImages.customerShape}
               alt='image'
-              className='h-full w-full object-fill z-20 relative'
+              className='relative z-20 size-full object-fill'
             />
             <img
               src={aboutImages.globe}
               alt='globe'
-              className='absolute left-6 bottom-10'
+              className='absolute bottom-10 left-6'
             />
             <img
               src={aboutImages.shapeLine}
               alt='bottom'
-              className='absolute -bottom-12 w-3/4 z-10'
+              className='absolute -bottom-12 z-10 w-3/4'
             />
-            <div className='text-black flex justify-around h-full items-end pl-20 absolute bottom-0 right-0 left-0 z-20'>
+            <div className='absolute inset-x-0 bottom-0 z-20 flex h-full items-end justify-around pl-20 text-black'>
               <div>
-                <h3 className='text-5xl font-bold mb-3'>{aboutData.title1}</h3>
+                <h3 className='mb-3 text-5xl font-bold'>{aboutData.title1}</h3>
                 <p className='text-[#49515B]'>{aboutData.p1}</p>
               </div>
               <div>
-                <h3 className='text-5xl font-bold mb-3'>{aboutData.title2}</h3>
+                <h3 className='mb-3 text-5xl font-bold'>{aboutData.title2}</h3>
                 <p className='text-[#49515B]'>{aboutData.p2}</p>
               </div>
             </div>
             <Link
               to='/about'
-              className='bg-[#0044EB] px-9 py-5 rounded-xl flex items-center gap-1 group/btn absolute right-5 top-0'
+              className='group/btn absolute right-5 top-0 flex items-center gap-1 rounded-xl bg-[#0044EB] px-9 py-5'
             >
               <span className='group-hover/btn:animate-out group-hover/btn:slide-out-to-top group-hover/btn:duration-500'>
                 Learn More
