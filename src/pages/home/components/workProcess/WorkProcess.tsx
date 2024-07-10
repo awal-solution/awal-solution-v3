@@ -1,10 +1,11 @@
 import { Disclosure, DisclosureButton, DisclosurePanel} from "@headlessui/react";
 import { ChevronDown } from "lucide-react";
 
+
 export const WorkProcess = () => {
   return (
-    <div className="w-full px-4 pt-16">
-      <div className="mx-auto w-full max-w-md rounded-2xl bg-white p-2">
+    <div className="w-full bg-[#E3F0FF] px-4 pt-16">
+      <div className="mx-auto w-full max-w-md rounded-2xl p-2">
         <Disclosure>
           {({ open }) => (
             <>
