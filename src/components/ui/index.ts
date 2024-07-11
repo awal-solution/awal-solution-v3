@@ -6,3 +6,5 @@ export { Marquee } from '@src/components/ui/marquee/Marquee';
 export { Parallax } from '@src/components/ui/parallax/Parallax';
 export { Section } from '@src/components/ui/section/Section';
 export { Typewriter } from '@src/components/ui/typewriter/Typewriter';
+export { AccordionTitle } from '@src/components/ui/accordion/AccordionTitle';
+export { AccordionPanel } from '@src/components/ui/accordion/AccordionPanel';

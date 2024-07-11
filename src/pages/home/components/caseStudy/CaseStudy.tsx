@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { caseData, sectionHeading } from '@src/data/caseStudy.data';
-import {  Parallax, ParallaxLayer, } from '@react-spring/parallax';
+import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
 export const CaseStudy = () => {
   return (
@@ -11,10 +11,7 @@ export const CaseStudy = () => {
       <h1 className='py-8 text-center text-5xl font-bold text-white'>
         Our latest <span className='text-[#0044EB]'>Case</span> Studies
       </h1>
-      <div
-        className='relative'
-        style={{ width: '100%',  height: '900px' }}
-      >
+      <div className='relative' style={{ width: '100%', height: '900px' }}>
         <Parallax pages={1}>
           {caseData?.map((item, index) => {
             return (
@@ -47,7 +44,10 @@ export const CaseStudy = () => {
                       <div className='flex items-center gap-3'>
                         {item.tech?.map((subitem, index) => {
                           return (
-                            <div className='inline-flex rounded-full bg-white p-4 shadow-icon' key={index}>
+                            <div
+                              className='shadow-icon inline-flex rounded-full bg-white p-4'
+                              key={index}
+                            >
                               <img
                                 src={subitem}
                                 alt='tech logo'

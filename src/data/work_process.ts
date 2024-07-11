@@ -7,33 +7,38 @@ export const sectionHeading = { title: 'WORKING PROCESS' };
 // sides banners
 export const workProccesImages = {
   bannerShape,
-  leftAngleShape
+  leftAngleShape,
 };
 
 export const workProcessData = [
   {
-    id: "01",
+    id: 1,
+    no: '01',
     title: 'Discovery Phase',
-    des: 'Data - driven diagnostic and predictive app for improving outcomes Data driven diagnostic and predictive app for improving.'
+    des: 'Data - driven diagnostic and predictive app for improving outcomes Data driven diagnostic and predictive app for improving.',
   },
   {
-    id: "02",
+    id: 2,
+    no: '02',
     title: 'Design and Development',
-    des: 'Data - driven diagnostic and predictive app for improving outcomes Data driven diagnostic and predictive app for improving.'
+    des: 'Data - driven diagnostic and predictive app for improving outcomes Data driven diagnostic and predictive app for improving.',
   },
   {
-    id: "03",
+    id: 3,
+    no: '03',
     title: 'Maintenance',
-    des: 'Data - driven diagnostic and predictive app for improving outcomes Data driven diagnostic and predictive app for improving.'
+    des: 'Data - driven diagnostic and predictive app for improving outcomes Data driven diagnostic and predictive app for improving.',
   },
   {
-    id: "04",
+    id: 4,
+    no: '04',
     title: 'Deployment',
-    des: 'Data - driven diagnostic and predictive app for improving outcomes Data driven diagnostic and predictive app for improving.'
+    des: 'Data - driven diagnostic and predictive app for improving outcomes Data driven diagnostic and predictive app for improving.',
   },
   {
-    id: "05",
+    id: 5,
+    no: '05',
     title: 'Testing and QA',
-    des: 'Data - driven diagnostic and predictive app for improving outcomes Data driven diagnostic and predictive app for improving.'
-  }
+    des: 'Data - driven diagnostic and predictive app for improving outcomes Data driven diagnostic and predictive app for improving.',
+  },
 ];
