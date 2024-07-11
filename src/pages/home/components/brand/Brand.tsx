@@ -19,7 +19,7 @@ export const Brand = () => {
         ))}
       </BrandMarquee>
       <div className='absolute inset-y-0 left-[28%] z-10 flex w-[210px] items-center bg-[#0132B8] px-5 pt-10'>
-        <h1 className='text-2xl'>Our Featured Partner's</h1>
+        <h1 className='text-2xl text-white'>Our Featured Partner's</h1>
       </div>
     </section>
   );

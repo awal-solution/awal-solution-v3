@@ -1,47 +1,72 @@
-import { Disclosure, DisclosureButton, DisclosurePanel} from "@headlessui/react";
-import { ChevronDown } from "lucide-react";
-
+import { Plus,Minus } from "lucide-react";
+import {workProccesImages,workProcessData } from "@src/data/work_process"
+import {AccordionTitle} from "@src/components/ui/accordion/AccordionTitle"
+import { Fragment, useState } from "react";
 
 export const WorkProcess = () => {
-  return (
-    <div className="w-full bg-[#E3F0FF] px-4 pt-16">
-      <div className="mx-auto w-full max-w-md rounded-2xl p-2">
-        <Disclosure>
-          {({ open }) => (
-            <>
-              <DisclosureButton className="flex w-full justify-between rounded-lg bg-purple-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500/75">
-                <span>What is your refund policy?</span>
-                <ChevronDown
-                  className={`${
-                    open ? "rotate-180" : ""
-                  } size-5 text-purple-500`}
-                />
-              </DisclosureButton>
-              <DisclosurePanel className="px-4 pb-2 pt-4 text-sm text-gray-500">
-                If you're unhappy with your purchase for any reason, email us
-                within 90 days and we'll refund you in full, no questions asked.
-              </DisclosurePanel>
-            </>
-          )}
-        </Disclosure>
-        <Disclosure as="div" className="mt-2">
-          {({ open }) => (
-            <>
-              <DisclosureButton className="flex w-full justify-between rounded-lg bg-purple-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500/75">
-                <span>Do you offer technical support?</span>
 
-                <ChevronDown
-                  className={`${
-                    open ? "rotate-180" : ""
-                  } size-5 text-purple-500`}
-                />
-              </DisclosureButton>
-              <DisclosurePanel className="px-4 pb-2 pt-4 text-sm text-gray-500">
-                No.
-              </DisclosurePanel>
-            </>
-          )}
-        </Disclosure>
+  const data: { id: number; title: string; data: string }[] = [
+  {
+    id: 1,
+    title: 'Accordion 1',
+    data: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit inventore ullam similique tenetur, reiciendis saepe doloribus? Repellat, ipsam sint? Soluta laudantium fugit repellat facilis et impedit fuga quasi nihil aspernatur neque aut qui quas, nemo explicabo architecto atque saepe provident, quae mollitia officia! Alias odit pariatur libero est aspernatur? Dignissimos?',
+  },
+  {
+    id: 2,
+    title: 'Accordion 1',
+    data: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit inventore ullam similique tenetur, reiciendis saepe doloribus? Repellat, ipsam sint? Soluta laudantium fugit repellat facilis et impedit fuga quasi nihil aspernatur neque aut qui quas, nemo explicabo architecto atque saepe provident, quae mollitia officia! Alias odit pariatur libero est aspernatur? Dignissimos?',
+  },
+  {
+    id: 3,
+    title: 'Accordion 1',
+    data: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit inventore ullam similique tenetur, reiciendis saepe doloribus? Repellat, ipsam sint? Soluta laudantium fugit repellat facilis et impedit fuga quasi nihil aspernatur neque aut qui quas, nemo explicabo architecto atque saepe provident, quae mollitia officia! Alias odit pariatur libero est aspernatur? Dignissimos?',
+  },
+  {
+    id: 4,
+    title: 'Accordion 1',
+    data: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit inventore ullam similique tenetur, reiciendis saepe doloribus? Repellat, ipsam sint? Soluta laudantium fugit repellat facilis et impedit fuga quasi nihil aspernatur neque aut qui quas, nemo explicabo architecto atque saepe provident, quae mollitia officia! Alias odit pariatur libero est aspernatur? Dignissimos?',
+  },
+  ];
+
+  const [toggle, setToggle] = useState<{ id: number; state: boolean }>({
+    id: 1,
+    state: true,
+  });
+
+  const handleToggle = (id: number) => {
+    if (toggle.id === id) {
+      setToggle({ id: id, state: !toggle.state });
+      return;
+    }
+
+    setToggle({ id: id, state: true });
+  };
+  
+  return (
+    <div className="relative w-full bg-[#E3F0FF]">
+      <div className='flex justify-center'>
+        <img
+          src={workProccesImages.bannerShape}
+          alt='about banner'
+          className='w-1/2'
+        />
+      </div>
+      <img src={ workProccesImages.leftAngleShape } alt="image" />
+      <div className="">
+       {data?.map((item) => (
+          <Fragment key={item.id}>
+            {/* <AccordionTitle
+              id={item.id}
+              toggle={toggle}
+              handleToggle={() => handleToggle(item.id)}
+            >
+              {item.title}
+            </AccordionTitle>
+            <AccordionPanel id={item.id} toggle={toggle}>
+              <div className='p-5'>{item.data}</div>
+            </AccordionPanel> */}
+          </Fragment>
+        ))}
       </div>
     </div>
   );
