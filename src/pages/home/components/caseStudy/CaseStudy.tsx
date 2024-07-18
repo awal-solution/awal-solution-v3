@@ -45,7 +45,7 @@ export const CaseStudy = () => {
                         {item.tech?.map((subitem, index) => {
                           return (
                             <div
-                              className='shadow-icon inline-flex rounded-full bg-white p-4'
+                              className='inline-flex rounded-full bg-white p-4 shadow-icon'
                               key={index}
                             >
                               <img
