@@ -8,3 +8,5 @@ export { Section } from '@src/components/ui/section/Section';
 export { Typewriter } from '@src/components/ui/typewriter/Typewriter';
 export { AccordionTitle } from '@src/components/ui/accordion/AccordionTitle';
 export { AccordionPanel } from '@src/components/ui/accordion/AccordionPanel';
+export { Tab } from '@src/components/ui/tabs/Tab';
+export { TabPanel } from '@src/components/ui/tabs/TabPanel';

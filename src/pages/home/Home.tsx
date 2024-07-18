@@ -4,6 +4,7 @@ import { Services } from '@src/pages/home/components/services/Services';
 import { About } from '@src/pages/home/components/about/About';
 import { CaseStudy } from '@src/pages/home/components/caseStudy/CaseStudy';
 import { WorkProcess } from '@src/pages/home/components/workProcess/WorkProcess';
+import { OurTech } from '@src/pages/home/components/ourTech/OurTech';
 // import { Testimonials } from '@src/pages/home/components/testimonials/Testimonials';
 
 export const Home = () => {
@@ -15,6 +16,7 @@ export const Home = () => {
       <About />
       <CaseStudy />
       <WorkProcess />
+      <OurTech />
       {/* <Testimonials /> */}
     </>
   );
