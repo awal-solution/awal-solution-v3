@@ -1,0 +1,4 @@
+.testimonial .swiper_button_prev,
+.testimonial .swiper_button_next {
+  @apply absolute bottom-0 z-50 cursor-pointer rounded-full bg-[#E3F0FF] p-2 hover:bg-[#0044EB] hover:text-white;
+}

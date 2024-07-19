@@ -35,7 +35,7 @@ export const Services = () => {
         className='absolute bottom-0 right-0 h-[400px]'
       />
       <div className='flex justify-center pb-5 pt-24'>
-        <div className='mx-auto w-[136px] bg-[url(../../../src/assets/images/title_bar/shape_title_under_line.svg)] bg-right-bottom bg-no-repeat pb-2 pr-4 text-black'>
+        <div className='mx-auto w-[136px] bg-[url(/src/assets/images/title_bar/shape_title_under_line.svg)] bg-right-bottom bg-no-repeat pb-2 pr-4 text-black'>
           {sectionHeading.title}
         </div>
       </div>
@@ -47,7 +47,7 @@ export const Services = () => {
           return (
             <div
               key={index}
-              className='shadow-card service_card_clip_path rounded-xl bg-white p-10'
+              className='service_card_clip_path rounded-xl bg-white p-10 shadow-card'
             >
               <img src={item.icon} alt='card icon' className='pb-8' />
               <h2 className='pb-9 text-2xl text-[#020842]'>{item.title}</h2>
@@ -56,7 +56,7 @@ export const Services = () => {
                   return (
                     <li
                       key={index}
-                      className='bg-list-gradient flex items-center gap-2 rounded-md py-2'
+                      className='flex items-center gap-2 rounded-md bg-list-gradient py-2'
                     >
                       <svg
                         xmlns='http://www.w3.org/2000/svg'

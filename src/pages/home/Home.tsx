@@ -5,7 +5,7 @@ import { About } from '@src/pages/home/components/about/About';
 import { CaseStudy } from '@src/pages/home/components/caseStudy/CaseStudy';
 import { WorkProcess } from '@src/pages/home/components/workProcess/WorkProcess';
 import { OurTech } from '@src/pages/home/components/ourTech/OurTech';
-// import { Testimonials } from '@src/pages/home/components/testimonials/Testimonials';
+import { Testimonial } from '@src/pages/home/components/testimonial/Testimonial';
 
 export const Home = () => {
   return (
@@ -17,7 +17,7 @@ export const Home = () => {
       <CaseStudy />
       <WorkProcess />
       <OurTech />
-      {/* <Testimonials /> */}
+      <Testimonial />
     </>
   );
 };

@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
-import cn from 'classnames';
+import { cn } from '@src/utils/functions/cn';
 
 interface Props {
   id: number;
