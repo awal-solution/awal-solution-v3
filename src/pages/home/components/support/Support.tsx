@@ -61,7 +61,23 @@ export const NeedSupport = () => {
                 isOpen={activeId === item.id}
                 className='bg-[#CCE3FF] p-5'
               >
-                {item.des}
+                <div className='grid grid-cols-8'>
+                  <div className='pt-4 text-center text-4xl font-bold'>
+                    {item.answer}
+                  </div>
+                  <div className='col-span-7'>
+                    <div className='mb-5'>{item.des}</div>
+                    <ul className='flex list-inside list-disc flex-wrap marker:text-[#0044EB]'>
+                      {item?.list?.map((subItem: any, index: any) => {
+                        return (
+                          <li key={index} className='w-1/2 py-2'>
+                            {subItem}
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                </div>
               </AccordionPanel>
             </Fragment>
           );
