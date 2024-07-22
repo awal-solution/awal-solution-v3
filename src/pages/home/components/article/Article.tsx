@@ -23,7 +23,7 @@ export const Article = () => {
         </div>
       </div>
       <h1 className='pb-12 text-center text-5xl font-bold text-[#020842]'>
-        Need a <span className='text-[#0044EB]'>Support?</span>
+        Latest <span className='text-[#0044EB]'>Articles</span>
       </h1>
       <div className='mx-auto grid max-w-screen-xl grid-cols-3 gap-5'>
         {articalData?.map((item: any, index: any) => {

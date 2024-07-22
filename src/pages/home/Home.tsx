@@ -8,6 +8,7 @@ import { OurTech } from '@src/pages/home/components/ourTech/OurTech';
 import { Testimonial } from '@src/pages/home/components/testimonial/Testimonial';
 import { NeedSupport } from '@src/pages/home/components/support/Support';
 import { Article } from '@src/pages/home/components/article/Article';
+import { Connect } from '@src/pages/home/components/connect/Connect';
 
 export const Home = () => {
   return (
@@ -22,6 +23,7 @@ export const Home = () => {
       <Testimonial />
       <NeedSupport />
       <Article />
+      <Connect />
     </>
   );
 };
