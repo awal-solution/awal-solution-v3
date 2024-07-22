@@ -46,10 +46,18 @@ export const Connect = () => {
           <ul>
             {firstCardData.list.map((item: any, index: number) => {
               return (
-                <li key={index} className='mb-3 flex items-center gap-5'>
-                  <div className=' size-10 rounded-full border border-[#0044EB] p-2'>
+                <li
+                  key={index}
+                  className='relative mb-3 flex items-center gap-5'
+                >
+                  <div className='size-10 rounded-full border border-[#0044EB] p-2'>
                     0{index}
                   </div>
+                  <div
+                    className={`absolute bottom-[-7px] left-[13px] w-[12px] rotate-90 border border-[#0044EB] ${
+                      index >= 3 ? 'hidden' : ''
+                    }`}
+                  ></div>
                   <div>{item}</div>
                 </li>
               );

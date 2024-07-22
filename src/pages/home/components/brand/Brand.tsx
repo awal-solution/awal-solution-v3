@@ -1,5 +1,5 @@
 import BrandMarquee from 'react-fast-marquee';
-import { brandData } from '@src/pages/home/components/brand/data';
+import { brandData } from '@src/data/brand.data';
 
 export const Brand = () => {
   return (
