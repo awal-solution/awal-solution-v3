@@ -8,9 +8,9 @@ export const Testimonial = () => {
         <img
           src={images.leftAngleShape}
           alt='image'
-          className='absolute bottom-5 left-0'
+          className='absolute bottom-5 left-0 z-10'
         />
-        <div className='grid grid-cols-3 gap-10'>
+        <div className='relative z-20 grid grid-cols-3 gap-10'>
           <div className='rounded bg-white p-10'>
             <h1 className='mb-3 text-6xl font-bold text-[#0044EB]'>
               {cardData.noOfClient}

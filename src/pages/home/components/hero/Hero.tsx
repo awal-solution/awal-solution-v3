@@ -17,9 +17,9 @@ export const Hero = () => {
           alt='image'
           className='absolute left-0 max-w-[50%]'
         />
-        <img src={image03} alt='image' className='absolute right-0 max-w-96' />
+        <img src={image03} alt='image' className='absolute right-0 max-w-80' />
       </div>
-      <div className='mx-auto flex max-w-screen-2xl justify-center'>
+      <div className='mx-auto flex max-w-screen-xl justify-center'>
         <div className='w-1/2 pr-28'>
           <h3>PERFECT COMPANY SOLUTION</h3>
           <img src={titleUnderLine} alt='title under line' />
@@ -132,7 +132,7 @@ export const Hero = () => {
         <img
           src={image04}
           alt='image'
-          className='absolute bottom-8 right-0 max-w-96'
+          className='absolute bottom-8 right-0 max-w-80'
         />
       </div>
     </section>

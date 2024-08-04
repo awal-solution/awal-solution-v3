@@ -13,7 +13,7 @@ export const OurTech = () => {
       <img
         src={images.rightAngleShape}
         alt='image'
-        className='absolute bottom-0 right-0'
+        className='absolute bottom-0 right-0 z-10 max-w-36'
       />
       <div className='mx-auto max-w-screen-xl'>
         <div className='mx-auto w-[185px] bg-[url(/src/assets/images/title_bar/shape_title_under_line.svg)] bg-right-bottom bg-no-repeat pb-2 pr-4'>
@@ -22,7 +22,7 @@ export const OurTech = () => {
         <h1 className='py-10 text-center text-5xl font-bold'>
           We Use <span className='text-[#0044EB]'>Technologies</span>
         </h1>
-        <ul className='flex justify-between rounded bg-[#CCE3FF] px-2 py-3 '>
+        <ul className='relative z-20 flex justify-between rounded bg-[#CCE3FF] px-2 py-3'>
           {tabData?.map((item: any) => {
             const isOpen = activeTab === item.id;
             return (
@@ -46,7 +46,7 @@ export const OurTech = () => {
               isOpen={activeTab === item.id}
               className='p-5'
             >
-              <div className='grid grid-cols-6 gap-6'>
+              <div className='relative z-20 grid grid-cols-6 gap-6'>
                 {item?.data?.map((subTab: any, index: any) => {
                   return (
                     <div

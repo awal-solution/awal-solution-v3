@@ -12,7 +12,7 @@ export const Logo = forwardRef(() => {
         alt='Awal-solution-logo-icon'
         className='w-8 lg:w-10'
       /> */}
-      <h1 className='capitalize text-2xl font-sans font-semibold'>
+      <h1 className='font-sans text-2xl font-semibold capitalize text-white'>
         {APP_TITLE}
       </h1>
     </Link>

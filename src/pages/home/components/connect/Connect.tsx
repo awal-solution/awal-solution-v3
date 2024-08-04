@@ -14,15 +14,15 @@ export const Connect = () => {
       <img
         src={connectImages.leftShape}
         alt='banner'
-        className='absolute left-0 top-[20%] h-[500px]'
+        className='absolute left-0 top-[20%] z-10 h-[500px]'
       />
       <img
         src={connectImages.rightShape}
         alt='banner'
-        className='absolute right-0 top-[40%]'
+        className='absolute right-0 top-[40%] z-10'
       />
 
-      <div className='mx-auto grid max-w-screen-xl grid-cols-3 gap-5 py-24'>
+      <div className='relative z-20 mx-auto grid max-w-screen-xl grid-cols-3 gap-5 py-24'>
         <div className='rounded-lg bg-white p-10 shadow-lg'>
           <div className='w-[136px] bg-[url(/src/assets/images/title_bar/shape_title_under_line.svg)] bg-right-bottom bg-no-repeat pb-2 pr-4 text-black'>
             {sectionHeading.title}

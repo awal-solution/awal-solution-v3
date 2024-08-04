@@ -5,11 +5,11 @@ import {
   Menu,
   MenuItem,
   HoveredLink,
-  ProductItem,
+  // ProductItem,
 } from '@src/components/ui/menu';
 import { Logo } from '@src/components/logo/Logo';
 import { Button, Section } from '@src/components/ui';
-import placeholder from '@src/assets/images/Image container.png';
+// import placeholder from '@src/assets/images/Image container.png';
 
 export const AppNavbar = () => {
   const [active, setActive] = useState<string | null>(null);
@@ -26,10 +26,10 @@ export const AppNavbar = () => {
         </Button>
       </div>
       <Logo />
-      <div className='hidden lg:block'>
+      <div className='hidden text-white lg:block'>
         <Menu setActive={setActive}>
           <MenuItem setActive={setActive} active={active} item='Services'>
-            <div className='flex flex-col space-y-4 text-sm'>
+            <div className='flex flex-col space-y-4 rounded bg-white p-5 text-sm text-black'>
               <HoveredLink href='/web-dev'>Web Development</HoveredLink>
               <HoveredLink href='/interface-design'>
                 Interface Design
@@ -38,7 +38,7 @@ export const AppNavbar = () => {
               <HoveredLink href='/branding'>Branding</HoveredLink>
             </div>
           </MenuItem>
-          <MenuItem setActive={setActive} active={active} item='Products'>
+          {/* <MenuItem setActive={setActive} active={active} item='Products'>
             <div className='grid grid-cols-3 gap-10 p-4 text-sm'>
               {[1, 2, 3, 4, 5, 6]?.map((product) => (
                 <ProductItem
@@ -50,10 +50,10 @@ export const AppNavbar = () => {
                 />
               ))}
             </div>
-          </MenuItem>
+          </MenuItem> */}
           <HoveredLink href='/Portfolio'>Portfolio</HoveredLink>
           <MenuItem setActive={setActive} active={active} item='Company'>
-            <div className='flex flex-col space-y-4 text-sm'>
+            <div className='flex flex-col space-y-4 rounded bg-white p-5 text-sm text-black'>
               <HoveredLink href='/about-us'>About</HoveredLink>
               <HoveredLink href='/team'>Team</HoveredLink>
               <HoveredLink href='/life-at-awal-solution'>
@@ -62,7 +62,7 @@ export const AppNavbar = () => {
             </div>
           </MenuItem>
           <MenuItem setActive={setActive} active={active} item='Resource'>
-            <div className='flex flex-col space-y-4 text-sm'>
+            <div className='flex flex-col space-y-4 rounded bg-white p-5 text-sm text-black'>
               <HoveredLink href='/blogs'>Blogs</HoveredLink>
               <HoveredLink href='/gallery'>Gallery</HoveredLink>
               <HoveredLink href='/careers'>Careers</HoveredLink>
