@@ -33,6 +33,7 @@ lerna-debug.log*
 
 .vscode
 .contentlayer
+.idea
 
 # Json
 package-lock.json
