@@ -97,9 +97,8 @@ export const AppFooter = () => {
         <div className='absolute inset-y-0 flex w-9/12 items-center justify-between'>
           <div className='flex w-full justify-between '>
             <div>
-              Copyright © 2024
-              <Link to='/' className='text-[#0044EB]'>
-                Techco
+              Copyright © 2024 <Link to='/' className='text-[#0044EB]'>
+                Awal Solution
               </Link>
               , All rights reserved.
             </div>
