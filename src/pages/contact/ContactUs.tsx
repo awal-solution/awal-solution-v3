@@ -1,193 +1,145 @@
 
 const ContactUs = () => {
-  return (<>
-    <div>
-      <div className="relative">
-        <img className="relative h-[350px] w-full object-cover" src="/src/assets/images/bg_pattern_4.svg" alt="" />
-        <div className="absolute  inset-0  bg-[#020842e6]">
-          <div>
-            <div className="pt-32 text-center  text-white">
-              <span className="mr-3 rounded bg-[#F44380] px-2 py-1"> Contact </span>
-              Us 😍
-            </div>
-            <h1 className="pt-5 text-center text-6xl font-bold text-white">
-              Contact Us
-            </h1>
+  return (
+      <>
+        <div className="bg-[#E3F0FF]">
+          <div
+              className="bg-[#020842] bg-[url('https://wp.xpressbuddy.com/techco/wp-content/uploads/2024/06/bg_pattern_4.svg')] bg-cover bg-no-repeat py-24 text-center text-white">
+            <h2 className="mt-24">
+              <span className="rounded bg-[#F44380] px-2 text-center">Contact</span> Us 😍
+            </h2>
+            <h1 className="text-5xl font-bold">Contact Us</h1>
           </div>
-        </div>
-      </div>
-      <div className="bg-[#E3F0FF] pb-20 pt-40">
-        <div className="mx-64">
-          <div className="mx-96 grid grid-cols-4 gap-6">
-            {/* First Card */}
-            <div className="rounded-2xl bg-white px-3 py-10 duration-300 ease-linear hover:-translate-y-1 hover:shadow-xl">
-              <div className="mx-auto flex size-16 items-center justify-center rounded-full bg-[#0044eb1a] text-4xl text-[#0044EB]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                  <path
-                    fill="currentColor"
-                    d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"
-                  />
-                </svg>
+          <div className="container mx-auto px-4">
+            <div
+                className="mx-4 mt-12 grid gap-6 sm:mx-10 sm:mt-16 sm:grid-cols-1 md:mx-24 md:mt-24 md:grid-cols-2 lg:mx-36 lg:grid-cols-3 xl:grid-cols-4">
+              <div className="rounded-2xl bg-white px-5 py-8 text-center sm:py-12">
+                <div className="rounded-full  p-4 sm:p-6">
+                  <div className="flex justify-center">
+                    <div className="max-w-xs">
+                      <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="#0044EB"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="lucide lucide-map-pin mx-auto size-12 rounded-full bg-[#E5ECFD] p-3 text-[#0044EB] sm:size-16"
+                      >
+                        <path
+                            d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
+                        />
+                        <circle cx="12" cy="10" r="3"/>
+                      </svg>
+                    </div>
+                  </div>
+
+
+                </div>
+                <p className="pt-3 text-lg font-semibold sm:pt-5 sm:text-xl">Location</p>
+                <p className="pt-3 text-sm sm:pt-5 sm:text-base">Sunshine Business Park Sector-94, Poland</p>
               </div>
-              <div className="py-2 text-center text-[#020842]">
-                <strong>Location </strong>
-              </div>
-              <div className="px-6">
-                <p className="pt-2 text-center font-medium text-[#49515B]">
-                  Street No 4 Gulshan-e-Madina Colony Near Al-Hanif School,
-                </p>
-              </div>
-              <p className="text-center text-lg font-medium text-[#49515B]">
-                Super Chowk Lodhran
-              </p>
+              <div className="rounded-2xl bg-white px-5 py-8 text-center sm:py-12">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+               
+                   fill="none"
+                   stroke="#0044EB"
+                   strokeWidth="2"
+                   strokeLinecap="round"
+                   strokeLinejoin="round"
+                   className="lucide lucide-phone-call mx-auto size-12 rounded-full bg-[#E5ECFD] p-3 text-[#0044EB] sm:size-16"
+              >
+                <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                />
+                <path d="M14.05 2a9 9 0 0 1 8 7.94"/>
+                <path d="M14.05 6A5 5 0 0 1 18 10"/>
+              </svg>
+
+
+              <p className="pt-3 text-lg font-semibold sm:pt-5 sm:text-xl">Contact</p>
+              <p className="pt-3 text-sm sm:pt-5 sm:text-base">+88(0) 555-0108</p>
+              <p className="text-sm sm:text-base">+88(0) 555-01117</p>
             </div>
-            {/* Second Card */}
-            <div className="rounded-2xl bg-white px-3 py-10 duration-300 ease-linear hover:-translate-y-1 hover:shadow-xl">
-              <div className="mx-auto flex size-16 items-center justify-center rounded-full bg-[#0044eb1a] text-4xl text-[#0044EB]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
-                  <path
-                    fill="currentColor"
-                    d="M144.27 45.93a8 8 0 0 1 9.8-5.66a86.22 86.22 0 0 1 61.66 61.66a8 8 0 0 1-5.66 9.8a8.2 8.2 0 0 1-2.07.27a8 8 0 0 1-7.73-5.93a70.35 70.35 0 0 0-50.33-50.34a8 8 0 0 1-5.67-9.8m-2.33 41.8c13.79 3.68 22.65 12.55 26.33 26.34A8 8 0 0 0 176 120a8.2 8.2 0 0 0 2.07-.27a8 8 0 0 0 5.66-9.8c-5.12-19.16-18.5-32.54-37.66-37.66a8 8 0 1 0-4.13 15.46m72.43 78.73l-47.11-21.11l-.13-.06a16 16 0 0 0-15.17 1.4a8 8 0 0 0-.75.56L126.87 168c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16 16 0 0 0 1.32-15.06v-.12L89.54 41.64a16 16 0 0 0-16.62-9.52A56.26 56.26 0 0 0 24 88c0 79.4 64.6 144 144 144a56.26 56.26 0 0 0 55.88-48.92a16 16 0 0 0-9.51-16.62"
-                  />
-                </svg>
-              </div>
-              <div className="py-2 text-center text-[#020842]">
-                <strong>Contact </strong>
-              </div>
-              <div className="px-6">
-                <p className="pt-2 text-center font-medium text-[#49515B]">
-                  +923083728960
-                </p>
-              </div>
-              <p className="text-center text-lg font-medium text-[#49515B]">
-                +923004633604
-              </p>
+            <div className="rounded-2xl bg-white px-5 py-8 text-center sm:py-12">
+              <i className="fa-solid fa-envelope rounded-full bg-[#E8EDFD] p-4 text-2xl text-[#0044EB] sm:p-6 sm:text-3xl"></i>
+              <p className="pt-3 text-lg font-semibold sm:pt-5 sm:text-xl">Email</p>
+              <p className="pt-3 text-sm sm:pt-5 sm:text-base">Techco@example.com</p>
+              <p className="text-sm sm:text-base">gmail.@example.com</p>
             </div>
-            {/* Third Card */}
-            <div className="rounded-2xl bg-white px-3 py-10 duration-300 ease-linear hover:-translate-y-1 hover:shadow-xl">
-              <div className="mx-auto flex size-16 items-center justify-center rounded-full bg-[#0044eb1a] text-4xl text-[#0044EB]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                  <path
-                    fill="currentColor"
-                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 4l-8 5l-8-5V6l8 5l8-5z"
-                  />
-                </svg>
+            <div className="rounded-2xl bg-white px-5 py-8 text-center sm:py-12">
+              <i className="fa-solid fa-calendar rounded-full bg-[#E8EDFD] p-4 text-2xl text-[#0044EB] sm:p-6 sm:text-3xl"></i>
+              <p className="pt-3 text-lg font-semibold sm:pt-5 sm:text-xl">Visit Between</p>
+                <p className="pt-3 text-sm sm:pt-5 sm:text-base">Mon - Sat: 8.00-5.00</p>
+                <p className="text-sm sm:text-base">Sunday: Closed</p>
               </div>
-              <div className="py-2 text-center text-[#020842]">
-                <strong>Email </strong>
-              </div>
-              <div className="px-6">
-                <p className="pt-2 text-center font-medium text-[#49515B]">
-                  contact@awalsolution.com
-                </p>
-              </div>
-              <p className="text-center text-lg font-medium text-[#49515B]">
-                info@awalsolution.com
-              </p>
-            </div>
-            {/* Fourth Card */}
-            <div className="rounded-2xl bg-white px-3 py-10 duration-300 ease-linear hover:-translate-y-1 hover:shadow-xl">
-              <div className="mx-auto flex size-16 items-center justify-center rounded-full bg-[#0044eb1a] text-4xl text-[#0044EB]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                  <path
-                    fill="currentColor"
-                    d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"
-                  />
-                </svg>
-              </div>
-              <div className="py-2 text-center text-[#020842]">
-                <strong>Visit Between </strong>
-              </div>
-              <div className="px-6">
-                <p className="pt-2 text-center font-medium text-[#49515B]">
-                  Mon - Fri: 10:00 - 5:00
-                </p>
-              </div>
-              <p className="text-center text-lg font-medium text-[#49515B]">
-                Sat,Sun: Closed
-              </p>
             </div>
           </div>
-          <div className="mx-96 grid grid-cols-2 gap-80 pt-24">
-            <div>
-              <h2 className="mb-2  text-5xl font-bold text-[#020842]">
-                Send Us A Message
-              </h2>
-              <p className="pb-11  text-lg text-[#49515B]">
+
+
+          {/*main div*/}
+          <div
+              className="mx-4 mt-12 flex flex-col gap-6 pb-10 sm:mx-10 sm:mt-16 md:mx-24 md:mt-24 lg:mx-36 lg:flex-row">
+            <div className="w-full lg:w-1/2">
+              <h2 className="text-2xl font-bold sm:text-3xl lg:text-4xl">Send Us A Message</h2>
+              <p className="mt-3 text-sm text-[#49515B] sm:text-base lg:text-lg">
                 Give us chance to serve and bring magic to your brand.
               </p>
-              <div className="flex gap-3 pb-1">
-                <div>
-                  <label className="pb-3 text-base font-semibold" htmlFor="input_name">Full Name</label>
-                  <div>
+              <form className="mt-6 sm:mt-10">
+                <div className="mb-5 flex flex-col gap-4 md:flex-row">
+                  <div className="w-full">
+                    <label className="text-base font-semibold sm:text-lg lg:text-xl">Full Name</label>
                     <input
-                      className="mt-5 w-[350px] rounded-xl px-2 py-4 shadow-card outline-blue-700"
-                      type="text"
-                      placeholder="Your Name"
+                        type="text"
+                        placeholder="Your Name"
+                        className="mt-3 w-full rounded-xl bg-white py-2 pl-3 shadow-card sm:py-3"
+                    />
+                  </div>
+                  <div className="w-full">
+                    <label className="text-base font-semibold placeholder:text-[#696969] sm:text-lg lg:text-xl">
+                      Your Email
+                    </label>
+                    <input
+                        type="text"
+                        placeholder="AwalSolution@example.com"
+                        className="mt-3 w-full rounded-xl bg-white py-2 pl-3 shadow-card sm:py-3"
                     />
                   </div>
                 </div>
-                <div>
-                  <label className="pb-3 text-base font-semibold" htmlFor="input_email">Your Email</label>
-                  <div>
-                    <input
-                      className="mb-8 mt-5 w-[350px] rounded-xl px-2 py-4 shadow-card outline-blue-700"
-                      type="text"
-                      placeholder="awalsolution@example.com"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div>
-                <label className="pb-3 text-base font-semibold" htmlFor="input_phone">Your Phone</label>
-                <div className="pt-5">
-                  <input
-                    className="mb-8 w-[712px] rounded-xl px-2 py-4 shadow-card outline-blue-700"
+                <label className="text-base font-semibold sm:text-lg lg:text-xl">Your Phone</label>
+                <input
                     type="text"
-                    placeholder="+1234-5678 9000"
-                  />
-                </div>
-              </div>
-              <div>
-                <label className="pb-3 text-base font-semibold" htmlFor="input_message">Message</label>
-                <div className=" py-5">
-                  <textarea
-                    className="w-[712px] rounded-xl px-3 py-2 shadow-card outline-blue-700"
-                    rows={7}
+                    placeholder="+8250-3560 6565"
+                    className="mb-5 mt-3 w-full rounded-xl bg-white py-2 pl-3 shadow-card sm:py-3"
+                />
+                <label className="text-base font-semibold sm:text-lg lg:text-xl">Message</label>
+                <textarea
+                    rows={5}
                     cols={40}
-
-                    id="input_message"
                     placeholder="How can we help you?"
-                  ></textarea>
-                </div>
-                <button className="flex items-center justify-center rounded-full bg-blue-700 px-16 py-5 pt-6 text-base text-white">
-                  <div>SEND MESSAGE</div>
-                  <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                      <path
-                        fill="white"
-                        d="m5.99 16.596l8.192-8.192H7.818v-2h9.778v9.778h-2V9.818L7.403 18.01z"
-                      />
-                    </svg>
-                  </div>
-                </button>
-              </div>
+                    className="mt-3 w-full rounded-xl bg-white py-2 pl-3 shadow-card sm:py-3"
+                ></textarea>
+              </form>
+              <button
+                  className="my-5 rounded-[35px] bg-[#0044EB] px-6 py-2 text-base font-bold text-white sm:px-10 sm:py-3 sm:text-lg lg:text-xl">
+                Send Message
+                <i className="fa-solid fa-arrow-up-long ml-2 rotate-45 sm:ml-4"></i>
+              </button>
             </div>
-            <div>
+            <div className="w-full lg:w-1/2">
               <iframe
-                  className="mr-10 rounded-3xl"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3471.876629991169!2d71.62953442934568!3d29.519955013454453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6420971a9d5b096b%3A0x460c41976e26683e!2sAwal%20Solution!5e0!3m2!1sen!2s!4v1723523470526!5m2!1sen!2s"
-                  width="500"
-                  height="650"
-                  style={{border: 0}}
                   loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
+                  className="h-48 w-full rounded-xl sm:h-64 md:h-96 lg:h-full"
+                  src="https://maps.google.com/maps?q=London%20Eye%2C%20London%2C%20United%20Kingdom&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near"
+                  title="London Eye, London, United Kingdom"
+                  aria-label="London Eye, London, United Kingdom"
               ></iframe>
             </div>
           </div>
         </div>
-      </div>
-    </div>
       </>
   );
 };
