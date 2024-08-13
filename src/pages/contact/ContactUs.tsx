@@ -34,11 +34,11 @@ const ContactUs = () => {
               </div>
               <div className="px-6">
                 <p className="pt-2 text-center font-medium text-[#49515B]">
-                  Sunshine Business Park Sector-
+                  Street No 4 Gulshan-e-Madina Colony Near Al-Hanif School,
                 </p>
               </div>
               <p className="text-center text-lg font-medium text-[#49515B]">
-                94, Poland
+                Super Chowk Lodhran
               </p>
             </div>
             {/* Second Card */}
@@ -56,11 +56,11 @@ const ContactUs = () => {
               </div>
               <div className="px-6">
                 <p className="pt-2 text-center font-medium text-[#49515B]">
-                  +88(0) 555-0108
+                  +923083728960
                 </p>
               </div>
               <p className="text-center text-lg font-medium text-[#49515B]">
-                +88(0) 555-01117
+                +923004633604
               </p>
             </div>
             {/* Third Card */}
@@ -78,11 +78,11 @@ const ContactUs = () => {
               </div>
               <div className="px-6">
                 <p className="pt-2 text-center font-medium text-[#49515B]">
-                  Techco@example.com
+                  contact@awalsolution.com
                 </p>
               </div>
               <p className="text-center text-lg font-medium text-[#49515B]">
-                gmail.@example.com
+                info@awalsolution.com
               </p>
             </div>
             {/* Fourth Card */}
@@ -100,11 +100,11 @@ const ContactUs = () => {
               </div>
               <div className="px-6">
                 <p className="pt-2 text-center font-medium text-[#49515B]">
-                  Mon - Sat: 8.00-5.00
+                  Mon - Fri: 10:00 - 5:00
                 </p>
               </div>
               <p className="text-center text-lg font-medium text-[#49515B]">
-                Sunday: Closed
+                Sat,Sun: Closed
               </p>
             </div>
           </div>
@@ -123,7 +123,7 @@ const ContactUs = () => {
                     <input
                       className="w-[350px] rounded-xl px-2 py-4 outline-blue-700"
                       type="text"
-                      placeholder="Goladra Gomaz"
+                      placeholder="Your Name"
                     />
                   </div>
                 </div>
@@ -133,7 +133,7 @@ const ContactUs = () => {
                     <input
                       className="w-[350px] rounded-xl px-2 py-4 outline-blue-700"
                       type="text"
-                      placeholder="Techco@example.com"
+                      placeholder="awalsolution@example.com"
                     />
                   </div>
                 </div>
@@ -144,7 +144,7 @@ const ContactUs = () => {
                   <input
                     className="w-[730px] rounded-xl px-2 py-4 outline-blue-700"
                     type="text"
-                    placeholder="+8250-3560 6565"
+                    placeholder="+1234-5678 9000"
                   />
                 </div>
               </div>
@@ -173,19 +173,19 @@ const ContactUs = () => {
             </div>
             <div>
               <iframe
-                className="rounded-3xl"
-                src="https://maps.google.com/maps?q=London%20Eye%2C%20London%2C%20United%20Kingdom&t=m&z=10&output=embed&iwloc=near"
-                width="500"
-                height="600"
-                style={{ border: 0 }}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
+                  className="rounded-3xl"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3471.876629991169!2d71.62953442934568!3d29.519955013454453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6420971a9d5b096b%3A0x460c41976e26683e!2sAwal%20Solution!5e0!3m2!1sen!2s!4v1723523470526!5m2!1sen!2s"
+                  width="500"
+                  height="600"
+                  style={{border: 0}}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
           </div>
         </div>
       </div>
-      </div>
+    </div>
       </>
   );
 };
