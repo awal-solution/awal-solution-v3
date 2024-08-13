@@ -34,7 +34,7 @@ export const AppFooter = () => {
             ))}
           </BrandMarquee>
         </div>
-        <div className='grid grid-cols-5 py-20'>
+        <div className='py-20 text-center md:grid md:grid-cols-5 md:text-left'>
           {footerLinks?.map((item, index) => {
             return (
               <div key={index} className='text-white'>

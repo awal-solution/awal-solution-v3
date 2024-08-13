@@ -68,6 +68,7 @@ export const AppNavbar = () => {
               <HoveredLink href='/careers'>Careers</HoveredLink>
             </div>
           </MenuItem>
+          <HoveredLink href='/contact'>Contact Us</HoveredLink>
         </Menu>
       </div>
       <div className='flex items-center gap-4'>
