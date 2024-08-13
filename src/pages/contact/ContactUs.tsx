@@ -1,4 +1,3 @@
-
 const ContactUs = () => {
   return (
       <>
@@ -10,7 +9,7 @@ const ContactUs = () => {
             </h2>
             <h1 className="text-5xl font-bold">Contact Us</h1>
           </div>
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto">
             <div
                 className="mx-4 mt-12 grid gap-6 sm:mx-10 sm:mt-16 sm:grid-cols-1 md:mx-24 md:mt-24 md:grid-cols-2 lg:mx-36 lg:grid-cols-3 xl:grid-cols-4">
               <div className="rounded-2xl bg-white px-5 py-8 text-center sm:py-12">
@@ -64,15 +63,31 @@ const ContactUs = () => {
               <p className="pt-3 text-sm sm:pt-5 sm:text-base">+88(0) 555-0108</p>
               <p className="text-sm sm:text-base">+88(0) 555-01117</p>
             </div>
-            <div className="rounded-2xl bg-white px-5 py-8 text-center sm:py-12">
-              <i className="fa-solid fa-envelope rounded-full bg-[#E8EDFD] p-4 text-2xl text-[#0044EB] sm:p-6 sm:text-3xl"></i>
-              <p className="pt-3 text-lg font-semibold sm:pt-5 sm:text-xl">Email</p>
-              <p className="pt-3 text-sm sm:pt-5 sm:text-base">Techco@example.com</p>
-              <p className="text-sm sm:text-base">gmail.@example.com</p>
-            </div>
-            <div className="rounded-2xl bg-white px-5 py-8 text-center sm:py-12">
-              <i className="fa-solid fa-calendar rounded-full bg-[#E8EDFD] p-4 text-2xl text-[#0044EB] sm:p-6 sm:text-3xl"></i>
-              <p className="pt-3 text-lg font-semibold sm:pt-5 sm:text-xl">Visit Between</p>
+              <div className="rounded-2xl bg-white px-5 py-8 text-center sm:py-12">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     className="lucide lucide-mail mx-auto size-12 rounded-full bg-[#E5ECFD] p-3 text-[#0044EB] sm:size-16">
+                  <rect width="20" height="16" x="2" y="4" rx="2"/>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+                {/*<i className="fa-solid fa-envelope rounded-full bg-[#E8EDFD] p-4 text-2xl text-[#0044EB] sm:p-6 sm:text-3xl"></i>*/}
+                <p className="pt-3 text-lg font-semibold sm:pt-5 sm:text-xl">Email</p>
+                <p className="pt-3 text-sm sm:pt-5 sm:text-base">Techco@example.com</p>
+                <p className="text-sm sm:text-base">gmail.@example.com</p>
+              </div>
+              <div className="rounded-2xl bg-white px-5 py-8 text-center sm:py-12">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     className="lucide lucide-footprints mx-auto size-12 rounded-full bg-[#E5ECFD] p-3 text-[#0044EB] sm:size-16">
+                  <path
+                      d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z"/>
+                  <path
+                      d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z"/>
+                  <path d="M16 17h4"/>
+                  <path d="M4 13h4"/>
+                </svg>
+                {/*<i className="fa-solid fa-calendar rounded-full bg-[#E8EDFD] p-4 text-2xl text-[#0044EB] sm:p-6 sm:text-3xl"></i>*/}
+                <p className="pt-3 text-lg font-semibold sm:pt-5 sm:text-xl">Visit Between</p>
                 <p className="pt-3 text-sm sm:pt-5 sm:text-base">Mon - Sat: 8.00-5.00</p>
                 <p className="text-sm sm:text-base">Sunday: Closed</p>
               </div>
