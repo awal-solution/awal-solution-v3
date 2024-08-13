@@ -3,12 +3,12 @@ const ContactUs = () => {
   return (<>
     <div>
       <div className="relative">
-        <img className="relative  w-full" src="/src/assets/images/bg_pattern_4.svg" alt="" />
-        <div className="absolute inset-0 h-96 bg-[#020842e6]">
-          <div className="mx-64">
-            <div className="pt-32 text-center text-white">
-              <span className="bg-pink-400"> contact </span>
-              us 😍
+        <img className="relative h-[350px] w-full object-cover" src="/src/assets/images/bg_pattern_4.svg" alt="" />
+        <div className="absolute  inset-0  bg-[#020842e6]">
+          <div>
+            <div className="pt-32 text-center  text-white">
+              <span className="mr-3 rounded bg-[#F44380] px-2 py-1"> Contact </span>
+              Us 😍
             </div>
             <h1 className="pt-5 text-center text-6xl font-bold text-white">
               Contact Us
@@ -18,9 +18,9 @@ const ContactUs = () => {
       </div>
       <div className="bg-[#E3F0FF] pb-20 pt-40">
         <div className="mx-64">
-          <div className="grid grid-cols-4 gap-6">
+          <div className="mx-96 grid grid-cols-4 gap-6">
             {/* First Card */}
-            <div className="rounded-2xl bg-white px-3 py-16 duration-300 ease-linear hover:-translate-y-1 hover:shadow-xl">
+            <div className="rounded-2xl bg-white px-3 py-10 duration-300 ease-linear hover:-translate-y-1 hover:shadow-xl">
               <div className="mx-auto flex size-16 items-center justify-center rounded-full bg-[#0044eb1a] text-4xl text-[#0044EB]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                   <path
@@ -42,7 +42,7 @@ const ContactUs = () => {
               </p>
             </div>
             {/* Second Card */}
-            <div className="rounded-2xl bg-white px-3 py-16 duration-300 ease-linear hover:-translate-y-1 hover:shadow-xl">
+            <div className="rounded-2xl bg-white px-3 py-10 duration-300 ease-linear hover:-translate-y-1 hover:shadow-xl">
               <div className="mx-auto flex size-16 items-center justify-center rounded-full bg-[#0044eb1a] text-4xl text-[#0044EB]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
                   <path
@@ -64,7 +64,7 @@ const ContactUs = () => {
               </p>
             </div>
             {/* Third Card */}
-            <div className="rounded-2xl bg-white px-3 py-16 duration-300 ease-linear hover:-translate-y-1 hover:shadow-xl">
+            <div className="rounded-2xl bg-white px-3 py-10 duration-300 ease-linear hover:-translate-y-1 hover:shadow-xl">
               <div className="mx-auto flex size-16 items-center justify-center rounded-full bg-[#0044eb1a] text-4xl text-[#0044EB]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                   <path
@@ -86,7 +86,7 @@ const ContactUs = () => {
               </p>
             </div>
             {/* Fourth Card */}
-            <div className="rounded-2xl bg-white px-3 py-16 duration-300 ease-linear hover:-translate-y-1 hover:shadow-xl">
+            <div className="rounded-2xl bg-white px-3 py-10 duration-300 ease-linear hover:-translate-y-1 hover:shadow-xl">
               <div className="mx-auto flex size-16 items-center justify-center rounded-full bg-[#0044eb1a] text-4xl text-[#0044EB]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                   <path
@@ -108,20 +108,20 @@ const ContactUs = () => {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-80 pt-24">
+          <div className="mx-96 grid grid-cols-2 gap-80 pt-24">
             <div>
-              <h2 className="mb-2 font-serif text-5xl font-bold text-[#020842]">
+              <h2 className="mb-2  text-5xl font-bold text-[#020842]">
                 Send Us A Message
               </h2>
-              <p className="pb-11 font-serif text-lg text-[#49515B]">
+              <p className="pb-11  text-lg text-[#49515B]">
                 Give us chance to serve and bring magic to your brand.
               </p>
-              <div className="flex gap-3 pb-3">
+              <div className="flex gap-3 pb-1">
                 <div>
                   <label className="pb-3 text-base font-semibold" htmlFor="input_name">Full Name</label>
-                  <div className="p-2">
+                  <div>
                     <input
-                      className="w-[350px] rounded-xl px-2 py-4 outline-blue-700"
+                      className="mt-5 w-[350px] rounded-xl px-2 py-4 shadow-card outline-blue-700"
                       type="text"
                       placeholder="Your Name"
                     />
@@ -129,9 +129,9 @@ const ContactUs = () => {
                 </div>
                 <div>
                   <label className="pb-3 text-base font-semibold" htmlFor="input_email">Your Email</label>
-                  <div className="p-2">
+                  <div>
                     <input
-                      className="w-[350px] rounded-xl px-2 py-4 outline-blue-700"
+                      className="mb-8 mt-5 w-[350px] rounded-xl px-2 py-4 shadow-card outline-blue-700"
                       type="text"
                       placeholder="awalsolution@example.com"
                     />
@@ -140,9 +140,9 @@ const ContactUs = () => {
               </div>
               <div>
                 <label className="pb-3 text-base font-semibold" htmlFor="input_phone">Your Phone</label>
-                <div className="p-2">
+                <div className="pt-5">
                   <input
-                    className="w-[730px] rounded-xl px-2 py-4 outline-blue-700"
+                    className="mb-8 w-[712px] rounded-xl px-2 py-4 shadow-card outline-blue-700"
                     type="text"
                     placeholder="+1234-5678 9000"
                   />
@@ -150,10 +150,12 @@ const ContactUs = () => {
               </div>
               <div>
                 <label className="pb-3 text-base font-semibold" htmlFor="input_message">Message</label>
-                <div className="px-2 pb-4 pt-2">
+                <div className=" py-5">
                   <textarea
-                    className="w-[730px] rounded-xl px-3 py-2 outline-blue-700"
-                 
+                    className="w-[712px] rounded-xl px-3 py-2 shadow-card outline-blue-700"
+                    rows={7}
+                    cols={40}
+
                     id="input_message"
                     placeholder="How can we help you?"
                   ></textarea>
@@ -173,10 +175,10 @@ const ContactUs = () => {
             </div>
             <div>
               <iframe
-                  className="rounded-3xl"
+                  className="mr-10 rounded-3xl"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3471.876629991169!2d71.62953442934568!3d29.519955013454453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6420971a9d5b096b%3A0x460c41976e26683e!2sAwal%20Solution!5e0!3m2!1sen!2s!4v1723523470526!5m2!1sen!2s"
                   width="500"
-                  height="600"
+                  height="650"
                   style={{border: 0}}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
