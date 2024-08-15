@@ -10,7 +10,7 @@ import {
 
 export const AppFooter = () => {
   return (
-    <footer className='relative bg-[#020842] bg-[url(./images/footer/bg_pattern_3-1.svg)] bg-cover bg-center bg-no-repeat'>
+    <footer className='relative bg-[#020842] bg-[url(/src/assets/images/footer/bg_pattern_3-1.svg)] bg-cover bg-center bg-no-repeat'>
       <div className='flex justify-center'>
         <img className='w-4/5' src={footerImages.topShape} alt='banner shap' />
       </div>
