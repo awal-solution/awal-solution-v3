@@ -30,7 +30,7 @@ export const Article = () => {
           return (
             <div key={index} className='col-span-3 md:col-span-1'>
               <img src={item.image} alt='post image' className='rounded-xl' />
-              <h1 className='py-6 text-3xl'>{item.title}</h1>
+              <h1 className='py-6 text-2xl lg:text-3xl'>{item.title}</h1>
               <div className='flex justify-between px-5'>
                 <div className='flex items-center gap-2'>
                   <div>

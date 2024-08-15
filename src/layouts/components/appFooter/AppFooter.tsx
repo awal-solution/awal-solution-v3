@@ -49,7 +49,7 @@ export const AppFooter = () => {
               </div>
             );
           })}
-          <div className='col-span-2 text-white'>
+          <div className='col-span-2 px-2 text-white'>
             <h3 className='mb-6'>{newsLetter.title}</h3>
             <div>{newsLetter.text}</div>
             <div className='my-8 flex items-center rounded-full bg-[#1B2155] p-1'>
@@ -74,7 +74,7 @@ export const AppFooter = () => {
                 Send
               </button>
             </div>
-            <div className='flex items-center gap-5'>
+            <div className='flex items-center justify-center gap-5'>
               {socialLinks?.map((item, index) => {
                 return (
                   <div key={index} className='rounded-full border p-2'>
@@ -90,12 +90,12 @@ export const AppFooter = () => {
       </div>
       <div className='relative flex justify-center'>
         <img
-          className='w-4/5'
+          className='hidden w-4/5 lg:block'
           src={footerImages.bottomShape}
           alt='banner shap'
         />
-        <div className='absolute inset-y-0 flex w-9/12 items-center justify-between'>
-          <div className='flex w-full justify-between '>
+        <div className='absolute inset-y-0 flex w-full items-center justify-between lg:w-9/12'>
+          <div className='flex w-full flex-col items-center justify-between gap-2 bg-[#E3F0FF] py-2 lg:flex-row lg:bg-transparent'>
             <div>
               Copyright © 2024{' '}
               <Link to='/' className='text-[#0044EB]'>
@@ -103,7 +103,7 @@ export const AppFooter = () => {
               </Link>
               , All rights reserved.
             </div>
-            <ul className='flex list-disc gap-8 marker:text-[#0044EB]'>
+            <ul className='flex list-inside list-disc gap-8 marker:text-[#0044EB]'>
               <li>
                 <Link to='#'>Terms of Up</Link>
               </li>

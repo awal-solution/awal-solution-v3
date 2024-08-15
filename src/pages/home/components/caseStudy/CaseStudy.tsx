@@ -21,7 +21,7 @@ export const CaseStudy = () => {
                 className='mx-auto max-w-screen-xl'
               >
                 <div className='grid grid-cols-3'>
-                  <div className='col-span-2 rounded-l bg-white py-12 pl-20 pr-36'>
+                  <div className='col-span-3 rounded-l bg-white py-12 pl-4 pr-3 lg:col-span-2 lg:py-12 lg:pl-20 lg:pr-36'>
                     <h3 className='text-base text-[#49515B]'>
                       {item.subtitle}
                     </h3>
@@ -45,7 +45,7 @@ export const CaseStudy = () => {
                         {item.tech?.map((subitem, index) => {
                           return (
                             <div
-                              className='inline-flex rounded-full bg-white p-4 shadow-icon'
+                              className='inline-flex rounded-full bg-white p-[5px] shadow-icon'
                               key={index}
                             >
                               <img
@@ -61,7 +61,7 @@ export const CaseStudy = () => {
                     </div>
                     <Link to={item.btnLink}>{item.btnText}</Link>
                   </div>
-                  <div className='h-[450px] w-full '>
+                  <div className='col-span-3 h-[450px] w-full lg:col-span-1'>
                     <img
                       src={item.image}
                       alt='image'
