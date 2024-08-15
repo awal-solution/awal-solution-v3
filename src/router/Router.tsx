@@ -10,6 +10,7 @@ import BlogDetails from '../pages/Blog/BlogDetail'
 import Portfolio from "@src/pages/portfolio/Portfolio.tsx";
 import {PortfolioDetails} from "@src/pages/portfolio/components/PortfolioDetails.tsx";
 import {Team} from "@src/pages/Team/team.tsx";
+import TeamDetail from '@src/pages/Team/TeamDetails';
 // import { SingleProject } from '@src/pages/singleProject/SingleProject';
 
 export const Router = () => {
@@ -21,7 +22,8 @@ export const Router = () => {
         <Route path='portfolio' element={<Portfolio />} />
         <Route path='portfoliodetails' element={<PortfolioDetails />} />
         <Route path='team' element={<Team/>} />
-
+        <Route path='teamdetails' element={<TeamDetail />} />
+        
         <Route path='contact' element={<ContactUs />} />
         <Route path='blog' element={<Blog />} />
         <Route path='blogdetails' element={<BlogDetails />} />
