@@ -10,8 +10,8 @@ export const Testimonial = () => {
           alt='image'
           className='absolute bottom-5 left-0 z-10'
         />
-        <div className='relative z-20 grid grid-cols-3 gap-10'>
-          <div className='rounded bg-white p-10'>
+        <div className='relative z-20 grid grid-cols-3 gap-10 p-2'>
+          <div className='col-span-3 rounded bg-white p-10 md:col-span-1'>
             <h1 className='mb-3 text-6xl font-bold text-[#0044EB]'>
               {cardData.noOfClient}
             </h1>
@@ -45,7 +45,7 @@ export const Testimonial = () => {
               </div>
             </div>
           </div>
-          <div className='col-span-2 rounded bg-white p-10'>
+          <div className='col-span-3 rounded bg-white p-10 md:col-span-2'>
             <TestimonialSlider />
           </div>
         </div>

@@ -19,11 +19,11 @@ export const Hero = () => {
         />
         <img src={image03} alt='image' className='absolute right-0 max-w-80' />
       </div>
-      <div className='mx-auto flex max-w-screen-xl justify-center'>
-        <div className='w-1/2 pr-28'>
+      <div className='mx-auto flex max-w-screen-xl flex-col justify-center gap-5 px-3 md:flex-row'>
+        <div className='w-full pr-28 md:w-1/2'>
           <h3>PERFECT COMPANY SOLUTION</h3>
           <img src={titleUnderLine} alt='title under line' />
-          <h1 className='mt-10 text-6xl'>
+          <h1 className='mt-10 text-3xl md:text-6xl'>
             We Help Companies in{' '}
             <span className='text-[#0044EB]'>Digitizing</span> Their Businesses.
           </h1>
@@ -98,8 +98,8 @@ export const Hero = () => {
             </button>
           </div>
         </div>
-        <div className='flex w-1/2 justify-end'>
-          <div className='relative h-[600px] w-[650px]'>
+        <div className='flex w-full justify-end md:w-1/2'>
+          <div className='circle_container relative'>
             <img
               src={innerCircle}
               alt='image'

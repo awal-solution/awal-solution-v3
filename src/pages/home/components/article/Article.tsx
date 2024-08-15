@@ -25,10 +25,10 @@ export const Article = () => {
       <h1 className='pb-12 text-center text-5xl font-bold text-[#020842]'>
         Latest <span className='text-[#0044EB]'>Articles</span>
       </h1>
-      <div className='relative z-20 mx-auto grid max-w-screen-xl grid-cols-3 gap-5'>
+      <div className='relative z-20 mx-auto grid max-w-screen-xl grid-cols-3 gap-5 p-2'>
         {articalData?.map((item: any, index: any) => {
           return (
-            <div key={index}>
+            <div key={index} className='col-span-3 md:col-span-1'>
               <img src={item.image} alt='post image' className='rounded-xl' />
               <h1 className='py-6 text-3xl'>{item.title}</h1>
               <div className='flex justify-between px-5'>

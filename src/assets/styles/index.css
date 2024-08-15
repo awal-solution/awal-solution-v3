@@ -12,3 +12,52 @@
 .service_card_clip_path {
   clip-path: polygon(80% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
 }
+
+@media only screen and (min-width: 1500px) {
+  .circle_container {
+    height: 600px;
+    width: 650px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .circle_container {
+    height: 600px;
+    width: 650px;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  .circle_container {
+    height: 600px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .circle_container {
+    height: 550px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .circle_container {
+    height: 380px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .circle_container {
+    height: 350px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 220px) {
+  .circle_container {
+    height: 350px;
+    width: 100%;
+  }
+}

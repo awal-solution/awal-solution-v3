@@ -11,8 +11,8 @@ export const About = () => {
           className='w-1/2'
         />
       </div>
-      <div className='mx-auto grid max-w-screen-xl grid-cols-5 gap-14 pt-32'>
-        <div className='col-span-2 flex flex-col'>
+      <div className='mx-auto grid max-w-screen-xl grid-cols-5 gap-14 px-2 pt-32'>
+        <div className='col-span-5 flex flex-col md:col-span-2'>
           <div className='w-[106px] bg-[url(../../../src/assets/images/title_bar/shape_title_under_line.svg)] bg-right-bottom bg-no-repeat pb-2 pr-4 text-white'>
             {sectionHeading.title}
           </div>
@@ -21,7 +21,7 @@ export const About = () => {
           </h1>
           <p className='text-white'>{aboutData.des}</p>
         </div>
-        <div className='col-span-3 flex gap-5'>
+        <div className='col-span-5 flex flex-col gap-5 md:col-span-3 md:flex-row'>
           <div>
             <img
               src={aboutImages.manPicture}

@@ -22,8 +22,8 @@ export const Connect = () => {
         className='absolute right-0 top-[40%] z-10'
       />
 
-      <div className='relative z-20 mx-auto grid max-w-screen-xl grid-cols-3 gap-5 py-24'>
-        <div className='rounded-lg bg-white p-10 shadow-lg'>
+      <div className='relative z-20 mx-auto grid max-w-screen-xl grid-cols-3 gap-5 px-2 py-24'>
+        <div className='col-span-3 rounded-lg bg-white p-10 shadow-lg md:col-span-1'>
           <div className='w-[136px] bg-[url(/src/assets/images/title_bar/shape_title_under_line.svg)] bg-right-bottom bg-no-repeat pb-2 pr-4 text-black'>
             {sectionHeading.title}
           </div>
@@ -64,14 +64,14 @@ export const Connect = () => {
             })}
           </ul>
         </div>
-        <div className='col-span-2 rounded-lg bg-white p-10 shadow-lg'>
+        <div className='col-span-3 rounded-lg bg-white p-10 shadow-lg md:col-span-2'>
           <div className='flex gap-2'>
             <img src={contactFormData.envelop} alt='image' className='size-5' />
             <div>{contactFormData.subTitle}</div>
           </div>
           <h1 className='py-2 text-4xl'>{contactFormData.title}</h1>
           <div className='grid grid-cols-2 gap-5 pt-4'>
-            <div className=' flex items-center rounded-lg border p-2'>
+            <div className='col-span-2 flex items-center rounded-lg border p-2 md:col-span-1'>
               <div className=''>
                 <img src={contactFormData.userIcons} alt='' />
               </div>
@@ -83,7 +83,7 @@ export const Connect = () => {
                 placeholder='Your Name'
               />
             </div>
-            <div className=' flex items-center rounded-lg border p-2'>
+            <div className='col-span-2 flex items-center rounded-lg border p-2 md:col-span-1'>
               <div className=''>
                 <img src={contactFormData.mailIcons} alt='' />
               </div>
@@ -95,7 +95,7 @@ export const Connect = () => {
                 placeholder='Your Email'
               />
             </div>
-            <div className=' flex items-center rounded-lg border p-2'>
+            <div className='col-span-2 flex items-center rounded-lg border p-2 md:col-span-1'>
               <div className=''>
                 <img src={contactFormData.callIcons} alt='' />
               </div>
@@ -107,7 +107,7 @@ export const Connect = () => {
                 placeholder='Your Phone No.'
               />
             </div>
-            <div className=' flex items-center rounded-lg border p-2'>
+            <div className='col-span-2 flex items-center rounded-lg border p-2 md:col-span-1'>
               <div className='text-red-500'>
                 <img src={contactFormData.globalIcons} alt='' />
               </div>
@@ -119,7 +119,7 @@ export const Connect = () => {
                 placeholder='Your company Name'
               />
             </div>
-            <div className='col-span-2 flex rounded-lg border p-2'>
+            <div className='col-span-2 flex rounded-lg border p-2 md:col-span-1'>
               <div className='mt-1.5'>
                 <img src={contactFormData.commentIcons} alt='' />
               </div>

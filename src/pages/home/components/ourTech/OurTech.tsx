@@ -22,7 +22,7 @@ export const OurTech = () => {
         <h1 className='py-10 text-center text-5xl font-bold'>
           We Use <span className='text-[#0044EB]'>Technologies</span>
         </h1>
-        <ul className='relative z-20 flex justify-between rounded bg-[#CCE3FF] px-2 py-3'>
+        <ul className='relative z-20 flex justify-between overflow-scroll rounded bg-[#CCE3FF] px-2 py-3'>
           {tabData?.map((item: any) => {
             const isOpen = activeTab === item.id;
             return (
@@ -32,7 +32,7 @@ export const OurTech = () => {
                 onTabClick={onTabClick}
                 className={`${
                   isOpen ? 'active' : ''
-                } cursor-pointer rounded px-10 py-2 font-bold`}
+                } cursor-pointer whitespace-nowrap rounded px-10 py-2 font-bold`}
               >
                 {item.name}
               </Tab>
@@ -46,7 +46,7 @@ export const OurTech = () => {
               isOpen={activeTab === item.id}
               className='p-5'
             >
-              <div className='relative z-20 grid grid-cols-6 gap-6'>
+              <div className='relative z-20 grid grid-cols-3 gap-6 md:grid-cols-6 '>
                 {item?.data?.map((subTab: any, index: any) => {
                   return (
                     <div
