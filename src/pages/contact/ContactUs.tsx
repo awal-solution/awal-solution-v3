@@ -5,8 +5,8 @@ export const ContactUs = () => {
     <>
       <div className='bg-[#E3F0FF]'>
         <HeroSection
-          subHeading={'About Us 😃'}
-          heading={'About Awal Solution'}
+          subHeading={'Get In Touch With Us 😃'}
+          heading={'Contact Us'}
         />
         <div className='container mx-auto'>
           <div className='mx-4 mt-12 grid gap-6 sm:mx-10 sm:mt-16 sm:grid-cols-1 md:mx-24 md:mt-24 md:grid-cols-2 lg:mx-36 lg:grid-cols-3 xl:grid-cols-4'>
@@ -166,10 +166,11 @@ export const ContactUs = () => {
             <iframe
               loading='lazy'
               className='h-48 w-full rounded-xl sm:h-64 md:h-96 lg:h-full'
-              src='https://maps.google.com/maps?q=London%20Eye%2C%20London%2C%20United%20Kingdom&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near'
+              src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13886.098561400935!2d71.62053226738281!3d29.53021211580633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6420971a9d5b096b%3A0x460c41976e26683e!2sAwal%20Solution!5e0!3m2!1sen!2s!4v1723705882494!5m2!1sen!2s'
               title='London Eye, London, United Kingdom'
               aria-label='London Eye, London, United Kingdom'
             ></iframe>
+
           </div>
         </div>
       </div>
