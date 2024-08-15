@@ -18,7 +18,7 @@ export const AppNavbar = () => {
     <Section
       as='nav'
       name='navbar'
-      className='absolute inset-x-0 top-0 z-50 flex w-full items-center justify-between overflow-visible bg-blue-700 p-4 sm:px-8 sm:py-6 md:px-12 md:py-2 lg:px-16 xl:px-20 2xl:px-24'
+      className='absolute inset-x-0 top-0 z-50 flex w-full items-center justify-between overflow-visible   p-4 sm:px-8 sm:py-6 md:px-12 md:py-2 lg:px-16 xl:px-20 2xl:px-24'
     >
       <div className='py-4 lg:hidden'>
         <Button onClick={() => console.log('menu clicked')} size='xs'>

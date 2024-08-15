@@ -28,9 +28,9 @@ export const WorkProcess = () => {
         alt='image'
         className='absolute top-0'
       />
-      <div className='mx-auto max-w-screen-xl py-36'>
-        <div className='flex items-center gap-10'>
-          <div className='w-1/2'>
+      <div className='mx-auto max-w-screen-xl px-2 py-36'>
+        <div className='flex flex-col items-center gap-10 md:flex-row'>
+          <div className='w-full md:w-1/2'>
             <div>{sectionHeading.title}</div>
             <h1 className='py-8 text-5xl font-bold'>
               Our <span className='text-[#0044EB]'>Approach</span>
@@ -57,13 +57,13 @@ export const WorkProcess = () => {
               );
             })}
           </div>
-          <div className='flex w-1/2 flex-col items-center justify-center'>
+          <div className='flex w-full flex-col items-center justify-center md:w-1/2'>
             {workProcessData?.map((item: any) => {
               return (
                 <button
                   onClick={() => handleToggle(item.id)}
                   key={item.id}
-                  className={`-mb-5 h-36 w-[450px] rounded-[100%] text-2xl ${
+                  className={`-mb-5 h-36 w-[300px] rounded-[100%] text-2xl md:w-[450px] ${
                     activeId === item.id
                       ? 'z-30 bg-[#0044EB] text-white'
                       : 'z-10 border border-[#020842] bg-transparent text-[#020842]'

@@ -3,7 +3,7 @@ import { brandData } from '@src/data/brand.data';
 
 export const Brand = () => {
   return (
-    <section className='relative z-0 bg-[#0132B8] pb-5 pl-[25%] pt-16'>
+    <section className='relative z-0 bg-[#0132B8] pb-5 pl-0 pt-16 md:pl-[25%]'>
       <BrandMarquee>
         {brandData?.map((item: { image: string }, i: any) => (
           <div

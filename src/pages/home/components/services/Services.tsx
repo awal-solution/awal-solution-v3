@@ -39,10 +39,10 @@ export const Services = () => {
           {sectionHeading.title}
         </div>
       </div>
-      <h1 className='pb-8 text-center text-5xl font-bold text-[#020842]'>
+      <h1 className='pb-8 text-center text-3xl font-bold text-[#020842] md:text-5xl'>
         How We Can <span className='text-[#0044EB]'>Help</span> You
       </h1>
-      <div className='mx-auto grid max-w-screen-xl grid-cols-3 gap-8'>
+      <div className='mx-auto grid max-w-screen-xl grid-cols-1 gap-8 p-3 md:grid-cols-3'>
         {servicesCard?.map((item, index) => {
           return (
             <div

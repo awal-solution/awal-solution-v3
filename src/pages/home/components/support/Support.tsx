@@ -36,7 +36,7 @@ export const NeedSupport = () => {
       <h1 className='pb-12 text-center text-5xl font-bold text-[#020842]'>
         Need a <span className='text-[#0044EB]'>Support?</span>
       </h1>
-      <div className='mx-auto max-w-screen-xl'>
+      <div className='mx-auto max-w-screen-xl px-2'>
         {needSupportData?.map((item: any) => {
           const isOpen = activeId === item.id;
           return (
