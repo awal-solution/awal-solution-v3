@@ -51,7 +51,7 @@ export const AppNavbar = () => {
               ))}
             </div>
           </MenuItem> */}
-          <HoveredLink href='/Portfolio'>Portfolio</HoveredLink>
+          <HoveredLink href='/portfolio'>Portfolio</HoveredLink>
           <MenuItem setActive={setActive} active={active} item='Company'>
             <div className='flex flex-col space-y-4 rounded bg-white p-5 text-sm text-black'>
               <HoveredLink href='/about-us'>About</HoveredLink>
