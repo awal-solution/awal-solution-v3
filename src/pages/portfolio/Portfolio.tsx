@@ -1,17 +1,13 @@
-import {OurPortfolio} from "@src/pages/portfolio/components/Tabs.tsx";
-import {HeroSection} from "@src/components/HeroSection/Herosection.tsx";
+import { OurPortfolio } from '@src/pages/portfolio/components/Tabs';
+import { HeroSection } from '@src/components/HeroSection/Herosection';
 
-const Portfolio = () => {
-    return (
-        <>
-            <div className="bg-[#E3F0FF] w-full">
-                <HeroSection subHeading={"Our Portfolio"} heading={"Our Portfolio"} />
-                <div className="container mx-auto">
-                    <OurPortfolio/>
-                </div>
-            </div>
-        </>
-    );
+export const Portfolio = () => {
+  return (
+    <div className='w-full bg-[#E3F0FF]'>
+      <HeroSection subHeading={'Our Portfolio'} heading={'Our Portfolio'} />
+      <div className='container mx-auto'>
+        <OurPortfolio />
+      </div>
+    </div>
+  );
 };
-
-export default Portfolio;

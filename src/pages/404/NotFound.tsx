@@ -1,7 +1,9 @@
 export const NotFound = () => {
   return (
     <>
-      <h1>Page Not Found</h1>
+      <h1 className='flex h-screen items-center justify-center text-4xl'>
+        Page Not Found
+      </h1>
     </>
   );
 };
