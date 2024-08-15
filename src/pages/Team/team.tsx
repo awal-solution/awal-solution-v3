@@ -1,4 +1,5 @@
 import {HeroSection} from "@src/components/HeroSection/Herosection.tsx";
+import {TeamCard} from "@src/pages/Team/TeamCard.tsx";
 
 export const  Team = () =>{
     return(<>
@@ -24,14 +25,29 @@ export const  Team = () =>{
                 </div>
             </div>
             <div className="bg-white">
-                <div className="flex justify-center gap-3 pt-5"><p className="rounded bg-[#F44380] px-2 text-white ">Our Expert</p><span>Team Members 😍</span></div>
-                <h1 className="py-5 text-center text-2xl font-semibold">Top Skilled Experts</h1>
-                <div className="bg-white p-10">
-                    <div className="bg-[#E3F0ff] p-3">
-                    <div className="bg-white ">
-                    <img src={"https://wp.xpressbuddy.com/techco/wp-content/uploads/2024/05/team_member_image_1.webp"}/>
-                    </div>
-                    </div>
+
+                <div className="flex justify-center gap-3 pt-5"><p className="rounded bg-[#F44380] px-2 text-white ">Our
+                    Expert</p><span>Team Members 😍</span></div>
+                <h1 className="py-5 text-center text-4xl font-bold">Top Skilled Experts</h1>
+                <div className="grid grid-cols-1 gap-5 lg:grid-cols-3 md:grid-cols-2 md:mx-5">
+                <TeamCard
+                    srcImg={"https://wp.xpressbuddy.com/techco/wp-content/uploads/2024/05/team_member_image_1.webp"}
+                    name={"Atticus Sterling"} post={"Systems Engineer"}/>
+                <TeamCard
+                    srcImg={"https://wp.xpressbuddy.com/techco/wp-content/uploads/2024/05/team_member_image_2.webp"}
+                    name={"Orion Jasper"} post={"IT Consultant"}/>
+                <TeamCard
+                    srcImg={"https://wp.xpressbuddy.com/techco/wp-content/uploads/2024/05/team_member_image_3.webp"}
+                    name={"August Everest"} post={"systems engineer"}/>
+                <TeamCard
+                    srcImg={"https://wp.xpressbuddy.com/techco/wp-content/uploads/2024/05/team_member_image_4.webp"}
+                    name={"Maverick Phoenix"} post={"Data Analyst"}/>
+                <TeamCard
+                    srcImg={"https://wp.xpressbuddy.com/techco/wp-content/uploads/2024/05/team_member_image_5.webp"}
+                    name={"Daxton Atlas"} post={"Project Manager"}/>
+                <TeamCard
+                    srcImg={"https://wp.xpressbuddy.com/techco/wp-content/uploads/2024/05/team_member_image_1.webp"}
+                    name={"Atticus Sterling"} post={"Systems Engineer"}/>
                 </div>
             </div>
         </div>
