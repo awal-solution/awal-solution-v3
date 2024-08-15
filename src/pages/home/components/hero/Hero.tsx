@@ -19,8 +19,8 @@ export const Hero = () => {
         />
         <img src={image03} alt='image' className='absolute right-0 max-w-80' />
       </div>
-      <div className='mx-auto flex max-w-screen-xl flex-col justify-center gap-5 px-3 md:flex-row'>
-        <div className='w-full pr-28 md:w-1/2'>
+      <div className='mx-auto flex max-w-screen-xl flex-col justify-center gap-5 overflow-hidden px-3 lg:flex-row'>
+        <div className='w-full pr-28 lg:w-1/2'>
           <h3>PERFECT COMPANY SOLUTION</h3>
           <img src={titleUnderLine} alt='title under line' />
           <h1 className='mt-10 text-3xl md:text-6xl'>
@@ -98,27 +98,27 @@ export const Hero = () => {
             </button>
           </div>
         </div>
-        <div className='flex w-full justify-end md:w-1/2'>
-          <div className='circle_container relative'>
+        <div className='flex w-full justify-center lg:w-1/2'>
+          <div className='circle_container relative overflow-hidden'>
             <img
               src={innerCircle}
               alt='image'
-              className='absolute left-[43%] top-[41.5%] z-50 h-1/5 w-[18%] object-cover'
+              className='absolute left-[43%] top-[41.5%] z-50 h-1/5 w-[18%] overflow-hidden object-cover'
             />
             <img
               src={middleCircle}
               alt='image'
-              className='absolute left-[21%] top-[18%] h-[67%] w-[62%] animate-[spinCW_10s_linear_infinite] object-cover'
+              className='absolute left-[21%] top-[18%] h-[67%] w-[62%] animate-[spinCW_10s_linear_infinite] overflow-hidden object-cover'
             />
             <img
               src={outerCircle}
               alt='image'
-              className='absolute left-[11.5%] top-[7.5%] h-[88%] w-[81%] animate-[spinAntiCW_10s_linear_infinite] object-cover'
+              className='absolute left-[11.5%] top-[7.5%] h-[88%] w-[81%] animate-[spinAntiCW_10s_linear_infinite] overflow-hidden object-cover'
             />
             <img
               src={mostOuterCircle}
               alt='image'
-              className='size-full object-cover'
+              className='size-full overflow-hidden object-cover'
             />
           </div>
         </div>

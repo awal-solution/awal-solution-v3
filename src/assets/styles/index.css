@@ -13,7 +13,23 @@
   clip-path: polygon(80% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
 }
 
-@media only screen and (min-width: 1500px) {
+/* .circle_container {
+  background-color: yellow;
+  padding: 5px;
+}
+.most_outer_circle {
+  background-color: red;
+  height: 80%;
+  width: 80%;
+}
+.outer_circle {
+  background-color: green;
+  height: 80%;
+  left: 15%;
+  top: 10%;
+} */
+
+/* @media only screen and (min-width: 1500px) {
   .circle_container {
     height: 600px;
     width: 650px;
@@ -25,18 +41,18 @@
     height: 600px;
     width: 650px;
   }
-}
+} */
 
-@media only screen and (max-width: 920px) {
+/* @media only screen and (max-width: 920px) {
   .circle_container {
-    height: 600px;
+    height: 380px;
     width: 100%;
   }
 }
 
 @media only screen and (max-width: 620px) {
   .circle_container {
-    height: 550px;
+    height: 380px;
     width: 100%;
   }
 }
@@ -60,4 +76,4 @@
     height: 350px;
     width: 100%;
   }
-}
+} */
