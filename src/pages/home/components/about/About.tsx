@@ -17,7 +17,7 @@ export const About = () => {
             {sectionHeading.title}
           </div>
           <h1 className='py-8 text-5xl font-bold text-white'>
-            Techco <span className='text-[#0044EB]'>Mission & Goal</span>
+            Awal Solution <span className='text-[#0044EB]'>Mission & Goal</span>
           </h1>
           <p className='text-white'>{aboutData.des}</p>
         </div>
