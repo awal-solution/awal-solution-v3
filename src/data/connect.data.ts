@@ -25,15 +25,15 @@ export const firstCardData = {
   cotactDetail: [
     {
       icon: phoneIcon,
-      text: '1234567890',
+      text: '+923004633604',
     },
     {
       icon: emailIcon,
-      text: 'techco@gmail.com',
+      text: 'contact@awalsolution.com',
     },
     {
       icon: locationIcon,
-      text: 'Sunshine Business Park',
+      text: 'Street No 4 Gulshan-e-Madina Colony Near Al-Hanif School,Super Chowk,Lodhran',
     },
   ],
   list: [
