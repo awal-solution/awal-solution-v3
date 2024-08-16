@@ -2,7 +2,7 @@ import {
   serviceImages,
   sectionHeading,
   servicesCard,
-} from '@src/data/services.data';
+} from '@src/data/home/services.data';
 
 export const Services = () => {
   return (
@@ -47,7 +47,7 @@ export const Services = () => {
           return (
             <div
               key={index}
-              className='service_card_clip_path rounded-xl bg-white p-10 shadow-card'
+              className='service_card_clip_path shadow-card rounded-xl bg-white p-10'
             >
               <img src={item.icon} alt='card icon' className='pb-8' />
               <h2 className='pb-9 text-2xl text-[#020842]'>{item.title}</h2>
@@ -56,7 +56,7 @@ export const Services = () => {
                   return (
                     <li
                       key={index}
-                      className='flex items-center gap-2 rounded-md bg-list-gradient py-2'
+                      className='bg-list-gradient flex items-center gap-2 rounded-md py-2'
                     >
                       <svg
                         xmlns='http://www.w3.org/2000/svg'

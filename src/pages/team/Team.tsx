@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
-import { dedicateTeam, teamCards, globalTeam } from '@src/data/team.data';
+import { dedicateTeam, teamCards, globalTeam } from '@src/data/team/team.data';
 import { HeroSection } from '@src/components/heroSection/Herosection';
 import { TeamCard } from '@src/pages/team/TeamCard';
 

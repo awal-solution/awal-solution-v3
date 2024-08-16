@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { tabData, sectionHeading, images } from '@src/data/tech.data';
+import { tabData, sectionHeading, images } from '@src/data/home/tech.data';
 import { Tab, TabPanel } from '@src/components/ui';
 
 export const OurTech = () => {

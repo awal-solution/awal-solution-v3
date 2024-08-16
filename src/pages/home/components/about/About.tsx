@@ -1,4 +1,8 @@
-import { aboutData, aboutImages, sectionHeading } from '@src/data/about.data';
+import {
+  aboutData,
+  aboutImages,
+  sectionHeading,
+} from '@src/data/home/about.data';
 import { Link } from 'react-router-dom';
 
 export const About = () => {

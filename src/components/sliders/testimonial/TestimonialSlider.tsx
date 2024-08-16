@@ -6,7 +6,7 @@ import 'swiper/css/navigation';
 
 import '@src/components/sliders/style.css';
 
-import { data, images } from '@src/data/testimonial.data';
+import { data, images } from '@src/data/home/testimonial.data';
 
 export const TestimonialSlider = () => {
   return (

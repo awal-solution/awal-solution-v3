@@ -3,7 +3,7 @@ import {
   connectImages,
   firstCardData,
   contactFormData,
-} from '@src/data/connect.data';
+} from '@src/data/home/connect.data';
 
 export const Connect = () => {
   return (

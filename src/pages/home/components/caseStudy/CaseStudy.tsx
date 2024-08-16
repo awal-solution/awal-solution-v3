@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { caseData, sectionHeading } from '@src/data/caseStudy.data';
+import { caseData, sectionHeading } from '@src/data/home/caseStudy.data';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
 export const CaseStudy = () => {
@@ -45,7 +45,7 @@ export const CaseStudy = () => {
                         {item.tech?.map((subitem, index) => {
                           return (
                             <div
-                              className='inline-flex rounded-full bg-white p-[5px] shadow-icon'
+                              className='shadow-icon inline-flex rounded-full bg-white p-[5px]'
                               key={index}
                             >
                               <img

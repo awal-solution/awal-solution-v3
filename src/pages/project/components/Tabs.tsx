@@ -1,5 +1,5 @@
 import { Fragment, useState } from 'react';
-import { tabData, images } from '@src/data/projects.data.ts';
+import { tabData, images } from '@src/data/projects/projects.data.ts';
 import { Tab, TabPanel } from '@src/components/ui';
 import { ProjectCard } from '@src/pages/project/components/ProjectCard.tsx';
 

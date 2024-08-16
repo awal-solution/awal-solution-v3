@@ -2,7 +2,7 @@ import {
   sectionHeading,
   articalsShapes,
   articalData,
-} from '@src/data/latest_article';
+} from '@src/data/home/latest_article';
 
 export const Article = () => {
   return (

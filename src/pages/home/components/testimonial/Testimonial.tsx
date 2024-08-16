@@ -1,5 +1,5 @@
 import { TestimonialSlider } from '@src/components/sliders/testimonial/TestimonialSlider';
-import { cardData, images } from '@src/data/testimonial.data';
+import { cardData, images } from '@src/data/home/testimonial.data';
 
 export const Testimonial = () => {
   return (

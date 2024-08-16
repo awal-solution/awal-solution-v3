@@ -4,7 +4,7 @@ import {
   needSupportImages,
   sectionHeading,
   needSupportData,
-} from '@src/data/need_support';
+} from '@src/data/home/need_support';
 import { AccordionTitle, AccordionPanel } from '@src/components/ui';
 
 export const NeedSupport = () => {

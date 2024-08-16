@@ -4,7 +4,7 @@ import {
   workProccesImages,
   workProcessData,
   sectionHeading,
-} from '@src/data/work_process';
+} from '@src/data/home/work_process';
 import { AccordionTitle, AccordionPanel } from '@src/components/ui';
 
 export const WorkProcess = () => {
