@@ -1,9 +1,9 @@
 import { Fragment, useState } from 'react';
-import { tabData, images } from '@src/data/portfolio.data.ts';
+import { tabData, images } from '@src/data/projects.data.ts';
 import { Tab, TabPanel } from '@src/components/ui';
-import { SinglePortfolioCard } from '@src/pages/portfolio/components/SinglePortfolioCard.tsx';
+import { ProjectCard } from '@src/pages/project/components/ProjectCard.tsx';
 
-export const OurPortfolio = () => {
+export const OurProjects = () => {
   const [activeTab, setActiveTab] = useState(1);
 
   const onTabClick = (index: any) => {
@@ -43,10 +43,11 @@ export const OurPortfolio = () => {
               className='md:m-5 lg:my-5'
             >
               <div className='relative z-20 mx-10 grid  grid-cols-1 gap-6 py-10 md:pt-10 lg:grid-cols-2'>
-                {item?.data?.map((subTab: any, index: any) => {
+                {item?.data?.map((item: any, index: any) => {
+                  console.log(item);
                   return (
                     <Fragment key={index}>
-                      <SinglePortfolioCard subTab={subTab.title} />
+                      <ProjectCard data={item} />
                     </Fragment>
                   );
                 })}

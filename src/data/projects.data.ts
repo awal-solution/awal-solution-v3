@@ -1,5 +1,6 @@
 import rightAngleShape from '@src/assets/images/shapes/shape_line_3.png';
 //
+import project1 from '@src/assets/images/projects/portfolio_item_image_4-800x600.webp';
 
 export const sectionHeading = { title: 'OUR TECHNOLOGIES' };
 
@@ -12,11 +13,12 @@ export const tabData = [
     data: [
       {
         id: 1,
-        title: 'Wrapsafe',
+        title:
+          'Driving Digital Transformation Explore the Depth of Our IT Projects',
         description:
           'Poisoning by, adverse effect of and underdosing of antimycobacterial drugs',
         short_description: 'Antimycobacterial drugs',
-        thumbnail: 'https://dummyimage.com/650x400png/450A0A',
+        thumbnail: project1,
         gallery: [
           { id: 1, image: 'https://dummyimage.com/650x400png/7F1D1D' },
           { id: 2, image: 'https://dummyimage.com/650x400png/991B1B' },

@@ -1,17 +1,8 @@
-interface Props {
-  subTab: string;
-}
-
-export const SinglePortfolioCard: React.FC<Props> = ({ subTab }) => {
+export const ProjectCard: React.FC<any> = ({ data }) => {
   return (
     <>
       <div className='rounded-2xl bg-white'>
-        <img
-          className='p-4'
-          src={
-            'https://wp.xpressbuddy.com/techco/wp-content/uploads/2024/06/portfolio_item_image_4-800x600.webp'
-          }
-        />
+        <img className='p-4' src={data?.thumbnail} />
         <div className='px-4 py-6'>
           <div className='flex gap-2 '>
             <svg
@@ -31,7 +22,7 @@ export const SinglePortfolioCard: React.FC<Props> = ({ subTab }) => {
             </svg>
             <span className='pb-4 text-sm'>Technology</span>
           </div>
-          <h1 className='text-4xl'>{subTab}</h1>
+          <h1 className='text-4xl'>{data?.title}</h1>
         </div>
       </div>
     </>

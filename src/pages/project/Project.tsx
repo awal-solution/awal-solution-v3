@@ -1,4 +1,4 @@
-import { OurPortfolio } from '@src/pages/project/components/Tabs';
+import { OurProjects } from '@src/pages/project/components/Tabs';
 import { HeroSection } from '@src/components/heroSection/Herosection';
 
 export const Project = () => {
@@ -9,7 +9,7 @@ export const Project = () => {
         heading='Our Portfolio'
       />
       <div className='container mx-auto'>
-        <OurPortfolio />
+        <OurProjects />
       </div>
     </div>
   );
