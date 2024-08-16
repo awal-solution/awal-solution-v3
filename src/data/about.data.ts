@@ -17,8 +17,8 @@ export const aboutImages = {
 };
 
 export const aboutData = {
-  des: 'At Techco, our mission is to empower businesses through innovative software solutions that streamline operations, foster growth, and drive success. With a commitment to excellence and customer satisfaction we strive.',
-  title1: '6K+',
+  des: 'At Awal Solution, our mission is to empower businesses by delivering innovative and reliable technology solutions that drive growth and efficiency. We are committed to providing top-quality services that meet the unique needs of each client, ensuring their success in a rapidly evolving digital landscape.Our goal is to become a leading provider of technology solutions, recognized for our expertise, customer-centric approach, and ability to deliver results. We aim to build long-term partnerships with our clients, helping them achieve their business objectives through cutting-edge technology and exceptional service.',
+  title1: '80+',
   p1: 'Projects Done',
   title2: '100%',
   p2: 'Results Guaranteed',
