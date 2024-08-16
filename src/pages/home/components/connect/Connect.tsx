@@ -51,7 +51,7 @@ export const Connect = () => {
                   className='relative mb-3 flex items-center gap-5'
                 >
                   <div className='size-10 rounded-full border border-[#0044EB] p-2'>
-                    0{index}
+                    0{index+1}
                   </div>
                   <div
                     className={`absolute bottom-[-7px] left-[13px] w-[12px] rotate-90 border border-[#0044EB] ${
@@ -119,7 +119,7 @@ export const Connect = () => {
                 placeholder='Your company Name'
               />
             </div>
-            <div className='col-span-2 flex rounded-lg border p-2 md:col-span-1'>
+            <div className='col-span-2 flex rounded-lg border p-2 md:col-span-2'>
               <div className='mt-1.5'>
                 <img src={contactFormData.commentIcons} alt='' />
               </div>
