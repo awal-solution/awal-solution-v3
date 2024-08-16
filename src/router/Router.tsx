@@ -10,8 +10,7 @@ import { BlogPost } from '../pages/Blog/BlogDetail';
 import { Portfolio } from '@src/pages/portfolio/Portfolio';
 import { PortfolioDetails } from '@src/pages/portfolio/components/PortfolioDetails';
 import { Team } from '@src/pages/Team/team.tsx';
-import TeamDetail from '@src/pages/Team/TeamDetails';
-// import { SingleProject } from '@src/pages/singleProject/SingleProject';
+import { TeamDetail } from '@src/pages/Team/TeamDetails';
 
 export const Router = () => {
   return (
@@ -22,11 +21,10 @@ export const Router = () => {
         <Route path='portfolio' element={<Portfolio />} />
         <Route path='portfolio-details' element={<PortfolioDetails />} />
         <Route path='team' element={<Team />} />
-        <Route path='teamdetails' element={<TeamDetail />} />
-        <Route path='contact' element={<ContactUs />} />
+        <Route path='team-detail/:id' element={<TeamDetail />} />
+        <Route path='contact-us' element={<ContactUs />} />
         <Route path='blog' element={<BlogPage />} />
         <Route path='blogdetails' element={<BlogPost />} />
-        {/* <Route path='portfolio/:projectName' element={<SingleProject />} /> */}
         <Route path='*' element={<NotFound />} />
       </Route>
     </Routes>

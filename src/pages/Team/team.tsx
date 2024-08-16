@@ -1,37 +1,35 @@
-import { HeroSection } from '@src/components/HeroSection/Herosection.tsx';
-import { TeamCard } from '@src/pages/Team/TeamCard.tsx';
+import { HeroSection } from '@src/components/HeroSection/Herosection';
+import { TeamCard } from '@src/pages/Team/TeamCard';
+import { dedicateTeam, teamCards, globalTeam } from '@src/data/team.data';
+import { ArrowUpRight } from 'lucide-react';
+import { Fragment } from 'react/jsx-runtime';
+import { Link } from 'react-router-dom';
 
 export const Team = () => {
   return (
     <>
       <div className='bg-[#E3F0ff] '>
         <HeroSection subHeading={'Members 😍 Team'} heading={'Team Member'} />
-        <div className='px-4 py-20 lg:mx-[30px] lg:flex lg:items-center lg:justify-between xl:mx-[100px] 2xl:mx-[500px]'>
-          <div className='lg:p-5'>
+        <div className='mx-auto flex max-w-screen-xl flex-col items-center justify-center gap-10 px-5 py-20 lg:flex-row'>
+          <div>
             <div className='flex gap-2'>
-              <span>Our Dedicated</span>
-              <p className='rounded bg-[#F44380] px-2'>Team 🙂</p>
+              <span>{dedicateTeam.title}</span>
+              <p className='rounded bg-[#F44380] px-2'>{dedicateTeam.tg}</p>
             </div>
             <h1 className='pt-5 text-3xl font-semibold'>
-              Get to Know Our Expert Techco Team
+              {dedicateTeam.subTitle}
             </h1>
-            <p className='pt-5 text-lg leading-8'>
-              Get acquainted with the powerhouse behind Techco – our expert team
-              of professionals dedicated to revolutionizing the IT landscape.
-              Comprising.
-            </p>
-            <button className='my-5 rounded-[35px] bg-[#0044EB] px-6 py-2 text-base font-bold text-white sm:px-10 sm:py-3 sm:text-lg lg:text-xl'>
-              TALK TO AN EXPERT
-              <i className='fa-solid fa-arrow-up-long ml-2 rotate-45 sm:ml-4'></i>
-            </button>
+            <p className='pt-5 text-lg leading-8'>{dedicateTeam.des}</p>
+            <Link
+              to='/contact-us'
+              className='my-5 flex w-fit items-center justify-center gap-3 rounded-full bg-[#0044EB] px-6 py-2 text-base text-white sm:px-10 sm:py-3 sm:text-lg'
+            >
+              <span className='whitespace-nowrap'>TALK TO AN EXPERT</span>
+              <ArrowUpRight />
+            </Link>
           </div>
           <div className='md:pt-10'>
-            <img
-              src={
-                'https://wp.xpressbuddy.com/techco/wp-content/uploads/2024/06/team_cartoon_image.webp'
-              }
-              alt='Team Cartoon'
-            />
+            <img src={dedicateTeam.img} alt='Team Cartoon' />
           </div>
         </div>
         <div className='bg-white pb-20'>
@@ -42,64 +40,27 @@ export const Team = () => {
           <h1 className='py-5 pb-20 text-center text-4xl font-bold'>
             Top Skilled Experts
           </h1>
-          <div className='mx-auto grid max-w-screen-xl grid-cols-1 gap-4 p-5 sm:grid-cols-2 lg:mx-[30px] lg:grid-cols-3 xl:mx-[100px] 2xl:mx-[500px]'>
-            <TeamCard
-              srcImg={
-                'https://wp.xpressbuddy.com/techco/wp-content/uploads/2024/05/team_member_image_1.webp'
-              }
-              name={'Atticus Sterling'}
-              post={'Systems Engineer'}
-            />
-            <TeamCard
-              srcImg={
-                'https://wp.xpressbuddy.com/techco/wp-content/uploads/2024/05/team_member_image_2.webp'
-              }
-              name={'Orion Jasper'}
-              post={'IT Consultant'}
-            />
-            <TeamCard
-              srcImg={
-                'https://wp.xpressbuddy.com/techco/wp-content/uploads/2024/05/team_member_image_3.webp'
-              }
-              name={'August Everest'}
-              post={'Systems Engineer'}
-            />
-            <TeamCard
-              srcImg={
-                'https://wp.xpressbuddy.com/techco/wp-content/uploads/2024/05/team_member_image_4.webp'
-              }
-              name={'Maverick Phoenix'}
-              post={'Data Analyst'}
-            />
-            <TeamCard
-              srcImg={
-                'https://wp.xpressbuddy.com/techco/wp-content/uploads/2024/05/team_member_image_5.webp'
-              }
-              name={'Daxton Atlas'}
-              post={'Project Manager'}
-            />
-            <TeamCard
-              srcImg={
-                'https://wp.xpressbuddy.com/techco/wp-content/uploads/2024/05/team_member_image_1.webp'
-              }
-              name={'Atticus Sterling'}
-              post={'Systems Engineer'}
-            />
+          <div className='mx-auto grid max-w-screen-xl grid-cols-1 gap-4 p-5 sm:grid-cols-2 lg:mx-auto lg:grid-cols-3'>
+            {teamCards.map((item, index) => {
+              return (
+                <Fragment key={index}>
+                  <TeamCard data={item} />
+                </Fragment>
+              );
+            })}
           </div>
         </div>
         <div className='bg-[#E3F0FF]'>
           <div className='flex justify-center gap-3 pt-20'>
-            <p className='rounded bg-[#F44380] px-2 text-white'>Techco</p>
-            <span>Company 😍</span>
+            <p className='rounded bg-[#F44380] px-2 text-white'>
+              {globalTeam.tg}
+            </p>
+            <span>{globalTeam.title}</span>
           </div>
           <h1 className='py-5 pb-20 text-center text-4xl font-bold'>
-            Our Global Team is Growing
+            {globalTeam.subTitle}
           </h1>
-          <img
-            src='/src/assets/images/team_map.webp'
-            className='px-10 xl:px-32 2xl:mx-auto'
-            alt='Team Map'
-          />
+          <img src={globalTeam.img} className='mx-auto' alt='Team Map' />
         </div>
       </div>
     </>

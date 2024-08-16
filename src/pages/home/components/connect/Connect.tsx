@@ -35,10 +35,14 @@ export const Connect = () => {
             {firstCardData.cotactDetail.map((item: any, index: number) => {
               return (
                 <li key={index} className='mb-3 flex items-center gap-5'>
-                  <div className='size-9 rounded-full bg-[#0044EB] p-2 text-white'>
-                    <img src={item.icon} alt='icon' />
+                  <div className='w-[12%] rounded-full bg-[#0044EB] p-2 text-white'>
+                    <img
+                      src={item.icon}
+                      alt='icon'
+                      className='size-full object-cover'
+                    />
                   </div>
-                  <div>{item.text}</div>
+                  <div className='w-[88%] '>{item.text}</div>
                 </li>
               );
             })}
@@ -51,7 +55,7 @@ export const Connect = () => {
                   className='relative mb-3 flex items-center gap-5'
                 >
                   <div className='size-10 rounded-full border border-[#0044EB] p-2'>
-                    0{index+1}
+                    0{index + 1}
                   </div>
                   <div
                     className={`absolute bottom-[-7px] left-[13px] w-[12px] rotate-90 border border-[#0044EB] ${
