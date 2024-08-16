@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 import { dedicateTeam, teamCards, globalTeam } from '@src/data/team.data';
 import { HeroSection } from '@src/components/heroSection/Herosection';
-import { TeamCard } from '@src/pages/Team/TeamCard';
+import { TeamCard } from '@src/pages/team/TeamCard';
 
 export const Team = () => {
   return (

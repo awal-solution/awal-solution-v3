@@ -9,8 +9,8 @@ import { Blog } from '../pages/blog/Blog';
 import { BlogPost } from '../pages/blog/BlogDetail';
 import { Project } from '@src/pages/project/Project';
 import { SingleProject } from '@src/pages/project/SingleProject';
-import { Team } from '@src/pages/Team/team.tsx';
-import { TeamDetail } from '@src/pages/Team/TeamDetail';
+import { Team } from '@src/pages/team/Team';
+import { TeamDetail } from '@src/pages/team/TeamDetail';
 
 export const Router = () => {
   return (
