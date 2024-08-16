@@ -6,7 +6,7 @@ import {
   newsLetter,
   socialLinks,
   footerSlider,
-} from '@src/data/footer.data';
+} from '@src/data/footer/footer.data';
 
 export const AppFooter = () => {
   return (
