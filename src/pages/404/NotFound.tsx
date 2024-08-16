@@ -1,9 +1,12 @@
+import { HeroSection } from '@src/components/heroSection/Herosection';
+
 export const NotFound = () => {
   return (
-    <>
-      <h1 className='flex h-screen items-center justify-center text-4xl'>
-        Page Not Found
-      </h1>
-    </>
+    <div className='h-screen bg-[#E3F0FF]'>
+      <HeroSection
+        subHeading={'contact with support 😃'}
+        heading={'Page not Found !'}
+      />
+    </div>
   );
 };

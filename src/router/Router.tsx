@@ -5,12 +5,12 @@ import { AppLayout } from '@src/layouts/AppLayout';
 import { Home } from '@src/pages/home/Home';
 import { NotFound } from '@src/pages/404/NotFound';
 import { ContactUs } from '@src/pages/contact/ContactUs';
-import { BlogPage } from '../pages/Blog/Blog';
-import { BlogPost } from '../pages/Blog/BlogDetail';
-import { Portfolio } from '@src/pages/portfolio/Portfolio';
-import { PortfolioDetails } from '@src/pages/portfolio/components/PortfolioDetails';
+import { Blog } from '../pages/blog/Blog';
+import { BlogPost } from '../pages/blog/BlogDetail';
+import { Project } from '@src/pages/project/Project';
+import { SingleProject } from '@src/pages/project/SingleProject';
 import { Team } from '@src/pages/Team/team.tsx';
-import { TeamDetail } from '@src/pages/Team/TeamDetails';
+import { TeamDetail } from '@src/pages/Team/TeamDetail';
 
 export const Router = () => {
   return (
@@ -18,13 +18,13 @@ export const Router = () => {
       <Route path='/' element={<AppLayout />}>
         <Route index element={<Home />} />
         <Route path='home' element={<Home />} />
-        <Route path='portfolio' element={<Portfolio />} />
-        <Route path='portfolio-details' element={<PortfolioDetails />} />
+        <Route path='project' element={<Project />} />
+        <Route path='project-detail/:id' element={<SingleProject />} />
         <Route path='team' element={<Team />} />
         <Route path='team-detail/:id' element={<TeamDetail />} />
         <Route path='contact-us' element={<ContactUs />} />
-        <Route path='blog' element={<BlogPage />} />
-        <Route path='blogdetails' element={<BlogPost />} />
+        <Route path='blog' element={<Blog />} />
+        <Route path='blog-detail/:id' element={<BlogPost />} />
         <Route path='*' element={<NotFound />} />
       </Route>
     </Routes>

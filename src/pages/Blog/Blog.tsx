@@ -184,7 +184,7 @@ const Sidebar = () => (
   </div>
 );
 
-export const BlogPage = () => (
+export const Blog = () => (
   <div>
     <BlogHeader />
     <BlogContent />

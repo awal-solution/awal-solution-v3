@@ -1,9 +1,9 @@
-import { HeroSection } from '@src/components/HeroSection/Herosection';
-import { TeamCard } from '@src/pages/Team/TeamCard';
-import { dedicateTeam, teamCards, globalTeam } from '@src/data/team.data';
-import { ArrowUpRight } from 'lucide-react';
-import { Fragment } from 'react/jsx-runtime';
+import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowUpRight } from 'lucide-react';
+import { dedicateTeam, teamCards, globalTeam } from '@src/data/team.data';
+import { HeroSection } from '@src/components/heroSection/Herosection';
+import { TeamCard } from '@src/pages/Team/TeamCard';
 
 export const Team = () => {
   return (
