@@ -1,6 +1,10 @@
 import rightAngleShape from '@src/assets/images/shapes/shape_line_3.png';
 //
 import project1 from '@src/assets/images/projects/portfolio_item_image_4-800x600.webp';
+import project2 from '@src/assets/images/projects/portfolio_item_image_5-800x600.webp';
+import project3 from '@src/assets/images/projects/portfolio_item_image_6-800x600.webp';
+import project4 from '@src/assets/images/projects/portfolio_item_image_7-800x600.webp';
+import project5 from '@src/assets/images/projects/portfolio_item_image_8-800x600.webp';
 
 export const sectionHeading = { title: 'OUR TECHNOLOGIES' };
 
@@ -15,8 +19,8 @@ export const tabData = [
         id: 1,
         title:
           'Driving Digital Transformation Explore the Depth of Our IT Projects',
-        description:
-          'Poisoning by, adverse effect of and underdosing of antimycobacterial drugs',
+        subTitle: 'Network Infrastructure and Design',
+        description: `The "Cloud Migration and Integration Project" represents a pivotal step for our client's digital transformation journey. By transitioning from traditional on-premises infrastructure to cloud-based solutions, we are unlocking a world of possibilities, from scalability and flexibility to enhanced security and cost efficiency. Our meticulous planning and execution ensure a smooth migration process, with minimal disruption to business operations. From assessing the current environment to preparing the infrastructure, migrating data and applications. providing comprehensive training and support, we leave no stone unturned in ensuring the success of this project. With our expertise and dedication, we empower our client to embrace the full potential of cloud computing, driving innovation.`,
         short_description: 'Antimycobacterial drugs',
         thumbnail: project1,
         gallery: [
@@ -107,7 +111,7 @@ export const tabData = [
         title: 'Latlux',
         description: 'Other dislocation of left foot, initial encounter',
         short_description: 'Other dislocation of left foot, initial encounter',
-        thumbnail: 'https://dummyimage.com/650x400png/083344',
+        thumbnail: project2,
         gallery: [
           { id: 1, image: 'https://dummyimage.com/650x400png/7F1D1D' },
           { id: 2, image: 'https://dummyimage.com/650x400png/991B1B' },
@@ -218,7 +222,7 @@ export const tabData = [
           'Corrosion of third degree of left ankle, subsequent encounter',
         short_description:
           'Corrosion of third degree of left ankle, subsequent encounter',
-        thumbnail: 'https://dummyimage.com/650x400png/450A0A',
+        thumbnail: project3,
         gallery: [
           { id: 1, image: 'https://dummyimage.com/650x400png/7F1D1D' },
           { id: 2, image: 'https://dummyimage.com/650x400png/991B1B' },
@@ -329,7 +333,7 @@ export const tabData = [
           'Burn of second degree of right thumb (nail), subsequent encounter',
         short_description:
           'Burn of second degree of right thumb (nail), subsequent encounter',
-        thumbnail: 'https://dummyimage.com/650x400png/0F4A8E',
+        thumbnail: project4,
         gallery: [
           { id: 1, image: 'https://dummyimage.com/650x400png/7F1D1D' },
           { id: 2, image: 'https://dummyimage.com/650x400png/991B1B' },
@@ -445,7 +449,7 @@ export const tabData = [
         description:
           'Poisoning by, adverse effect of and underdosing of antimycobacterial drugs',
         short_description: 'Antimycobacterial drugs',
-        thumbnail: 'https://dummyimage.com/650x400png/450A0A',
+        thumbnail: project5,
         gallery: [
           { id: 1, image: 'https://dummyimage.com/650x400png/7F1D1D' },
           { id: 2, image: 'https://dummyimage.com/650x400png/991B1B' },
