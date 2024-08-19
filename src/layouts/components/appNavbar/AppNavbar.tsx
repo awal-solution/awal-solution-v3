@@ -23,7 +23,12 @@ export const AppNavbar = () => {
       <Logo />
       <div className='hidden text-white lg:block'>
         <Menu setActive={setActive}>
-          <MenuItem setActive={setActive} active={active} item='Services'>
+          <MenuItem
+            setActive={setActive}
+            active={active}
+            item='Services'
+            link='/services'
+          >
             <div className='flex flex-col space-y-4 rounded bg-white p-5 text-sm text-black'>
               <HoveredLink href='/web-dev'>Web Development</HoveredLink>
               <HoveredLink href='/interface-design'>
@@ -71,7 +76,7 @@ export const AppNavbar = () => {
         <div className='hidden sm:block'>
           <Link
             to='/contact'
-            className='group/btn flex items-center gap-1 rounded-full bg-[#0044EB] px-8 py-3'
+            className='group/btn flex items-center gap-1 rounded-full bg-[#0044EB] px-8 py-3 text-white'
           >
             <span className='group-hover/btn:animate-out group-hover/btn:slide-out-to-top group-hover/btn:duration-500'>
               Get Started

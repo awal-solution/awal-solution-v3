@@ -18,6 +18,8 @@ export const Router = () => {
       <Route path='/' element={<AppLayout />}>
         <Route index element={<Home />} />
         <Route path='home' element={<Home />} />
+        <Route path='services' element={<Project />} />
+        <Route path='service-detail/:serviceId' element={<SingleProject />} />
         <Route path='project' element={<Project />} />
         <Route path='project-detail/:projectId' element={<SingleProject />} />
         <Route path='team' element={<Team />} />

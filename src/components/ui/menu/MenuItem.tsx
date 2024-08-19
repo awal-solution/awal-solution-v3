@@ -1,7 +1,9 @@
 import { ReactNode } from 'react';
 import { motion as M } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 interface MenuItemProps {
+  link?: any;
   item: string;
   children?: ReactNode;
   active: string | null;
@@ -18,19 +20,22 @@ const transition = {
 };
 
 export const MenuItem: React.FC<MenuItemProps> = ({
+  link,
   item,
   active,
   children,
   setActive,
 }) => {
   return (
-    <div onMouseEnter={() => setActive(item)} className='relative '>
-      <M.p
-        transition={{ duration: 0.3 }}
-        className='cursor-pointer font-sans font-semibold tracking-widest transition-opacity duration-200 ease-out hover:opacity-70'
-      >
-        {item}
-      </M.p>
+    <div onMouseEnter={() => setActive(item)} className='relative'>
+      <Link to={link}>
+        <M.p
+          transition={{ duration: 0.3 }}
+          className='cursor-pointer font-sans font-semibold tracking-widest transition-opacity duration-200 ease-out hover:opacity-70'
+        >
+          {item}
+        </M.p>
+      </Link>
       {active !== null && (
         <M.div
           initial={{ opacity: 0, scale: 0.85, y: 10 }}
