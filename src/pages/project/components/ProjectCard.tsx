@@ -1,8 +1,13 @@
+import { Env } from '@src/constants/environments';
+import { Link } from 'react-router-dom';
+
 export const ProjectCard: React.FC<any> = ({ data }) => {
+  const { imgUrl } = Env;
+
   return (
     <>
       <div className='rounded-2xl bg-white'>
-        <img className='p-4' src={data?.thumbnail} />
+        <img className='p-4' src={imgUrl + data?.thumbnail} />
         <div className='px-4 py-6'>
           <div className='flex gap-2 '>
             <svg
@@ -22,7 +27,9 @@ export const ProjectCard: React.FC<any> = ({ data }) => {
             </svg>
             <span className='pb-4 text-sm'>Technology</span>
           </div>
-          <h1 className='text-4xl'>{data?.title}</h1>
+          <Link to={`/project-detail/${data?.id}`}>
+            <h1 className='text-4xl'>{data?.title}</h1>
+          </Link>
         </div>
       </div>
     </>
