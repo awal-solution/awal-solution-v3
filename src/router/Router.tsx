@@ -23,7 +23,7 @@ export const Router = () => {
         <Route path='project' element={<Project />} />
         <Route path='project-detail/:projectId' element={<SingleProject />} />
         <Route path='team' element={<Team />} />
-        <Route path='team-detail/:id' element={<TeamDetail />} />
+        <Route path='team-detail/:teamId' element={<TeamDetail />} />
         <Route path='contact-us' element={<ContactUs />} />
         <Route path='blog' element={<Blog />} />
         <Route path='blog-detail/:id' element={<BlogPost />} />

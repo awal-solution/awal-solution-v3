@@ -1,15 +1,24 @@
-import { Fragment } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
-import { dedicateTeam, teamCards, globalTeam } from '@src/data/team/team.data';
+import { dedicateTeam, globalTeam } from '@src/data/team/team.data';
 import { HeroSection } from '@src/components/heroSection/Herosection';
 import { TeamCard } from '@src/pages/team/TeamCard';
+import { getRecordsApi } from '@src/api/enpoints';
 
 export const Team = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getRecordsApi('/team').then((res) => {
+      setData(res?.data);
+    });
+  }, []);
+
   return (
     <>
-      <div className='bg-[#E3F0ff] '>
-        <HeroSection subHeading={'Members 😍 Team'} heading={'Team Member'} />
+      <HeroSection subHeading={'Members 😍 Team'} heading={'Team Member'} />
+      <div className='bg-[#E3F0ff]'>
         <div className='mx-auto flex max-w-screen-xl flex-col items-center justify-center gap-10 px-5 py-20 lg:flex-row'>
           <div>
             <div className='flex gap-2'>
@@ -41,7 +50,7 @@ export const Team = () => {
             Top Skilled Experts
           </h1>
           <div className='mx-auto grid max-w-screen-xl grid-cols-1 gap-4 p-5 sm:grid-cols-2 lg:mx-auto lg:grid-cols-3'>
-            {teamCards.map((item, index) => {
+            {data?.map((item, index) => {
               return (
                 <Fragment key={index}>
                   <TeamCard data={item} />
