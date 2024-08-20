@@ -11,6 +11,7 @@ import { Project } from '@src/pages/project/Project';
 import { SingleProject } from '@src/pages/project/SingleProject';
 import { Team } from '@src/pages/team/Team';
 import { TeamDetail } from '@src/pages/team/TeamDetail';
+import { Services } from '@src/pages/services/Services';
 
 export const Router = () => {
   return (
@@ -18,7 +19,7 @@ export const Router = () => {
       <Route path='/' element={<AppLayout />}>
         <Route index element={<Home />} />
         <Route path='home' element={<Home />} />
-        <Route path='services' element={<Project />} />
+        <Route path='services' element={<Services />} />
         <Route path='service-detail/:serviceId' element={<SingleProject />} />
         <Route path='project' element={<Project />} />
         <Route path='project-detail/:projectId' element={<SingleProject />} />
