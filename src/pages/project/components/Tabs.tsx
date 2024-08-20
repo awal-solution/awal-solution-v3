@@ -14,7 +14,6 @@ export const OurProjects = () => {
 
   useEffect(() => {
     getRecordsApi('/project-category').then((res) => {
-      console.log(res);
       setData(res?.data);
     });
   }, []);

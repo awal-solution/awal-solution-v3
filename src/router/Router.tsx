@@ -12,6 +12,7 @@ import { SingleProject } from '@src/pages/project/SingleProject';
 import { Team } from '@src/pages/team/Team';
 import { TeamDetail } from '@src/pages/team/TeamDetail';
 import { Services } from '@src/pages/services/Services';
+import { ServicesDetail } from '@src/pages/services/ServicesDetail';
 
 export const Router = () => {
   return (
@@ -20,7 +21,7 @@ export const Router = () => {
         <Route index element={<Home />} />
         <Route path='home' element={<Home />} />
         <Route path='services' element={<Services />} />
-        <Route path='service-detail/:serviceId' element={<SingleProject />} />
+        <Route path='service-detail/:serviceId' element={<ServicesDetail />} />
         <Route path='project' element={<Project />} />
         <Route path='project-detail/:projectId' element={<SingleProject />} />
         <Route path='team' element={<Team />} />
