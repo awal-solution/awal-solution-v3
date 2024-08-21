@@ -103,7 +103,7 @@ export const Hero = () => {
             <img
               src={innerCircle}
               alt='image'
-              className='absolute left-[43%] top-[41.5%] z-50 h-1/5 w-[18%] overflow-hidden object-cover'
+              className='absolute left-[43%] top-[41.5%] z-40 h-1/5 w-[18%] overflow-hidden object-cover'
             />
             <img
               src={middleCircle}
