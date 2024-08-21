@@ -9,7 +9,7 @@ export const Menu: React.FC<MenuProps> = ({ setActive, children }) => {
   return (
     <nav
       onMouseLeave={() => setActive(null)}
-      className='flex justify-center items-center gap-6 py-6'
+      className='flex items-center justify-center gap-6 py-6'
     >
       {children}
     </nav>

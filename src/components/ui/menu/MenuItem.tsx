@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import { motion as M } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
 interface MenuItemProps {
   link?: any;
@@ -26,15 +27,18 @@ export const MenuItem: React.FC<MenuItemProps> = ({
   children,
   setActive,
 }) => {
+  console.log(item);
+  console.log('active item ==>', active);
   return (
     <div onMouseEnter={() => setActive(item)} className='relative'>
       <Link to={link}>
-        <M.p
+        <M.div
           transition={{ duration: 0.3 }}
-          className='cursor-pointer font-sans font-semibold tracking-widest transition-opacity duration-200 ease-out hover:opacity-70'
+          className={`flex cursor-pointer items-center px-3 py-1 font-sans font-semibold tracking-widest transition-opacity duration-200 ease-out hover:rounded-full hover:border hover:border-[#333a79] hover:opacity-70`}
         >
-          {item}
-        </M.p>
+          <div>{item}</div>
+          {active === item ? <ChevronUp /> : <ChevronDown />}
+        </M.div>
       </Link>
       {active !== null && (
         <M.div

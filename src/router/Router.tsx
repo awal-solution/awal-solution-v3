@@ -27,6 +27,7 @@ export const Router = () => {
         <Route path='team' element={<Team />} />
         <Route path='team-detail/:teamId' element={<TeamDetail />} />
         <Route path='contact-us' element={<ContactUs />} />
+        <Route path='about-us' element={<ContactUs />} />
         <Route path='blog' element={<Blog />} />
         <Route path='blog-detail/:id' element={<BlogPost />} />
         <Route path='*' element={<NotFound />} />

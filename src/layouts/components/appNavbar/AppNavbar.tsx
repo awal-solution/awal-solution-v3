@@ -1,14 +1,8 @@
 import { useState } from 'react';
 import { MenuIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import {
-  Menu,
-  MenuItem,
-  HoveredLink,
-  // ProductItem,
-} from '@src/components/ui/menu';
+import { Menu, MenuItem, HoveredLink } from '@src/components/ui/menu';
 import { Logo } from '@src/components/logo/Logo';
-// import placeholder from '@src/assets/images/Image container.png';
 
 export const AppNavbar = () => {
   const [active, setActive] = useState<string | null>(null);
@@ -23,6 +17,7 @@ export const AppNavbar = () => {
       <Logo />
       <div className='hidden text-white lg:block'>
         <Menu setActive={setActive}>
+          <HoveredLink href='/home'>Home</HoveredLink>
           <MenuItem
             setActive={setActive}
             active={active}
@@ -38,50 +33,23 @@ export const AppNavbar = () => {
               <HoveredLink href='/branding'>Branding</HoveredLink>
             </div>
           </MenuItem>
-          {/* <MenuItem setActive={setActive} active={active} item='Products'>
-            <div className='grid grid-cols-3 gap-10 p-4 text-sm'>
-              {[1, 2, 3, 4, 5, 6]?.map((product) => (
-                <ProductItem
-                  key={product}
-                  title={`Project ${product} Title`}
-                  href='/'
-                  src={placeholder}
-                  description={`This is the simple product ${product} description`}
-                />
-              ))}
-            </div>
-          </MenuItem> */}
           <HoveredLink href='/project'>Portfolio</HoveredLink>
-          <MenuItem setActive={setActive} active={active} item='Company'>
-            <div className='flex flex-col space-y-4 rounded bg-white p-5 text-sm text-black'>
-              <HoveredLink href='/about-us'>About</HoveredLink>
-              <HoveredLink href='/team'>Team</HoveredLink>
-              <HoveredLink href='/life-at-awal-solution'>
-                Life at awal solution
-              </HoveredLink>
-            </div>
-          </MenuItem>
-          <MenuItem setActive={setActive} active={active} item='Resource'>
-            <div className='flex flex-col space-y-4 rounded bg-white p-5 text-sm text-black'>
-              <HoveredLink href='/blogs'>Blogs</HoveredLink>
-              <HoveredLink href='/gallery'>Gallery</HoveredLink>
-              <HoveredLink href='/careers'>Careers</HoveredLink>
-            </div>
-          </MenuItem>
-          <HoveredLink href='/contact'>Contact Us</HoveredLink>
+          <HoveredLink href='/about-us'>About Us</HoveredLink>
+          <HoveredLink href='/team'>Team</HoveredLink>
+          <HoveredLink href='/blog'>Blog</HoveredLink>
+          <HoveredLink href='/career'>Careers</HoveredLink>
+          <HoveredLink href='/contact-us'>Contact Us</HoveredLink>
         </Menu>
       </div>
       <div className='flex items-center gap-4'>
-        {/* <ThemeToggler /> */}
         <div className='hidden sm:block'>
           <Link
-            to='/contact'
+            to='/contact-us'
             className='group/btn flex items-center gap-1 rounded-full bg-[#0044EB] px-8 py-3 text-white'
           >
             <span className='group-hover/btn:animate-out group-hover/btn:slide-out-to-top group-hover/btn:duration-500'>
               Get Started
             </span>
-
             <svg
               xmlns='http://www.w3.org/2000/svg'
               width='1em'
