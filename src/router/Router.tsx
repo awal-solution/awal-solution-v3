@@ -13,6 +13,7 @@ import { Team } from '@src/pages/team/Team';
 import { TeamDetail } from '@src/pages/team/TeamDetail';
 import { Services } from '@src/pages/services/Services';
 import { ServicesDetail } from '@src/pages/services/ServicesDetail';
+import { About } from '@src/pages/about-us/About';
 
 export const Router = () => {
   return (
@@ -27,7 +28,7 @@ export const Router = () => {
         <Route path='team' element={<Team />} />
         <Route path='team-detail/:teamId' element={<TeamDetail />} />
         <Route path='contact-us' element={<ContactUs />} />
-        <Route path='about-us' element={<ContactUs />} />
+        <Route path='about-us' element={<About />} />
         <Route path='blog' element={<Blog />} />
         <Route path='blog-detail/:id' element={<BlogPost />} />
         <Route path='*' element={<NotFound />} />
