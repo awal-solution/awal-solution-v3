@@ -27,8 +27,6 @@ export const MenuItem: React.FC<MenuItemProps> = ({
   children,
   setActive,
 }) => {
-  console.log(item);
-  console.log('active item ==>', active);
   return (
     <div onMouseEnter={() => setActive(item)} className='relative'>
       <Link to={link}>

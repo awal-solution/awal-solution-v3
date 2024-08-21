@@ -1,4 +1,3 @@
-import { forwardRef } from 'react';
 import { Link } from 'react-router-dom';
 // import { APP_TITLE } from '@src/constants/variables';
 import { Image } from '@src/components/ui/image/Image';
@@ -10,7 +9,7 @@ interface LogoProps {
   isSticky: boolean;
 }
 
-export const Logo: React.FC<LogoProps> = forwardRef(({ isSticky }) => {
+export const Logo: React.FC<LogoProps> = ({ isSticky }) => {
   return (
     <Link to='/' className='flex items-center justify-center gap-0.5 lg:gap-2'>
       <Image
@@ -23,4 +22,4 @@ export const Logo: React.FC<LogoProps> = forwardRef(({ isSticky }) => {
       </h1> */}
     </Link>
   );
-});
+};

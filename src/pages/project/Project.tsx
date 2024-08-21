@@ -5,8 +5,8 @@ export const Project = () => {
   return (
     <>
       <HeroSection
-        subHeading='Projects By Awal Solution'
-        heading='Our Portfolio'
+        heading='Portfolio'
+        subHeading='Projects By Awal Solution 😍'
       />
       <div className='w-full bg-[#E3F0FF]'>
         <OurProjects />

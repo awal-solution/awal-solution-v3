@@ -24,7 +24,10 @@ export const Services = () => {
 
   return (
     <>
-      <HeroSection subHeading='Our Main Services 😍' heading='Our Services' />
+      <HeroSection
+        heading='Services'
+        subHeading='Services by Awal Solution 😍'
+      />
       <div className=''>
         <section className='bg-[#E3F0FF] px-2 py-28 lg:px-8'>
           <div className='mx-auto flex max-w-screen-xl flex-col lg:flex-row'>
