@@ -87,7 +87,7 @@ export const AppNavbar = () => {
         <div className='hidden sm:block'>
           <Link
             to='/contact-us'
-            className='group/btn flex items-center gap-1 rounded-full bg-[#0044EB] px-8 py-3 text-white'
+            className='group/btn flex items-center gap-1 whitespace-nowrap rounded-full bg-[#0044EB] px-8 py-3 text-white'
           >
             <span className='group-hover/btn:animate-out group-hover/btn:slide-out-to-top group-hover/btn:duration-500'>
               Get Started

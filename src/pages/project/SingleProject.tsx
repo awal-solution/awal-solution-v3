@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import ProjectImageMarquee from 'react-fast-marquee';
+import Marquee from 'react-fast-marquee';
 import { getRecordApi } from '@src/api/enpoints';
 import { Env } from '@src/constants/environments';
 import { HeroSection } from '@src/components/heroSection/Herosection';
@@ -34,7 +34,7 @@ export const SingleProject = () => {
       <div className='bg-[#E3F0ff] px-5 py-3 pt-20'>
         <div className='mx-auto max-w-screen-xl'>
           <div className=''>
-            <ProjectImageMarquee pauseOnHover={true}>
+            <Marquee pauseOnHover={true}>
               {data?.images?.map((item: any, index: number) => (
                 <div className='mx-3 size-80' key={index}>
                   <img
@@ -56,7 +56,7 @@ export const SingleProject = () => {
                   </div>
                 </div>
               ))}
-            </ProjectImageMarquee>
+            </Marquee>
             {model && (
               <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/80'>
                 <div className='relative h-4/5 w-full overflow-y-auto px-32'>
@@ -92,6 +92,24 @@ export const SingleProject = () => {
                 {data?.project_link}
               </a>
             </div>
+          </div>
+          <h1 className='pt-5 text-4xl font-bold'>Professionals Skills</h1>
+          <div className='mt-5 grid grid-cols-2 gap-5  sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-8'>
+            {data?.skills?.map((item: any, index: number) => {
+              return (
+                <div
+                  key={index}
+                  className='flex flex-col items-center justify-center gap-3 rounded-lg bg-white px-3 py-2'
+                >
+                  <img
+                    src={imgUrl + item.thumbnail}
+                    alt='image'
+                    className='size-16'
+                  />
+                  <div>{item?.title}</div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

@@ -22,7 +22,7 @@ export const HoveredLink: React.FC<HoveredLinkProps> = ({
             } transition-opacity duration-200 ease-out hover:opacity-70 border border-[#333a79] rounded-full px-3 py-1`
           : `${
               isSticky ? 'hover:border-[#E3F0FF]' : 'hover:border-[#333a79]'
-            } transition-opacity duration-200 ease-out hover:opacity-70 px-3 py-1 hover:rounded-full hover:border`
+            }  whitespace-nowrap transition-opacity duration-200 ease-out hover:opacity-70 px-1 xl:px-3 py-1 hover:rounded-full hover:border`
       }
     >
       {children}
