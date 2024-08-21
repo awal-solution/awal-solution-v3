@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { MenuIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Menu, MenuItem, HoveredLink } from '@src/components/ui/menu';
@@ -6,16 +6,38 @@ import { Logo } from '@src/components/logo/Logo';
 
 export const AppNavbar = () => {
   const [active, setActive] = useState<string | null>(null);
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <header className='absolute inset-x-0 top-0 z-50 flex w-full items-center justify-between overflow-visible p-4 sm:px-8 sm:py-6 md:px-12 md:py-2 lg:px-16 xl:px-20 2xl:px-24 '>
+    <header
+      className={`${
+        isSticky ? 'sticky bg-white' : 'absolute'
+      } inset-x-0 top-0 z-50 flex w-full items-center justify-between overflow-visible p-4 sm:px-8 sm:py-6 md:px-12 md:py-2 lg:px-16 xl:px-20 2xl:px-24 `}
+    >
       <div className='py-4 lg:hidden'>
         <button onClick={() => console.log('menu clicked')}>
           <MenuIcon size={18} />
         </button>
       </div>
-      <Logo />
-      <div className='hidden text-white lg:block'>
+      <Logo isSticky={isSticky} />
+      <div
+        className={`${isSticky ? 'text-black' : 'text-white'} hidden  lg:block`}
+      >
         <Menu setActive={setActive}>
           <HoveredLink href='/home'>Home</HoveredLink>
           <MenuItem
@@ -24,7 +46,7 @@ export const AppNavbar = () => {
             item='Services'
             link='/services'
           >
-            <div className='flex flex-col space-y-4 rounded bg-white p-5 text-sm text-black'>
+            <div className='flex flex-col space-y-4 rounded bg-white p-5 text-sm '>
               <HoveredLink href='/web-dev'>Web Development</HoveredLink>
               <HoveredLink href='/interface-design'>
                 Interface Design
