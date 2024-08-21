@@ -34,7 +34,7 @@ export const MenuItem: React.FC<MenuItemProps> = ({
       <Link to={link}>
         <M.div
           transition={{ duration: 0.3 }}
-          className={`flex cursor-pointer items-center px-3 py-1 font-sans font-semibold tracking-widest transition-opacity duration-200 ease-out hover:rounded-full hover:border hover:border-[#333a79] hover:opacity-70`}
+          className={`flex cursor-pointer items-center px-3 py-1 tracking-widest transition-opacity duration-200 ease-out hover:rounded-full hover:border hover:border-[#333a79] hover:opacity-70`}
         >
           <div>{item}</div>
           {active === item ? <ChevronUp /> : <ChevronDown />}

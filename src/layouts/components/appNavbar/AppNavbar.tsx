@@ -26,7 +26,7 @@ export const AppNavbar = () => {
   return (
     <header
       className={`${
-        isSticky ? 'sticky bg-white' : 'absolute'
+        isSticky ? 'sticky bg-white' : 'absolute '
       } inset-x-0 top-0 z-50 flex w-full items-center justify-between overflow-visible p-4 sm:px-8 sm:py-6 md:px-12 md:py-2 lg:px-16 xl:px-20 2xl:px-24 `}
     >
       <div className='py-4 lg:hidden'>
@@ -39,28 +39,48 @@ export const AppNavbar = () => {
         className={`${isSticky ? 'text-black' : 'text-white'} hidden  lg:block`}
       >
         <Menu setActive={setActive}>
-          <HoveredLink href='/home'>Home</HoveredLink>
+          <HoveredLink href='/home' isSticky={isSticky}>
+            Home
+          </HoveredLink>
           <MenuItem
             setActive={setActive}
             active={active}
             item='Services'
             link='/services'
           >
-            <div className='flex flex-col space-y-4 rounded bg-white p-5 text-sm '>
-              <HoveredLink href='/web-dev'>Web Development</HoveredLink>
-              <HoveredLink href='/interface-design'>
+            <div className='flex flex-col space-y-4 rounded bg-white p-5 text-sm text-black'>
+              <HoveredLink href='/web-dev' isSticky={isSticky}>
+                Web Development
+              </HoveredLink>
+              <HoveredLink href='/interface-design' isSticky={isSticky}>
                 Interface Design
               </HoveredLink>
-              <HoveredLink href='/seo'>Search Engine Optimization</HoveredLink>
-              <HoveredLink href='/branding'>Branding</HoveredLink>
+              <HoveredLink href='/seo' isSticky={isSticky}>
+                Search Engine Optimization
+              </HoveredLink>
+              <HoveredLink href='/branding' isSticky={isSticky}>
+                Branding
+              </HoveredLink>
             </div>
           </MenuItem>
-          <HoveredLink href='/project'>Portfolio</HoveredLink>
-          <HoveredLink href='/about-us'>About Us</HoveredLink>
-          <HoveredLink href='/team'>Team</HoveredLink>
-          <HoveredLink href='/blog'>Blog</HoveredLink>
-          <HoveredLink href='/career'>Careers</HoveredLink>
-          <HoveredLink href='/contact-us'>Contact Us</HoveredLink>
+          <HoveredLink href='/project' isSticky={isSticky}>
+            Portfolio
+          </HoveredLink>
+          <HoveredLink href='/about-us' isSticky={isSticky}>
+            About Us
+          </HoveredLink>
+          <HoveredLink href='/team' isSticky={isSticky}>
+            Team
+          </HoveredLink>
+          <HoveredLink href='/blog' isSticky={isSticky}>
+            Blog
+          </HoveredLink>
+          {/* <HoveredLink href='/career' isSticky={isSticky}>
+            Careers
+          </HoveredLink> */}
+          <HoveredLink href='/contact-us' isSticky={isSticky}>
+            Contact Us
+          </HoveredLink>
         </Menu>
       </div>
       <div className='flex items-center gap-4'>
