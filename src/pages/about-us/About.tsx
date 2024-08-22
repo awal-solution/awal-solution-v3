@@ -94,7 +94,7 @@ const AboutHero = () => {
           alt=''
         />
       </div>
-      <div className='my-20 grid grid-cols-1 lg:grid-cols-2'>
+      <div className=' my-10 grid grid-cols-1 lg:my-20 lg:grid-cols-2'>
         <div>
           <h2 className=''>
             About
@@ -114,15 +114,15 @@ const AboutHero = () => {
           software development
         </div>
       </div>
-      <div className='grid grid-cols-1 gap-5 py-14 lg:grid-cols-3'>
+      <div className='grid grid-cols-1 gap-5 py-7 lg:grid-cols-3 lg:py-14'>
         {data?.map((item: any, index: number) => {
           return (
             <div key={index} className='rounded-2xl bg-white px-6 py-8'>
-              <div className='mb-2 h-1/4 w-1/5 rounded-full bg-[#E3F0FF]'>
+              <div className='mb-2 mr-2 h-[16%] w-[22%] rounded-full bg-[#E3F0FF] md:h-[26%] md:w-[7%] lg:h-[22%] lg:w-[23%]'>
                 <img
                   src={item.icon}
                   alt='image'
-                  className='my-2 ml-3 size-12 pt-4 '
+                  className='my-2 mb-5 ml-1 size-10 pt-4 md:size-11 lg:ml-3 lg:size-12 '
                 />
               </div>
 
@@ -168,9 +168,9 @@ const AboutBrand = () => {
 const AboutCard = () => {
   return (
     <>
-      <div className=' my-12 grid grid-cols-3 gap-24 pb-14 '>
+      <div className=' my-12 grid grid-cols-3 gap-24 lg:pb-14 '>
         <div className=' col-span-3 lg:col-span-2'>
-          <div className='grid grid-cols-2 gap-5 py-9'>
+          <div className='grid grid-cols-1 gap-5 py-0 lg:grid-cols-2 lg:py-9'>
             {cardData?.map((item: any, index: number) => {
               return (
                 <div key={index} className='rounded-2xl bg-white px-6 py-8'>
@@ -193,7 +193,7 @@ const AboutCard = () => {
         </div>
 
         <img
-          className=' col-span-3 mt-[38px] h-[90%] rounded-xl lg:col-span-1'
+          className=' col-span-3 mt-1 h-[90%] rounded-xl lg:col-span-1 lg:mt-[38px]'
           src={crdimg}
           alt=''
         />
@@ -203,7 +203,7 @@ const AboutCard = () => {
 };
 const AboutChoose = () => {
   return (
-    <section className='bg-[#E3F0FF] px-2 py-28 lg:px-8'>
+    <section className='bg-[#E3F0FF] px-2 py-0 lg:px-8 lg:py-28'>
       <div className='mx-auto grid max-w-screen-xl grid-cols-1 items-center gap-7 lg:grid-cols-2 '>
         <div className=''>
           <img
