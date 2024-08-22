@@ -13,7 +13,7 @@ export const SingleProject = () => {
   const [selectedImage, setSelectedImage] = useState<any>(null);
 
   useEffect(() => {
-    getRecordApi(`/project/${projectId}`).then((res) => {
+    getRecordApi(`/project/${projectId}`).then((res: any) => {
       setData(res?.data);
     });
   }, [projectId]);

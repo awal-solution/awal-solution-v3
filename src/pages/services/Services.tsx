@@ -17,7 +17,7 @@ export const Services = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    getRecordsApi('/service').then((res) => {
+    getRecordsApi('/service').then((res: any) => {
       setData(res?.data);
     });
   }, []);

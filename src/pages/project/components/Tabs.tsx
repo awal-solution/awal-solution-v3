@@ -13,7 +13,7 @@ export const OurProjects = () => {
   };
 
   useEffect(() => {
-    getRecordsApi('/project-category').then((res) => {
+    getRecordsApi('/project-category').then((res: any) => {
       setData(res?.data);
     });
   }, []);

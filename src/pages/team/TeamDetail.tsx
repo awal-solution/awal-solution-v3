@@ -16,7 +16,7 @@ export const TeamDetail = () => {
   const [data, setData] = useState<any>({});
 
   useEffect(() => {
-    getRecordApi(`/team/${teamId}`).then((res) => {
+    getRecordApi(`/team/${teamId}`).then((res: any) => {
       setData(res?.data);
     });
   }, [teamId]);
