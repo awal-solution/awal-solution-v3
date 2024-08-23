@@ -30,7 +30,7 @@ export const caseData = [
     btnLink: '/',
     image: image01,
     start: 0,
-    end: 1,
+    end: 1
   },
   {
     title: 'CAE Blue Phantom',
@@ -43,7 +43,7 @@ export const caseData = [
     btnLink: '/',
     image: image02,
     start: 0.55,
-    end: 1,
+    end: 1
   },
   {
     title: 'Liberkeys',
@@ -56,6 +56,6 @@ export const caseData = [
     btnLink: '/',
     image: image03,
     start: 1.1,
-    end: 1,
-  },
+    end: 1
+  }
 ];

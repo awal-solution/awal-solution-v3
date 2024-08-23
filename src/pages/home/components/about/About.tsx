@@ -1,19 +1,11 @@
-import {
-  aboutData,
-  aboutImages,
-  sectionHeading,
-} from '@src/data/home/about.data';
+import { aboutData, aboutImages, sectionHeading } from '@src/data/home/about.data';
 import { Link } from 'react-router-dom';
 
 export const About = () => {
   return (
     <section className='bg-[#020842] pb-36'>
       <div className='flex justify-center'>
-        <img
-          src={aboutImages.angleShape}
-          alt='about banner'
-          className='w-1/2'
-        />
+        <img src={aboutImages.angleShape} alt='about banner' className='w-1/2' />
       </div>
       <div className='mx-auto grid max-w-screen-xl grid-cols-5 gap-14 px-2 pt-32'>
         <div className='col-span-5 flex flex-col md:col-span-2'>
@@ -27,11 +19,7 @@ export const About = () => {
         </div>
         <div className='col-span-5 flex flex-col gap-5 md:col-span-3 md:flex-row'>
           <div>
-            <img
-              src={aboutImages.manPicture}
-              alt='man image'
-              className='max-w-48 rounded-xl'
-            />
+            <img src={aboutImages.manPicture} alt='man image' className='max-w-48 rounded-xl' />
           </div>
           <div className='relative grow rounded-lg'>
             <img
@@ -39,11 +27,7 @@ export const About = () => {
               alt='image'
               className='relative z-20 size-full object-fill'
             />
-            <img
-              src={aboutImages.globe}
-              alt='globe'
-              className='absolute bottom-10 left-6'
-            />
+            <img src={aboutImages.globe} alt='globe' className='absolute bottom-10 left-6' />
             <img
               src={aboutImages.shapeLine}
               alt='bottom'
@@ -67,12 +51,7 @@ export const About = () => {
                 Learn More
               </span>
 
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                width='1em'
-                height='1em'
-                viewBox='0 0 15 15'
-              >
+              <svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 15 15'>
                 <path
                   fill='currentColor'
                   fillRule='evenodd'

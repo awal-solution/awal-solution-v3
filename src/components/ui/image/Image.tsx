@@ -13,7 +13,7 @@ export const Image: React.FC<ImageProps> = ({
   className,
   loading = 'lazy',
   width,
-  height,
+  height
 }) => {
   return (
     <img

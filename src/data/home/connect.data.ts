@@ -25,23 +25,23 @@ export const firstCardData = {
   cotactDetail: [
     {
       icon: phoneIcon,
-      text: '+923004633604',
+      text: '+923004633604'
     },
     {
       icon: emailIcon,
-      text: 'contact@awalsolution.com',
+      text: 'contact@awalsolution.com'
     },
     {
       icon: locationIcon,
-      text: 'Street No 4 Gulshan-e-Madina Colony Near Al-Hanif School,Super Chowk,Lodhran',
-    },
+      text: 'Street No 4 Gulshan-e-Madina Colony Near Al-Hanif School,Super Chowk,Lodhran'
+    }
   ],
   list: [
     'Share your requirements',
     'Discuss them with our experts',
     'Get a free quote',
-    'Start the project',
-  ],
+    'Start the project'
+  ]
 };
 
 export const contactFormData = {
@@ -53,5 +53,5 @@ export const contactFormData = {
   commentIcons,
   envelop,
   subTitle: "LET'S CONNECT!",
-  title: "Send us a message, and we'll promptly discuss your project with you.",
+  title: "Send us a message, and we'll promptly discuss your project with you."
 };

@@ -78,9 +78,7 @@ export interface CampaignContextProps {
   locationData: LocationData[];
   setLocationData: React.Dispatch<React.SetStateAction<LocationData[]>>;
   selectedLocations: SelectedLocations[];
-  setSelectedLocations: React.Dispatch<
-    React.SetStateAction<SelectedLocations[]>
-  >;
+  setSelectedLocations: React.Dispatch<React.SetStateAction<SelectedLocations[]>>;
   selectedValue: string;
   setSelectedValue: React.Dispatch<React.SetStateAction<string>>;
 }

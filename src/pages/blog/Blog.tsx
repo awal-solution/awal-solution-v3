@@ -23,12 +23,7 @@ const BlogPost = ({ item }: any) => {
       </h3>
       <button className='flex items-center justify-center rounded-full bg-[#020842] px-10 py-3 text-white hover:bg-[#0044EB]'>
         <div>READ MORE</div>
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          width='1.5em'
-          height='1.5em'
-          viewBox='0 0 24 24'
-        >
+        <svg xmlns='http://www.w3.org/2000/svg' width='1.5em' height='1.5em' viewBox='0 0 24 24'>
           <path
             fill='white'
             d='m5.99 16.596 8.192-8.192H7.818v-2h9.778v9.778h-2V9.818L7.403 18.01z'
@@ -42,12 +37,7 @@ const BlogPost = ({ item }: any) => {
 const PostMeta = ({ item }: any) => (
   <div className=' flex gap-6 py-5'>
     <div className='flex items-center gap-2'>
-      <svg
-        xmlns='http://www.w3.org/2000/svg'
-        width='1.2em'
-        height='1.2em'
-        viewBox='0 0 24 24'
-      >
+      <svg xmlns='http://www.w3.org/2000/svg' width='1.2em' height='1.2em' viewBox='0 0 24 24'>
         <g fill='none' stroke='#0044EB' strokeWidth='1.5'>
           <circle cx='12' cy='6' r='4' />
           <path d='M20 17.5c0 2.485 0 4.5-8 4.5s-8-2.015-8-4.5S7.582 13 12 13s8 2.015 8 4.5Z' />
@@ -56,12 +46,7 @@ const PostMeta = ({ item }: any) => (
       <div className='text-[#49515B]'>{item?.auther}</div>
     </div>
     <div className='flex items-center gap-2'>
-      <svg
-        xmlns='http://www.w3.org/2000/svg'
-        width='1.2em'
-        height='1.2em'
-        viewBox='0 0 24 24'
-      >
+      <svg xmlns='http://www.w3.org/2000/svg' width='1.2em' height='1.2em' viewBox='0 0 24 24'>
         <path
           fill='#0044EB'
           fillRule='evenodd'
@@ -73,12 +58,7 @@ const PostMeta = ({ item }: any) => (
       </a>
     </div>
     <div className='flex items-center gap-2'>
-      <svg
-        xmlns='http://www.w3.org/2000/svg'
-        width='1.2em'
-        height='1.2em'
-        viewBox='0 0 24 24'
-      >
+      <svg xmlns='http://www.w3.org/2000/svg' width='1.2em' height='1.2em' viewBox='0 0 24 24'>
         <g
           fill='none'
           stroke='#0044EB'
@@ -99,18 +79,9 @@ const Sidebar = () => (
   <div className=''>
     <div className='text-lg font-bold uppercase text-[#020842]'>Search</div>
     <div className='relative flex pt-3'>
-      <input
-        className='w-full rounded-l-full bg-white p-3'
-        type='text'
-        placeholder='Search...'
-      />
+      <input className='w-full rounded-l-full bg-white p-3' type='text' placeholder='Search...' />
       <div className='flex items-center justify-center rounded-r-full bg-[#0044EB] px-3 text-white'>
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          width='1.5em'
-          height='1.5em'
-          viewBox='0 0 24 24'
-        >
+        <svg xmlns='http://www.w3.org/2000/svg' width='1.5em' height='1.5em' viewBox='0 0 24 24'>
           <path
             fill='currentColor'
             d='M15.096 5.904a6.5 6.5 0 1 0-9.192 9.192a6.5 6.5 0 0 0 9.192-9.192M4.49 4.49a8.5 8.5 0 0 1 12.686 11.272l5.345 5.345l-1.414 1.414l-5.345-5.345A8.501 8.501 0 0 1 4.49 4.49'
@@ -119,9 +90,7 @@ const Sidebar = () => (
       </div>
     </div>
     <div className='py-4'>
-      <div className='text-lg font-bold uppercase text-[#020842]'>
-        Recent Post
-      </div>
+      <div className='text-lg font-bold uppercase text-[#020842]'>Recent Post</div>
     </div>
     <div className='w-full rounded-2xl bg-white p-5'>
       <div className='flex items-center gap-6'>

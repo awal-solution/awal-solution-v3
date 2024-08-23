@@ -1,19 +1,14 @@
-import {
-  animation,
-  boxShadow,
-  keyframes,
-  gradiants,
-} from './src/theme';
+import { animation, boxShadow, keyframes, gradiants } from './src/theme';
 
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-     extend: {
+    extend: {
       animation: animation,
       keyframes: keyframes,
       boxShadow: boxShadow,
-      backgroundImage: gradiants,
-    },
+      backgroundImage: gradiants
+    }
   },
-  plugins: [],
+  plugins: []
 };

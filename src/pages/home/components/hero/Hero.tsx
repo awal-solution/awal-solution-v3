@@ -13,11 +13,7 @@ export const Hero = () => {
   return (
     <section className='bg-[#020842]  pt-24 text-white'>
       <div className='relative h-[100px]'>
-        <img
-          src={image01}
-          alt='image'
-          className='absolute left-0 max-w-[50%]'
-        />
+        <img src={image01} alt='image' className='absolute left-0 max-w-[50%]' />
         <img src={image03} alt='image' className='absolute right-0 max-w-80' />
       </div>
       <div className='mx-auto flex max-w-screen-xl flex-col justify-center gap-5 overflow-hidden px-3 lg:flex-row'>
@@ -25,12 +21,12 @@ export const Hero = () => {
           <h3>PERFECT COMPANY SOLUTION</h3>
           <img src={titleUnderLine} alt='title under line' />
           <h1 className='mt-10 text-3xl md:text-6xl'>
-            We Help Companies in{' '}
-            <span className='text-[#0044EB]'>Digitizing</span> Their Businesses.
+            We Help Companies in <span className='text-[#0044EB]'>Digitizing</span> Their
+            Businesses.
           </h1>
           <p className='my-8 leading-7 text-[#B6B8CA]'>
-            In today's rapidly evolving digital landscape, staying ahead of the
-            curve is essential for businesses aiming to thrive and succeed.
+            In today's rapidly evolving digital landscape, staying ahead of the curve is essential
+            for businesses aiming to thrive and succeed.
           </p>
           <ul className='relative mb-5 text-white'>
             <div className='mb-2 flex items-center gap-3'>
@@ -86,12 +82,7 @@ export const Hero = () => {
                 Contact Us Today!
               </span>
 
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                width='1em'
-                height='1em'
-                viewBox='0 0 15 15'
-              >
+              <svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 15 15'>
                 <path
                   fill='currentColor'
                   fillRule='evenodd'
@@ -128,16 +119,8 @@ export const Hero = () => {
         </div>
       </div>
       <div className='relative h-[150px]'>
-        <img
-          src={image02}
-          alt='image'
-          className='absolute bottom-6 left-0 max-w-[50%]'
-        />
-        <img
-          src={image04}
-          alt='image'
-          className='absolute bottom-8 right-0 max-w-80'
-        />
+        <img src={image02} alt='image' className='absolute bottom-6 left-0 max-w-[50%]' />
+        <img src={image04} alt='image' className='absolute bottom-8 right-0 max-w-80' />
       </div>
     </section>
   );

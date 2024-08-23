@@ -3,7 +3,7 @@ import { RefObject } from 'react';
 export const ripple = (
   e: React.MouseEvent<HTMLButtonElement>,
   btnRef: RefObject<HTMLButtonElement>,
-  color: string = 'bg-primary',
+  color: string = 'bg-primary'
 ) => {
   const btn = btnRef.current;
 
@@ -16,14 +16,7 @@ export const ripple = (
   circle.style.left = `${e.clientX - (btn.offsetLeft + radius)}px`;
   circle.style.top = `${e.clientY - (btn.offsetTop + radius)}px`;
 
-  circle.classList.add(
-    'absolute',
-    'animate-ripple',
-    'inset-0',
-    'scale-0',
-    'rounded-full',
-    color,
-  );
+  circle.classList.add('absolute', 'animate-ripple', 'inset-0', 'scale-0', 'rounded-full', color);
 
   btn.appendChild(circle);
 

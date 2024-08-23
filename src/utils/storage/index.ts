@@ -24,7 +24,7 @@ export default class Storage {
   set(key: string, value: any, expire: number | null = DEFAULT_CACHE_TIME) {
     const stringData = JSON.stringify({
       value,
-      expire: expire !== null ? new Date().getTime() + expire * 1000 : null,
+      expire: expire !== null ? new Date().getTime() + expire * 1000 : null
     });
     this.storage.setItem(this.getKey(key), stringData);
   }

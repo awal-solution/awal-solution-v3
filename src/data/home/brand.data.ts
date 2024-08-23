@@ -19,5 +19,5 @@ export const brandData = [
   { image: image07 },
   { image: image08 },
   { image: image09 },
-  { image: image10 },
+  { image: image10 }
 ];

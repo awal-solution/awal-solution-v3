@@ -18,7 +18,7 @@ export const TabPanel: React.FC<Props> = ({ isOpen, children, className }) => {
           exit='collapsed'
           variants={{
             open: { height: 'auto' },
-            collapsed: { height: 0 },
+            collapsed: { height: 0 }
           }}
           transition={{ duration: 0.5, ease: 'easeInOut' }}
           className='overflow-hidden'

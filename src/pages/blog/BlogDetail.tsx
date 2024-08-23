@@ -2,19 +2,15 @@ export const BlogPost = () => {
   return (
     <div>
       <div className='relative'>
-        <img
-          className='relative w-full'
-          src='/src/assets/images/bg_pattern_4.svg'
-          alt=''
-        />
+        <img className='relative w-full' src='/src/assets/images/bg_pattern_4.svg' alt='' />
         <div className='absolute inset-0 h-96 bg-[#020842e6]'>
           <div className='mx-64'>
             <h1 className='pt-24 text-center text-6xl font-bold text-white'>
               Leading the Digital Age with Groundbreaking IT Technologies
             </h1>
             <p className='pt-5 text-center text-lg text-white'>
-              Techco / Blog / Cybersecurity / Leading the Digital Age with
-              Groundbreaking IT Technologie
+              Techco / Blog / Cybersecurity / Leading the Digital Age with Groundbreaking IT
+              Technologie
             </p>
           </div>
         </div>
@@ -92,22 +88,19 @@ export const BlogPost = () => {
               </div>
 
               <p className='py-5 font-sans text-lg tracking-wide text-[#49515B]'>
-                Gain exclusive insights into the world of IT solutions with
-                Techco’s distinguished thought leaders. With years of experience
-                and a deep understanding of industry trends, our thought leaders
-                offer invaluable perspectives that illuminate the path to
-                technological excellence. From emerging technologies to
-                innovative strategies, they provide unique insights that inform
-                and inspire. Join us as we delve into the inner workings of IT
-                solutions, exploring the challenges.
+                Gain exclusive insights into the world of IT solutions with Techco’s distinguished
+                thought leaders. With years of experience and a deep understanding of industry
+                trends, our thought leaders offer invaluable perspectives that illuminate the path
+                to technological excellence. From emerging technologies to innovative strategies,
+                they provide unique insights that inform and inspire. Join us as we delve into the
+                inner workings of IT solutions, exploring the challenges.
               </p>
               <p className='py-3 font-sans text-lg tracking-wide text-[#49515B]'>
-                Embark on an illuminating journey into the world of IT solutions
-                with Techco’s esteemed thought leaders. Delve deep into the
-                inner workings of technology as our seasoned experts share their
-                wealth of knowledge and experience. With a finger on the pulse
-                of industry trends and a keen eye for innovation, our thought
-                leaders offer unparalleled insights that illuminate
+                Embark on an illuminating journey into the world of IT solutions with Techco’s
+                esteemed thought leaders. Delve deep into the inner workings of technology as our
+                seasoned experts share their wealth of knowledge and experience. With a finger on
+                the pulse of industry trends and a keen eye for innovation, our thought leaders
+                offer unparalleled insights that illuminate
               </p>
               <div className='my-7 flex gap-12'>
                 <div>
@@ -121,44 +114,29 @@ export const BlogPost = () => {
                 </div>
                 <div>
                   <ul className='py-3 text-lg text-[#49515B] marker:text-blue-700'>
-                    <li className='list-disc py-2'>
-                      Unveiling Emerging Technologies
-                    </li>
-                    <li className='list-disc py-2'>
-                      Navigating Complex Challenges
-                    </li>
-                    <li className='list-disc py-2'>
-                      Forecasting Future Trends
-                    </li>
-                    <li className='list-disc py-2'>
-                      Driving Innovation Strategies
-                    </li>
-                    <li className='list-disc py-2'>
-                      Exploring Industry Practices
-                    </li>
-                    <li className='list-disc py-2'>
-                      Empowering Transformation
-                    </li>
+                    <li className='list-disc py-2'>Unveiling Emerging Technologies</li>
+                    <li className='list-disc py-2'>Navigating Complex Challenges</li>
+                    <li className='list-disc py-2'>Forecasting Future Trends</li>
+                    <li className='list-disc py-2'>Driving Innovation Strategies</li>
+                    <li className='list-disc py-2'>Exploring Industry Practices</li>
+                    <li className='list-disc py-2'>Empowering Transformation</li>
                   </ul>
                 </div>
               </div>
               <p className='py-3 font-sans text-lg tracking-wide text-[#49515B]'>
-                they provide a comprehensive and in-depth analysis that goes
-                beyond surface-level . Join us as we uncover the secrets of IT
-                solutions, guided by the wisdom and expertise of Techco’s
-                thought leaders. Prepare to be inspired, informed, and empowered
-                to navigate the ever- landscape of technology with confidence
-                and clarity. you’ll gain access to unparalleled expertise and
-                discover new possibilities for success in the ever-evolving
-                world of technology.
+                they provide a comprehensive and in-depth analysis that goes beyond surface-level .
+                Join us as we uncover the secrets of IT solutions, guided by the wisdom and
+                expertise of Techco’s thought leaders. Prepare to be inspired, informed, and
+                empowered to navigate the ever- landscape of technology with confidence and clarity.
+                you’ll gain access to unparalleled expertise and discover new possibilities for
+                success in the ever-evolving world of technology.
               </p>
               <div className='my-7 border-4 border-l-blue-700 bg-white px-6 py-9'>
                 <p className="font-['Axiforma Medium'] mb-3 px-4 py-2 text-xl font-medium tracking-wide text-[#0F172A]">
-                  “In the rapidly evolving world of technology, staying ahead is
-                  not just an advantage—it’s a necessity. Embracing the latest
-                  IT solutions and trends like AI, edge computing, and 5G isn’t
-                  merely about keeping up with the competition; it’s about
-                  setting the pace, driving innovation”
+                  “In the rapidly evolving world of technology, staying ahead is not just an
+                  advantage—it’s a necessity. Embracing the latest IT solutions and trends like AI,
+                  edge computing, and 5G isn’t merely about keeping up with the competition; it’s
+                  about setting the pace, driving innovation”
                 </p>
                 <cite className='px-4 text-[#49515B]'>Robert Vibes</cite>
               </div>
@@ -166,44 +144,34 @@ export const BlogPost = () => {
                 Exploring the Future with Quantum Computing
               </h2>
               <p className='py-3 font-sans text-lg tracking-wide text-[#49515B]'>
-                As we venture into the future of IT solutions, one
-                groundbreaking technology stands out: Quantum Computing. This
-                revolutionary field promises to redefine the boundaries of
-                computing power, unlocking new potentials and solving problems
-                beyond the reach of classical computers. Join us as we delve
-                into the world of quantum computing, exploring its principles,
-                applications, and the transformative impact it may have on
+                As we venture into the future of IT solutions, one groundbreaking technology stands
+                out: Quantum Computing. This revolutionary field promises to redefine the boundaries
+                of computing power, unlocking new potentials and solving problems beyond the reach
+                of classical computers. Join us as we delve into the world of quantum computing,
+                exploring its principles, applications, and the transformative impact it may have on
                 industries across the globe.
               </p>
               <div className='py-3'>
                 <img src='../assest/img/featured-image.png' alt='' />
               </div>
               <p className='py-3 font-sans text-lg tracking-wide text-[#49515B]'>
-                From cryptography to complex simulations, quantum computing is
-                set to revolutionize how we approach some of the world’s most
-                challenging problems. Stay informed and ahead of the curve as we
-                explore the implications of this cutting-edge technology and its
-                potential to reshape our digital landscape.
+                From cryptography to complex simulations, quantum computing is set to revolutionize
+                how we approach some of the world’s most challenging problems. Stay informed and
+                ahead of the curve as we explore the implications of this cutting-edge technology
+                and its potential to reshape our digital landscape.
               </p>
             </div>
             <div className='w-[30%]'>
               <div className='rounded-xl border-4 border-blue-700 bg-white'>
                 <div className='border-b-2 border-blue-700 px-5 py-6'>
-                  <h2 className='text-2xl font-bold text-[#020842]'>
-                    About Me
-                  </h2>
+                  <h2 className='text-2xl font-bold text-[#020842]'>About Me</h2>
                 </div>
                 <div className='px-5 py-7'>
-                  <img
-                    className='w-28 rounded-full'
-                    src='../assest/img/author.jpg'
-                    alt='author'
-                  />
+                  <img className='w-28 rounded-full' src='../assest/img/author.jpg' alt='author' />
                   <p className='py-4 text-lg text-[#49515B]'>
-                    Hi, I’m John Doe, a tech enthusiast with a passion for
-                    exploring the latest advancements in IT. With over a decade
-                    of experience in the field, I’m dedicated to sharing
-                    insights and knowledge that can help others navigate the
+                    Hi, I’m John Doe, a tech enthusiast with a passion for exploring the latest
+                    advancements in IT. With over a decade of experience in the field, I’m dedicated
+                    to sharing insights and knowledge that can help others navigate the
                     ever-evolving world of technology.
                   </p>
                 </div>
@@ -224,9 +192,7 @@ export const BlogPost = () => {
               </div>
               <div className='my-8 rounded-xl border-4 border-blue-700 bg-white'>
                 <div className='border-b-2 border-blue-700 px-5 py-6'>
-                  <h2 className='text-2xl font-bold text-[#020842]'>
-                    Recent Posts
-                  </h2>
+                  <h2 className='text-2xl font-bold text-[#020842]'>Recent Posts</h2>
                 </div>
                 <div className='px-5 py-7'>
                   <ul className='list-disc px-4 py-3 text-lg text-[#49515B]'>
@@ -252,15 +218,11 @@ export const BlogPost = () => {
           </div>
 
           <div className='py-14'>
-            <h2 className='mb-8 font-serif text-3xl font-bold text-[#020842]'>
-              Comments
-            </h2>
+            <h2 className='mb-8 font-serif text-3xl font-bold text-[#020842]'>Comments</h2>
 
             <div className='rounded-xl border-4 border-blue-700 bg-white'>
               <div className='border-b-2 border-blue-700 px-5 py-6'>
-                <h2 className='text-2xl font-bold text-[#020842]'>
-                  Leave a Reply
-                </h2>
+                <h2 className='text-2xl font-bold text-[#020842]'>Leave a Reply</h2>
               </div>
               <div className='px-5 py-7'>
                 <form>

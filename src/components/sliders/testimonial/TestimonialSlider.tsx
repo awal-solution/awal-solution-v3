@@ -16,12 +16,12 @@ export const TestimonialSlider = () => {
         delay: 3000,
         disableOnInteraction: false,
         waitForTransition: true,
-        pauseOnMouseEnter: true,
+        pauseOnMouseEnter: true
       }}
       navigation={{
         enabled: true,
         prevEl: '.swiper_button_prev',
-        nextEl: '.swiper_button_next',
+        nextEl: '.swiper_button_next'
       }}
       modules={[Autoplay, Navigation]}
       className='testimonial relative size-full'
@@ -34,11 +34,7 @@ export const TestimonialSlider = () => {
             <div className='flex justify-between'>
               <div className='flex justify-between gap-8'>
                 <div className='h-36 w-32 rounded-xl bg-[#E3F0FF]'>
-                  <img
-                    src={item.avatar}
-                    alt=''
-                    className='size-full object-cover'
-                  />
+                  <img src={item.avatar} alt='' className='size-full object-cover' />
                 </div>
                 <div className='flex h-full flex-col justify-evenly'>
                   <h3 className='text-xl font-bold'>{item.auther}</h3>

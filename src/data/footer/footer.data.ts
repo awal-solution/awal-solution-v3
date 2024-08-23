@@ -18,8 +18,8 @@ export const footerLinks = [
       { link: '#', text: 'Our partners' },
       { link: '#', text: 'Our locations' },
       { link: '#', text: 'Careers' },
-      { link: '#', text: 'Contacts' },
-    ],
+      { link: '#', text: 'Contacts' }
+    ]
   },
   {
     title: 'Expertise',
@@ -29,8 +29,8 @@ export const footerLinks = [
       { text: 'Data management', link: '#' },
       { text: 'BI services', link: '#' },
       { text: 'Big data', link: '#' },
-      { text: 'Data science', link: '#' },
-    ],
+      { text: 'Data science', link: '#' }
+    ]
   },
   {
     title: 'Industries',
@@ -40,22 +40,22 @@ export const footerLinks = [
       { text: 'Fintech', link: '#' },
       { text: 'Logistics', link: '#' },
       { text: 'Retail', link: '#' },
-      { text: 'HealthCare', link: '#' },
-    ],
-  },
+      { text: 'HealthCare', link: '#' }
+    ]
+  }
 ];
 
 export const newsLetter = {
   title: 'Newsletter',
   text: 'Sign up to Techco weekly newsletter to get the latest updates.',
-  mailIcon,
+  mailIcon
 };
 
 export const socialLinks = [
   { icon: facebook, link: '#' },
   { icon: twitter, link: '#' },
   { icon: linkedin, link: '#' },
-  { icon: youtube, link: '#' },
+  { icon: youtube, link: '#' }
 ];
 
 export const footerSlider = [
@@ -64,5 +64,5 @@ export const footerSlider = [
   'Web Development',
   'Enterprise Apps',
   'Software Solution',
-  'Custom Web Apps',
+  'Custom Web Apps'
 ];

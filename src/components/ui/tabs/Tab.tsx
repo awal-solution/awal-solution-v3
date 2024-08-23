@@ -9,18 +9,9 @@ interface Props {
   className?: string;
 }
 
-export const Tab: React.FC<Props> = ({
-  onTabClick,
-  id,
-  children,
-  className,
-}) => {
+export const Tab: React.FC<Props> = ({ onTabClick, id, children, className }) => {
   return (
-    <motion.li
-      initial={false}
-      onClick={() => onTabClick(id)}
-      className={cn(className)}
-    >
+    <motion.li initial={false} onClick={() => onTabClick(id)} className={cn(className)}>
       {children}
     </motion.li>
   );

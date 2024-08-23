@@ -13,7 +13,7 @@ export const aboutImages = {
   manPicture,
   customerShape,
   shapeLine,
-  globe,
+  globe
 };
 
 export const aboutData = {
@@ -21,5 +21,5 @@ export const aboutData = {
   title1: '80+',
   p1: 'Projects Done',
   title2: '100%',
-  p2: 'Results Guaranteed',
+  p2: 'Results Guaranteed'
 };

@@ -1,18 +1,10 @@
-import {
-  serviceImages,
-  sectionHeading,
-  servicesCard,
-} from '@src/data/home/services.data';
+import { serviceImages, sectionHeading, servicesCard } from '@src/data/home/services.data';
 
 export const Services = () => {
   return (
     <section className='relative bg-[#E3F0FF] pb-12'>
       <div className='flex justify-end'>
-        <img
-          className='w-3/5'
-          src={serviceImages.bannerShape}
-          alt='banner shap'
-        />
+        <img className='w-3/5' src={serviceImages.bannerShape} alt='banner shap' />
       </div>
       <img
         src={serviceImages.leftAngleShape}
@@ -73,12 +65,7 @@ export const Services = () => {
                           strokeWidth='2'
                         >
                           <circle cx='12' cy='12' r='10'></circle>
-                          <circle
-                            cx='12'
-                            cy='12'
-                            r='1'
-                            strokeWidth='5'
-                          ></circle>
+                          <circle cx='12' cy='12' r='1' strokeWidth='5'></circle>
                         </g>
                       </svg>
                       <div className='text-[#49515B]'>{subItem}</div>

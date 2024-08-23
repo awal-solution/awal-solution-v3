@@ -41,24 +41,13 @@ export const OurTech = () => {
         </ul>
         {tabData?.map((item: any) => {
           return (
-            <TabPanel
-              key={item.id}
-              isOpen={activeTab === item.id}
-              className='p-5'
-            >
+            <TabPanel key={item.id} isOpen={activeTab === item.id} className='p-5'>
               <div className='relative z-20 grid grid-cols-3 gap-6 md:grid-cols-6 '>
                 {item?.data?.map((subTab: any, index: any) => {
                   return (
-                    <div
-                      key={index}
-                      className='flex flex-col items-center gap-5'
-                    >
+                    <div key={index} className='flex flex-col items-center gap-5'>
                       <div className='flex size-24 items-center justify-center bg-[url(/src/assets/images/shapes/shape_polygon.webp)] bg-cover'>
-                        <img
-                          src={subTab.icon}
-                          alt='image'
-                          className='max-w-10'
-                        />
+                        <img src={subTab.icon} alt='image' className='max-w-10' />
                       </div>
                       <div>{subTab.name}</div>
                     </div>

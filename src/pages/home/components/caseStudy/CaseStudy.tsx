@@ -22,9 +22,7 @@ export const CaseStudy = () => {
               >
                 <div className='grid grid-cols-3'>
                   <div className='col-span-3 rounded-l bg-white py-12 pl-4 pr-3 lg:col-span-2 lg:py-12 lg:pl-20 lg:pr-36'>
-                    <h3 className='text-base text-[#49515B]'>
-                      {item.subtitle}
-                    </h3>
+                    <h3 className='text-base text-[#49515B]'>{item.subtitle}</h3>
                     <h1 className='py-4 text-4xl text-black'>{item.title}</h1>
                     <p className='mb-5 text-[#49515B]'>{item.des}</p>
                     <div className='flex justify-between pb-10'>
@@ -48,12 +46,7 @@ export const CaseStudy = () => {
                               className='shadow-icon inline-flex rounded-full bg-white p-[5px]'
                               key={index}
                             >
-                              <img
-                                src={subitem}
-                                alt='tech logo'
-                                height={40}
-                                width={40}
-                              />
+                              <img src={subitem} alt='tech logo' height={40} width={40} />
                             </div>
                           );
                         })}

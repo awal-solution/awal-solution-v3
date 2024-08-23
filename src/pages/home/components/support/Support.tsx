@@ -1,10 +1,6 @@
 import { Fragment, useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
-import {
-  needSupportImages,
-  sectionHeading,
-  needSupportData,
-} from '@src/data/home/need_support';
+import { needSupportImages, sectionHeading, needSupportData } from '@src/data/home/need_support';
 import { AccordionTitle, AccordionPanel } from '@src/components/ui';
 
 export const NeedSupport = () => {
@@ -17,11 +13,7 @@ export const NeedSupport = () => {
   return (
     <section className='relative bg-white pb-12'>
       <div className='flex justify-start'>
-        <img
-          className='w-4/5'
-          src={needSupportImages.upperShape}
-          alt='banner shap'
-        />
+        <img className='w-4/5' src={needSupportImages.upperShape} alt='banner shap' />
       </div>
       <img
         src={needSupportImages.rightShape}
@@ -57,14 +49,9 @@ export const NeedSupport = () => {
                   </div>
                 )}
               </AccordionTitle>
-              <AccordionPanel
-                isOpen={activeId === item.id}
-                className='bg-[#CCE3FF] p-5'
-              >
+              <AccordionPanel isOpen={activeId === item.id} className='bg-[#CCE3FF] p-5'>
                 <div className='grid grid-cols-8'>
-                  <div className='pt-4 text-center text-4xl font-bold'>
-                    {item.answer}
-                  </div>
+                  <div className='pt-4 text-center text-4xl font-bold'>{item.answer}</div>
                   <div className='col-span-7'>
                     <div className='mb-5'>{item.des}</div>
                     <ul className='flex list-inside list-disc flex-wrap marker:text-[#0044EB]'>

@@ -23,40 +23,40 @@ const data: any = [
   {
     icon: icon1,
     title: 'Our History',
-    des: 'Since 1997 we have been a visionary and a reliable software engineering partner for world-class brands. abbreviated as co.',
+    des: 'Since 1997 we have been a visionary and a reliable software engineering partner for world-class brands. abbreviated as co.'
   },
   {
     icon: icon2,
     title: 'Our Mission',
-    des: 'A mission statement clarifies what the company wants to achieve, who they want to support, and why they want to support them. On the other hand',
+    des: 'A mission statement clarifies what the company wants to achieve, who they want to support, and why they want to support them. On the other hand'
   },
   {
     icon: icon3,
     title: 'Our Vision',
-    des: "A vision statement for a company or organization focuses on the potential inherent in the company's future; it's about what they intend to be how you",
-  },
+    des: "A vision statement for a company or organization focuses on the potential inherent in the company's future; it's about what they intend to be how you"
+  }
 ];
 const cardData: any = [
   {
     icon: crd1,
     title: '25+',
-    des: 'Years of experience',
+    des: 'Years of experience'
   },
   {
     icon: crd2,
     title: '280+',
-    des: 'Success Stories',
+    des: 'Success Stories'
   },
   {
     icon: crd3,
     title: '56K',
-    des: 'Companies Trust Us',
+    des: 'Companies Trust Us'
   },
   {
     icon: crd4,
     title: '100%',
-    des: 'Results Guaranteed',
-  },
+    des: 'Results Guaranteed'
+  }
 ];
 
 interface Props {
@@ -83,16 +83,8 @@ const AboutHero = () => {
   return (
     <div>
       <div className='mt-10 grid grid-cols-3 gap-8 lg:-mt-64'>
-        <img
-          className=' col-span-3 rounded-md lg:col-span-2'
-          src={about1}
-          alt='image'
-        />
-        <img
-          className=' col-span-3 rounded-xl lg:col-span-1'
-          src={about2}
-          alt=''
-        />
+        <img className=' col-span-3 rounded-md lg:col-span-2' src={about1} alt='image' />
+        <img className=' col-span-3 rounded-xl lg:col-span-1' src={about2} alt='' />
       </div>
       <div className=' my-10 grid grid-cols-1 lg:my-20 lg:grid-cols-2'>
         <div>
@@ -107,11 +99,10 @@ const AboutHero = () => {
           </h1>
         </div>
         <div className='text-lg font-medium text-[#54595F]'>
-          At Techco, we pride ourselves on offering dynamic and IT to suit your
-          specific requirements. Our flexible approach means we can adjust our
-          offerings to accommodate your evolving needs, whether you require
-          comprehensive IT infrastructure support, strategic consultancy,
-          software development
+          At Techco, we pride ourselves on offering dynamic and IT to suit your specific
+          requirements. Our flexible approach means we can adjust our offerings to accommodate your
+          evolving needs, whether you require comprehensive IT infrastructure support, strategic
+          consultancy, software development
         </div>
       </div>
       <div className='grid grid-cols-1 gap-5 py-7 lg:grid-cols-3 lg:py-14'>
@@ -126,9 +117,7 @@ const AboutHero = () => {
                 />
               </div>
 
-              <h3 className='mt-6 text-2xl font-semibold text-[#020842] '>
-                {item.title}
-              </h3>
+              <h3 className='mt-6 text-2xl font-semibold text-[#020842] '>{item.title}</h3>
               <p className='py-5 text-lg text-[#54595F]'>{item.des}</p>
             </div>
           );
@@ -149,10 +138,7 @@ const AboutBrand = () => {
       </h2>
       <BrandMarquee>
         {brandData?.map((item: { image: string }, i: any) => (
-          <div
-            className='brand_slider mx-2 h-[80px] w-[180px] rounded bg-white px-3 py-7'
-            key={i}
-          >
+          <div className='brand_slider mx-2 h-[80px] w-[180px] rounded bg-white px-3 py-7' key={i}>
             <img
               src={item.image}
               alt='sample image for showcase'
@@ -175,16 +161,10 @@ const AboutCard = () => {
               return (
                 <div key={index} className='rounded-2xl bg-white px-6 py-8'>
                   <div>
-                    <img
-                      src={item.icon}
-                      alt='image'
-                      className='my-2 ml-3 size-24 pt-4 '
-                    />
+                    <img src={item.icon} alt='image' className='my-2 ml-3 size-24 pt-4 ' />
                   </div>
 
-                  <h1 className='mt-6 text-5xl font-bold text-[#020842] '>
-                    {item.title}
-                  </h1>
+                  <h1 className='mt-6 text-5xl font-bold text-[#020842] '>{item.title}</h1>
                   <p className='py-5 text-lg text-[#54595F]'>{item.des}</p>
                 </div>
               );
@@ -206,20 +186,12 @@ const AboutChoose = () => {
     <section className='bg-[#E3F0FF] px-2 py-0 lg:px-8 lg:py-28'>
       <div className='mx-auto grid max-w-screen-xl grid-cols-1 items-center gap-7 lg:grid-cols-2 '>
         <div className=''>
-          <img
-            src={whyChoseUs}
-            alt='Services'
-            className='w-full rounded-xl lg:w-auto'
-          />
+          <img src={whyChoseUs} alt='Services' className='w-full rounded-xl lg:w-auto' />
         </div>
         <div className='flex flex-col gap-6'>
           <div>
-            <span className='rounded-md bg-[#F44380]  px-[6px] pb-0.5 text-white'>
-              Better
-            </span>
-            <span className='ml-1 text-base font-semibold text-[#4F5761]'>
-              Why Us
-            </span>
+            <span className='rounded-md bg-[#F44380]  px-[6px] pb-0.5 text-white'>Better</span>
+            <span className='ml-1 text-base font-semibold text-[#4F5761]'>Why Us</span>
           </div>
           <h2 className='w-[70%] text-[40px] font-bold leading-[50px] tracking-[-1px] text-[#020842]'>
             Why Our Services are Better Than Others?

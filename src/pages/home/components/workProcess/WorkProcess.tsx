@@ -1,10 +1,6 @@
 import { Fragment, useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
-import {
-  workProccesImages,
-  workProcessData,
-  sectionHeading,
-} from '@src/data/home/work_process';
+import { workProccesImages, workProcessData, sectionHeading } from '@src/data/home/work_process';
 import { AccordionTitle, AccordionPanel } from '@src/components/ui';
 
 export const WorkProcess = () => {
@@ -17,17 +13,9 @@ export const WorkProcess = () => {
   return (
     <div className='relative w-full bg-[#E3F0FF]'>
       <div className='flex justify-center'>
-        <img
-          src={workProccesImages.bannerShape}
-          alt='about banner'
-          className='w-1/2'
-        />
+        <img src={workProccesImages.bannerShape} alt='about banner' className='w-1/2' />
       </div>
-      <img
-        src={workProccesImages.leftAngleShape}
-        alt='image'
-        className='absolute top-0'
-      />
+      <img src={workProccesImages.leftAngleShape} alt='image' className='absolute top-0' />
       <div className='mx-auto max-w-screen-xl px-2 py-36'>
         <div className='flex flex-col items-center gap-10 md:flex-row'>
           <div className='w-full md:w-1/2'>
@@ -47,10 +35,7 @@ export const WorkProcess = () => {
                     {item.no}. {item.title}
                     {isOpen ? <Minus /> : <Plus />}
                   </AccordionTitle>
-                  <AccordionPanel
-                    isOpen={activeId === item.id}
-                    className='bg-[#CCE3FF] p-5'
-                  >
+                  <AccordionPanel isOpen={activeId === item.id} className='bg-[#CCE3FF] p-5'>
                     {item.des}
                   </AccordionPanel>
                 </Fragment>

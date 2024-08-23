@@ -17,7 +17,7 @@ export const cardData = {
   title: 'customers win deals with Techco',
   reviewIcon1,
   reviewIcon2,
-  starIcon,
+  starIcon
 };
 
 export const data = [
@@ -30,7 +30,7 @@ export const data = [
     address: 'Seattle, Ukraine',
     avatar: avatar01,
     flag: flag,
-    company_logo: companyLogo,
+    company_logo: companyLogo
   },
   {
     title: '“Amazing software services”',
@@ -41,6 +41,6 @@ export const data = [
     address: 'Seattle, Ukraine',
     avatar: avatar02,
     flag: flag,
-    company_logo: companyLogo,
-  },
+    company_logo: companyLogo
+  }
 ];

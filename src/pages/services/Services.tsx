@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getRecordsApi } from '@src/api/enpoints';
 import { HeroSection } from '@src/components/heroSection/Herosection';
@@ -24,12 +24,9 @@ export const Services = () => {
   }, []);
 
   return (
-    <>
-      <HeroSection
-        heading='Services'
-        subHeading='Services by Awal Solution 😍'
-      />
-      <div className=''>
+    <Fragment>
+      <HeroSection heading='Services' subHeading='Services by Awal Solution 😍' />
+      <div>
         <section className='bg-[#E3F0FF] px-2 py-28 lg:px-8'>
           <div className='mx-auto flex max-w-screen-xl flex-col lg:flex-row'>
             <div className='mb-8 lg:mb-0 lg:mr-28 lg:pt-10'>
@@ -43,9 +40,8 @@ export const Services = () => {
                 Tailored IT Solutions for Your Success
               </h2>
               <p className='pb-8 text-[18px] font-medium leading-[30px] text-[#020842]'>
-                We understand that every business is unique, with its own set of
-                challenges, goals, and aspirations. Thats why we offer tailored
-                IT solutions designed.
+                We understand that every business is unique, with its own set of challenges, goals,
+                and aspirations. Thats why we offer tailored IT solutions designed.
               </p>
               <Link
                 to='/contact-us'
@@ -55,23 +51,15 @@ export const Services = () => {
               </Link>
             </div>
             <div>
-              <img
-                src={serviceImage8}
-                alt='Services'
-                className='w-full lg:w-auto'
-              />
+              <img src={serviceImage8} alt='Services' className='w-full lg:w-auto' />
             </div>
           </div>
         </section>
         <section className='bg-white px-2 py-28 lg:px-8'>
           <div className='mx-auto max-w-screen-xl'>
             <div className='pb-5 text-center'>
-              <span className='rounded-md bg-[#F44380]  px-[6px] py-1 text-white'>
-                Our 🙂
-              </span>
-              <span className='ml-2 text-lg font-semibold text-[#4F5761]'>
-                Specialize
-              </span>
+              <span className='rounded-md bg-[#F44380]  px-[6px] py-1 text-white'>Our 🙂</span>
+              <span className='ml-2 text-lg font-semibold text-[#4F5761]'>Specialize</span>
             </div>
             <h2 className='pb-7 text-center text-[40px] font-bold leading-[50px] tracking-[-1px] text-[#020842]'>
               Featured Services
@@ -80,9 +68,7 @@ export const Services = () => {
             <div className='grid grid-cols-6 gap-8'>
               {data?.map((item: any, index) => {
                 const colSpanClass =
-                  index < 2
-                    ? 'col-span-6 md:col-span-3'
-                    : 'col-span-6 md:col-span-2 ';
+                  index < 2 ? 'col-span-6 md:col-span-3' : 'col-span-6 md:col-span-2 ';
                 return (
                   <div
                     key={index}
@@ -127,20 +113,12 @@ export const Services = () => {
         <section className='bg-[#E3F0FF] px-2 py-28 lg:px-8'>
           <div className='mx-auto grid max-w-screen-xl grid-cols-1 items-center gap-7 lg:grid-cols-2 '>
             <div className=''>
-              <img
-                src={whyChoseUs}
-                alt='Services'
-                className='w-full rounded-xl lg:w-auto'
-              />
+              <img src={whyChoseUs} alt='Services' className='w-full rounded-xl lg:w-auto' />
             </div>
             <div className='flex flex-col gap-6'>
               <div>
-                <span className='rounded-md bg-[#F44380]  px-[6px] pb-0.5 text-white'>
-                  Better
-                </span>
-                <span className='ml-1 text-base font-semibold text-[#4F5761]'>
-                  Why Us
-                </span>
+                <span className='rounded-md bg-[#F44380]  px-[6px] pb-0.5 text-white'>Better</span>
+                <span className='ml-1 text-base font-semibold text-[#4F5761]'>Why Us</span>
               </div>
               <h2 className='w-[70%] text-[40px] font-bold leading-[50px] tracking-[-1px] text-[#020842]'>
                 Why Our Services are Better Than Others?
@@ -192,6 +170,6 @@ export const Services = () => {
           </div>
         </section>
       </div>
-    </>
+    </Fragment>
   );
 };

@@ -25,7 +25,7 @@ export const articalData = [
     date: '06/07/2024',
     dateIcon: dateIcon,
     commentCount: 0,
-    commentIcon: commentIcon,
+    commentIcon: commentIcon
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ export const articalData = [
     date: '06/08/2024',
     dateIcon: dateIcon,
     commentCount: 0,
-    commentIcon: commentIcon,
+    commentIcon: commentIcon
   },
   {
     id: 3,
@@ -47,6 +47,6 @@ export const articalData = [
     date: '06/08/2024',
     dateIcon: dateIcon,
     commentCount: 0,
-    commentIcon: commentIcon,
-  },
+    commentIcon: commentIcon
+  }
 ];

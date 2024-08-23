@@ -9,18 +9,9 @@ interface Props {
   className?: string;
 }
 
-export const AccordionTitle: React.FC<Props> = ({
-  handleToggle,
-  id,
-  children,
-  className,
-}) => {
+export const AccordionTitle: React.FC<Props> = ({ handleToggle, id, children, className }) => {
   return (
-    <motion.div
-      initial={false}
-      onClick={() => handleToggle(id)}
-      className={cn(className)}
-    >
+    <motion.div initial={false} onClick={() => handleToggle(id)} className={cn(className)}>
       {children}
     </motion.div>
   );

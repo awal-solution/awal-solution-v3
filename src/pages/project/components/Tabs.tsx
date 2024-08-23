@@ -20,11 +20,7 @@ export const OurProjects = () => {
 
   return (
     <div className='relative bg-[#E3F0FF]'>
-      <img
-        src={images.rightAngleShape}
-        alt='image'
-        className='absolute bottom-0 right-0 z-10 '
-      />
+      <img src={images.rightAngleShape} alt='image' className='absolute bottom-0 right-0 z-10 ' />
       <div className='mx-auto max-w-screen-xl pt-10'>
         <ul className='relative z-20 mx-10 flex flex-col rounded bg-white  px-5 py-3 sm:grid sm:grid-cols-2 md:grid md:grid-cols-2 lg:flex lg:flex-row'>
           {data?.map((item: any) => {
@@ -45,11 +41,7 @@ export const OurProjects = () => {
         </ul>
         {data?.map((item: any) => {
           return (
-            <TabPanel
-              key={item.id}
-              isOpen={activeTab === item.id}
-              className='md:m-5 lg:my-5'
-            >
+            <TabPanel key={item.id} isOpen={activeTab === item.id} className='md:m-5 lg:my-5'>
               <div className='relative z-20 mx-10 grid  grid-cols-1 gap-6 py-10 md:pt-10 lg:grid-cols-2'>
                 {item?.projects?.map((item: any, index: any) => {
                   return (

@@ -25,9 +25,7 @@ export const Team = () => {
               <span>{dedicateTeam.title}</span>
               <p className='rounded bg-[#F44380] px-2'>{dedicateTeam.tg}</p>
             </div>
-            <h1 className='pt-5 text-3xl font-semibold'>
-              {dedicateTeam.subTitle}
-            </h1>
+            <h1 className='pt-5 text-3xl font-semibold'>{dedicateTeam.subTitle}</h1>
             <p className='pt-5 text-lg leading-8'>{dedicateTeam.des}</p>
             <Link
               to='/contact-us'
@@ -46,9 +44,7 @@ export const Team = () => {
             <p className='rounded bg-[#F44380] px-2 text-white'>Our Expert</p>
             <span>Team Members 😍</span>
           </div>
-          <h1 className='py-5 pb-20 text-center text-4xl font-bold'>
-            Top Skilled Experts
-          </h1>
+          <h1 className='py-5 pb-20 text-center text-4xl font-bold'>Top Skilled Experts</h1>
           <div className='mx-auto grid max-w-screen-xl grid-cols-1 gap-4 p-5 sm:grid-cols-2 lg:mx-auto lg:grid-cols-3'>
             {data?.map((item, index) => {
               return (
@@ -61,14 +57,10 @@ export const Team = () => {
         </div>
         <div className='bg-[#E3F0FF]'>
           <div className='flex justify-center gap-3 pt-20'>
-            <p className='rounded bg-[#F44380] px-2 text-white'>
-              {globalTeam.tg}
-            </p>
+            <p className='rounded bg-[#F44380] px-2 text-white'>{globalTeam.tg}</p>
             <span>{globalTeam.title}</span>
           </div>
-          <h1 className='py-5 pb-20 text-center text-4xl font-bold'>
-            {globalTeam.subTitle}
-          </h1>
+          <h1 className='py-5 pb-20 text-center text-4xl font-bold'>{globalTeam.subTitle}</h1>
           <img src={globalTeam.img} className='mx-auto' alt='Team Map' />
         </div>
       </div>

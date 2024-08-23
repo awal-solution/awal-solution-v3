@@ -5,7 +5,7 @@ import {
   footerLinks,
   newsLetter,
   socialLinks,
-  footerSlider,
+  footerSlider
 } from '@src/data/footer/footer.data';
 
 export const AppFooter = () => {
@@ -16,11 +16,7 @@ export const AppFooter = () => {
       </div>
       <div className='mx-auto max-w-screen-xl'>
         <div className='mt-24 text-white'>
-          <BrandMarquee
-            gradient={true}
-            gradientWidth={50}
-            gradientColor='#020842'
-          >
+          <BrandMarquee gradient={true} gradientWidth={50} gradientColor='#020842'>
             {footerSlider?.map((item, index) => (
               <div
                 key={index}
@@ -54,11 +50,7 @@ export const AppFooter = () => {
             <div>{newsLetter.text}</div>
             <div className='my-8 flex items-center rounded-full bg-[#1B2155] p-1'>
               <div>
-                <img
-                  src={newsLetter.mailIcon}
-                  alt='img'
-                  className='ml-1 size-6'
-                />
+                <img src={newsLetter.mailIcon} alt='img' className='ml-1 size-6' />
               </div>
               <input
                 type='email'
@@ -89,11 +81,7 @@ export const AppFooter = () => {
         </div>
       </div>
       <div className='relative flex justify-center'>
-        <img
-          className='hidden w-4/5 lg:block'
-          src={footerImages.bottomShape}
-          alt='banner shap'
-        />
+        <img className='hidden w-4/5 lg:block' src={footerImages.bottomShape} alt='banner shap' />
         <div className='absolute inset-y-0 flex w-full items-center justify-between lg:w-9/12'>
           <div className='flex w-full flex-col items-center justify-between gap-2 bg-[#E3F0FF] py-2 lg:flex-row lg:bg-transparent'>
             <div>

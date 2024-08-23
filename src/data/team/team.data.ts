@@ -18,14 +18,14 @@ export const dedicateTeam = {
   tg: 'Team 🙂',
   subTitle: 'Get to Know Our Expert Techco Team',
   des: 'Get acquainted with the powerhouse behind Techco – our expert team of professionals dedicated to revolutionizing the IT landscape. Comprising.',
-  img: dedcatedTeamImage,
+  img: dedcatedTeamImage
 };
 
 export const globalTeam = {
   title: 'Company 😍',
   tg: 'Techco',
   subTitle: 'Our Global Team is Growing',
-  img: globalImg,
+  img: globalImg
 };
 
 export const teamCards = [
@@ -44,8 +44,8 @@ export const teamCards = [
       { name: 'Twitter', icon: tw, link: '#' },
       { name: 'LinkedIn', icon: linkedin, link: '#' },
       { name: 'Instagram', icon: insta, link: '#' },
-      { name: 'YouTube', icon: youtube, link: '#' },
-    ],
+      { name: 'YouTube', icon: youtube, link: '#' }
+    ]
   },
   {
     id: 2,
@@ -62,8 +62,8 @@ export const teamCards = [
       { name: 'Twitter', icon: tw, link: '#' },
       { name: 'LinkedIn', icon: linkedin, link: '#' },
       { name: 'Instagram', icon: insta, link: '#' },
-      { name: 'YouTube', icon: youtube, link: '#' },
-    ],
+      { name: 'YouTube', icon: youtube, link: '#' }
+    ]
   },
   {
     id: 3,
@@ -80,8 +80,8 @@ export const teamCards = [
       { name: 'Twitter', icon: tw, link: '#' },
       { name: 'LinkedIn', icon: linkedin, link: '#' },
       { name: 'Instagram', icon: insta, link: '#' },
-      { name: 'YouTube', icon: youtube, link: '#' },
-    ],
+      { name: 'YouTube', icon: youtube, link: '#' }
+    ]
   },
   {
     id: 1,
@@ -98,8 +98,8 @@ export const teamCards = [
       { name: 'Twitter', icon: tw, link: '#' },
       { name: 'LinkedIn', icon: linkedin, link: '#' },
       { name: 'Instagram', icon: insta, link: '#' },
-      { name: 'YouTube', icon: youtube, link: '#' },
-    ],
+      { name: 'YouTube', icon: youtube, link: '#' }
+    ]
   },
   {
     id: 1,
@@ -116,7 +116,7 @@ export const teamCards = [
       { name: 'Twitter', icon: tw, link: '#' },
       { name: 'LinkedIn', icon: linkedin, link: '#' },
       { name: 'Instagram', icon: insta, link: '#' },
-      { name: 'YouTube', icon: youtube, link: '#' },
-    ],
-  },
+      { name: 'YouTube', icon: youtube, link: '#' }
+    ]
+  }
 ];

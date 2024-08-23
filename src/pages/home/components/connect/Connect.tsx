@@ -2,7 +2,7 @@ import {
   sectionHeading,
   connectImages,
   firstCardData,
-  contactFormData,
+  contactFormData
 } from '@src/data/home/connect.data';
 
 export const Connect = () => {
@@ -27,20 +27,14 @@ export const Connect = () => {
           <div className='w-[136px] bg-[url(/src/assets/images/title_bar/shape_title_under_line.svg)] bg-right-bottom bg-no-repeat pb-2 pr-4 text-black'>
             {sectionHeading.title}
           </div>
-          <h1 className='py-4 text-5xl font-bold text-[#020842]'>
-            {firstCardData.title}
-          </h1>
+          <h1 className='py-4 text-5xl font-bold text-[#020842]'>{firstCardData.title}</h1>
           <div>{firstCardData.pg}</div>
           <ul className='py-6'>
             {firstCardData.cotactDetail.map((item: any, index: number) => {
               return (
                 <li key={index} className='mb-3 flex items-center gap-5'>
                   <div className='w-[12%] rounded-full bg-[#0044EB] p-2 text-white'>
-                    <img
-                      src={item.icon}
-                      alt='icon'
-                      className='size-full object-cover'
-                    />
+                    <img src={item.icon} alt='icon' className='size-full object-cover' />
                   </div>
                   <div className='w-[88%] '>{item.text}</div>
                 </li>
@@ -50,10 +44,7 @@ export const Connect = () => {
           <ul>
             {firstCardData.list.map((item: any, index: number) => {
               return (
-                <li
-                  key={index}
-                  className='relative mb-3 flex items-center gap-5'
-                >
+                <li key={index} className='relative mb-3 flex items-center gap-5'>
                   <div className='size-10 rounded-full border border-[#0044EB] p-2'>
                     0{index + 1}
                   </div>

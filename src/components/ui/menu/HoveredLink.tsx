@@ -7,11 +7,7 @@ interface HoveredLinkProps {
   isSticky: boolean;
 }
 
-export const HoveredLink: React.FC<HoveredLinkProps> = ({
-  href,
-  children,
-  isSticky,
-}) => {
+export const HoveredLink: React.FC<HoveredLinkProps> = ({ href, children, isSticky }) => {
   return (
     <NavLink
       to={href}

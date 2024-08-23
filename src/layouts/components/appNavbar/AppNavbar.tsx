@@ -34,9 +34,7 @@ export const AppNavbar = () => {
         </button>
       </div>
       <Logo isSticky={isSticky} />
-      <div
-        className={`${isSticky ? 'text-black' : 'text-white'} hidden  lg:block`}
-      >
+      <div className={`${isSticky ? 'text-black' : 'text-white'} hidden  lg:block`}>
         <Menu>
           <HoveredLink href='/home' isSticky={isSticky}>
             Home
@@ -70,12 +68,7 @@ export const AppNavbar = () => {
             <span className='group-hover/btn:animate-out group-hover/btn:slide-out-to-top group-hover/btn:duration-500'>
               Get Started
             </span>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              width='1em'
-              height='1em'
-              viewBox='0 0 15 15'
-            >
+            <svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 15 15'>
               <path
                 fill='currentColor'
                 fillRule='evenodd'

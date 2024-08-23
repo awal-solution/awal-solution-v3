@@ -4,7 +4,7 @@ import type {
   AxiosInstance,
   AxiosRequestConfig,
   AxiosResponse,
-  InternalAxiosRequestConfig,
+  InternalAxiosRequestConfig
 } from 'axios';
 import { axiosConfig } from '@src/api/axios/config';
 import { ACCESS_TOKEN } from '@src/utils/storage/variables';
@@ -43,37 +43,21 @@ export const request = (config: AxiosRequestConfig) => {
 };
 
 export const REQ = {
-  get: (
-    url: string,
-    params?: Record<string, unknown>,
-    config?: AxiosRequestConfig
-  ) => {
+  get: (url: string, params?: Record<string, unknown>, config?: AxiosRequestConfig) => {
     return instance.get(url, { params, ...config });
   },
 
-  post: (
-    url: string,
-    data?: Record<string, unknown>,
-    config?: AxiosRequestConfig
-  ) => {
+  post: (url: string, data?: Record<string, unknown>, config?: AxiosRequestConfig) => {
     return instance.post(url, data, config);
   },
 
-  put: (
-    url: string,
-    data?: Record<string, unknown>,
-    config?: AxiosRequestConfig
-  ) => {
+  put: (url: string, data?: Record<string, unknown>, config?: AxiosRequestConfig) => {
     return instance.put(url, data, config);
   },
 
-  destory: (
-    url: string,
-    params?: Record<string, unknown>,
-    config?: AxiosRequestConfig
-  ) => {
+  destory: (url: string, params?: Record<string, unknown>, config?: AxiosRequestConfig) => {
     return instance.delete(url, { params, ...config });
-  },
+  }
 };
 
 function handleCode(code: number, msg: any): void {

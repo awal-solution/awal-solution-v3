@@ -6,10 +6,7 @@ export const Brand = () => {
     <section className='relative z-0 bg-[#0132B8] pb-5 pl-0 pt-16 md:pl-[25%]'>
       <BrandMarquee>
         {brandData?.map((item: { image: string }, i: any) => (
-          <div
-            className='brand_slider mx-2 h-[80px] w-[180px] rounded bg-white px-3 py-7'
-            key={i}
-          >
+          <div className='brand_slider mx-2 h-[80px] w-[180px] rounded bg-white px-3 py-7' key={i}>
             <img
               src={item.image}
               alt='sample image for showcase'

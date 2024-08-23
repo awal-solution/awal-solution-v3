@@ -29,16 +29,16 @@ export const tabData = [
       { name: 'TailwindCSS', icon: tailwind },
       { name: 'JavaScript', icon: javascript },
       { name: 'Typescript', icon: typescript },
-      { name: 'PHP', icon: php },
-    ],
+      { name: 'PHP', icon: php }
+    ]
   },
   {
     id: 2,
     name: 'Databases',
     data: [
       { name: 'MYSQL', icon: mysql },
-      { name: 'PostgreSQL', icon: postgres },
-    ],
+      { name: 'PostgreSQL', icon: postgres }
+    ]
   },
   {
     id: 3,
@@ -57,8 +57,8 @@ export const tabData = [
       { name: 'Laraval', icon: laravel },
       { name: 'Node Js', icon: node },
       { name: 'Redux', icon: redux },
-      { name: 'PHP', icon: php },
-    ],
+      { name: 'PHP', icon: php }
+    ]
   },
   {
     id: 4,
@@ -77,8 +77,8 @@ export const tabData = [
       { name: 'Laraval', icon: laravel },
       { name: 'Node Js', icon: node },
       { name: 'Redux', icon: redux },
-      { name: 'PHP', icon: php },
-    ],
+      { name: 'PHP', icon: php }
+    ]
   },
   {
     id: 5,
@@ -88,7 +88,7 @@ export const tabData = [
       { name: 'Vue', icon: vue },
       { name: 'Laraval', icon: laravel },
       { name: 'Node Js', icon: node },
-      { name: 'Redux', icon: redux },
-    ],
-  },
+      { name: 'Redux', icon: redux }
+    ]
+  }
 ];

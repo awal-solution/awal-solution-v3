@@ -43,11 +43,7 @@ export const SingleProject = () => {
                     className='size-full rounded-lg object-cover'
                     onClick={() => handleClick(imgUrl + item?.url)}
                   />
-                  <div
-                    className={`${
-                      model ? 'block' : 'hidden'
-                    } fixed inset-0 size-full`}
-                  >
+                  <div className={`${model ? 'block' : 'hidden'} fixed inset-0 size-full`}>
                     <img
                       src={imgUrl + item?.url}
                       alt='sample image for showcase'
@@ -101,11 +97,7 @@ export const SingleProject = () => {
                   key={index}
                   className='flex flex-col items-center justify-center gap-3 rounded-lg bg-white px-3 py-2'
                 >
-                  <img
-                    src={imgUrl + item.thumbnail}
-                    alt='image'
-                    className='size-16'
-                  />
+                  <img src={imgUrl + item.thumbnail} alt='image' className='size-16' />
                   <div>{item?.title}</div>
                 </div>
               );

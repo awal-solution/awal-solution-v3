@@ -50,10 +50,7 @@ const ServicesProcess = ({ data }: any) => {
                   0{item.id}. {item.title}
                   {isOpen ? <Minus /> : <Plus />}
                 </AccordionTitle>
-                <AccordionPanel
-                  isOpen={activeId === item.id}
-                  className='bg-[#CCE3FF] p-5'
-                >
+                <AccordionPanel isOpen={activeId === item.id} className='bg-[#CCE3FF] p-5'>
                   {item.description}
                 </AccordionPanel>
               </Fragment>
@@ -94,10 +91,7 @@ const ServicesOutcome = ({ data }: any) => {
         <div className='grid grid-cols-1 pt-10 md:grid-cols-2'>
           {data?.outcomes?.map((item: any, index: number) => {
             return (
-              <div
-                key={index}
-                className='mb-2 flex items-center gap-1 text-lg capitalize'
-              >
+              <div key={index} className='mb-2 flex items-center gap-1 text-lg capitalize'>
                 <CircleCheck color='blue' />
                 <p>{item.title}</p>
               </div>

@@ -17,16 +17,10 @@ const transition = {
   damping: 11.5,
   stiffness: 100,
   restDelta: 0.001,
-  restSpeed: 0.001,
+  restSpeed: 0.001
 };
 
-export const MenuItem: React.FC<MenuItemProps> = ({
-  link,
-  item,
-  active,
-  children,
-  setActive,
-}) => {
+export const MenuItem: React.FC<MenuItemProps> = ({ link, item, active, children, setActive }) => {
   return (
     <div onMouseEnter={() => setActive(item)} className='relative'>
       <Link to={link}>

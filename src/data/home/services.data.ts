@@ -18,7 +18,7 @@ export const serviceImages = {
   leftAngleShape,
   rightAngleShape,
   leftCircleShape,
-  rightCircleShape,
+  rightCircleShape
 };
 
 // section title
@@ -33,8 +33,8 @@ export const servicesCard = [
       'Software architecture design',
       'System integration services',
       'Data migration services',
-      'Legacy app modernization',
-    ],
+      'Legacy app modernization'
+    ]
   },
   {
     icon: consult,
@@ -43,8 +43,8 @@ export const servicesCard = [
       'TechGuard Audit',
       'CyberSafe Audit & IT Consulting',
       'AssuranceEdge & IT Consulting',
-      'IT Sentry Audit & IT Consulting',
-    ],
+      'IT Sentry Audit & IT Consulting'
+    ]
   },
   {
     icon: laptop,
@@ -53,8 +53,8 @@ export const servicesCard = [
       'Web app development services',
       'Web portal development services',
       'Website development services',
-      'Offshore web development',
-    ],
+      'Offshore web development'
+    ]
   },
   {
     icon: mb,
@@ -63,8 +63,8 @@ export const servicesCard = [
       'Android development services',
       'iOS app development services',
       'Mobile application design services',
-      'Enterprise mobile app development',
-    ],
+      'Enterprise mobile app development'
+    ]
   },
   {
     icon: ui,
@@ -73,8 +73,8 @@ export const servicesCard = [
       'PixelPerfection UI/UX Design',
       'DesignCraft UI/UX Design',
       'CreativeWave UI/UX Design',
-      'InterfaceGenius UI/UX Design',
-    ],
+      'InterfaceGenius UI/UX Design'
+    ]
   },
   {
     icon: support,
@@ -83,7 +83,7 @@ export const servicesCard = [
       'CareCraft Maintenance',
       'FixItPro Maintenance',
       'TechCare Maintenance',
-      'AssistEdge Maintenance',
-    ],
-  },
+      'AssistEdge Maintenance'
+    ]
+  }
 ];

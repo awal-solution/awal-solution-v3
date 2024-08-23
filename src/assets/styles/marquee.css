@@ -16,23 +16,11 @@
   }
 
   .marquee[data-animated='true'] .marquee_inner {
-    @apply w-max flex-nowrap ;
+    @apply w-max flex-nowrap;
   }
 
   .marquee[data-animated='true'] {
-    -webkit-mask: linear-gradient(
-      90deg,
-      transparent,
-      white 20%,
-      white 80%,
-      transparent
-    );
-    mask: linear-gradient(
-      90deg,
-      transparent,
-      white 20%,
-      white 80%,
-      transparent
-    );
+    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
   }
 }

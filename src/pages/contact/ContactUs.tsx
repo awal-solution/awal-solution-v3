@@ -3,10 +3,7 @@ import { HeroSection } from '@src/components/heroSection/Herosection.tsx';
 export const ContactUs = () => {
   return (
     <div className='bg-[#E3F0FF]'>
-      <HeroSection
-        subHeading={'Get In Touch With Us 😃'}
-        heading={'Contact Us'}
-      />
+      <HeroSection subHeading={'Get In Touch With Us 😃'} heading={'Contact Us'} />
       <div className='mx-auto max-w-screen-xl px-5'>
         <div className='mt-12 grid gap-6 sm:mt-16 sm:grid-cols-1 md:mt-24 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
           <div className='rounded-2xl bg-white px-5 py-8 text-center sm:py-12'>
@@ -66,9 +63,7 @@ export const ContactUs = () => {
               <path d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7' />
             </svg>
             <p className='pt-3 text-lg sm:pt-5 sm:text-xl'>Email</p>
-            <p className='pt-3 text-sm sm:pt-5 sm:text-base'>
-              contact@awalsolution.com
-            </p>
+            <p className='pt-3 text-sm sm:pt-5 sm:text-base'>contact@awalsolution.com</p>
             <p className='text-sm sm:text-base'>info@awalsolution.com</p>
           </div>
           <div className='rounded-2xl bg-white px-5 py-8 text-center sm:py-12'>
@@ -90,9 +85,7 @@ export const ContactUs = () => {
               <path d='M4 13h4' />
             </svg>
             <p className='pt-3 text-lg sm:pt-5 sm:text-xl'>Visit Between</p>
-            <p className='pt-3 text-sm sm:pt-5 sm:text-base'>
-              Mon - Fri: 10:00 - 17:00
-            </p>
+            <p className='pt-3 text-sm sm:pt-5 sm:text-base'>Mon - Fri: 10:00 - 17:00</p>
             <p className='text-sm sm:text-base'>Sat, Sun: Closed</p>
           </div>
         </div>
@@ -101,18 +94,14 @@ export const ContactUs = () => {
       {/*main div*/}
       <div className='mx-auto mt-12 flex max-w-screen-xl flex-col gap-6 px-5 pb-10  sm:mt-16  md:mt-24 lg:flex-row'>
         <div className='w-full lg:w-1/2'>
-          <h2 className='text-2xl font-bold sm:text-3xl lg:text-4xl'>
-            Send Us A Message
-          </h2>
+          <h2 className='text-2xl font-bold sm:text-3xl lg:text-4xl'>Send Us A Message</h2>
           <p className='mt-3 text-sm text-[#49515B] sm:text-base lg:text-lg'>
             Give us chance to serve and bring magic to your brand.
           </p>
           <form className='mt-6 sm:mt-10'>
             <div className='mb-5 flex flex-col gap-4 md:flex-row'>
               <div className='w-full'>
-                <label className='text-base sm:text-lg lg:text-xl'>
-                  Full Name
-                </label>
+                <label className='text-base sm:text-lg lg:text-xl'>Full Name</label>
                 <input
                   type='text'
                   placeholder='Your Name'
@@ -130,9 +119,7 @@ export const ContactUs = () => {
                 />
               </div>
             </div>
-            <label className='text-base  sm:text-lg lg:text-xl'>
-              Your Phone
-            </label>
+            <label className='text-base  sm:text-lg lg:text-xl'>Your Phone</label>
             <input
               type='text'
               placeholder='+8250-3560 6565'

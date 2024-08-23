@@ -1,8 +1,4 @@
-import {
-  sectionHeading,
-  articalsShapes,
-  articalData,
-} from '@src/data/home/latest_article';
+import { sectionHeading, articalsShapes, articalData } from '@src/data/home/latest_article';
 
 export const Article = () => {
   return (
