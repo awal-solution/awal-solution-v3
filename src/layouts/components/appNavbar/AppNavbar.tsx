@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react';
 import { MenuIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Menu, MenuItem, HoveredLink } from '@src/components/ui/menu';
+import { Menu, HoveredLink } from '@src/components/ui/menu';
 import { Logo } from '@src/components/logo/Logo';
 
 export const AppNavbar = () => {
-  const [active, setActive] = useState<string | null>(null);
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
@@ -38,31 +37,13 @@ export const AppNavbar = () => {
       <div
         className={`${isSticky ? 'text-black' : 'text-white'} hidden  lg:block`}
       >
-        <Menu setActive={setActive}>
+        <Menu>
           <HoveredLink href='/home' isSticky={isSticky}>
             Home
           </HoveredLink>
-          <MenuItem
-            setActive={setActive}
-            active={active}
-            item='Services'
-            link='/services'
-          >
-            <div className='flex flex-col space-y-4 rounded bg-white p-5 text-sm text-black'>
-              <HoveredLink href='/web-dev' isSticky={isSticky}>
-                Web Development
-              </HoveredLink>
-              <HoveredLink href='/interface-design' isSticky={isSticky}>
-                Interface Design
-              </HoveredLink>
-              <HoveredLink href='/seo' isSticky={isSticky}>
-                Search Engine Optimization
-              </HoveredLink>
-              <HoveredLink href='/branding' isSticky={isSticky}>
-                Branding
-              </HoveredLink>
-            </div>
-          </MenuItem>
+          <HoveredLink href='/services' isSticky={isSticky}>
+            Services
+          </HoveredLink>
           <HoveredLink href='/project' isSticky={isSticky}>
             Portfolio
           </HoveredLink>
@@ -75,9 +56,6 @@ export const AppNavbar = () => {
           <HoveredLink href='/blog' isSticky={isSticky}>
             Blog
           </HoveredLink>
-          {/* <HoveredLink href='/career' isSticky={isSticky}>
-            Careers
-          </HoveredLink> */}
           <HoveredLink href='/contact-us' isSticky={isSticky}>
             Contact Us
           </HoveredLink>

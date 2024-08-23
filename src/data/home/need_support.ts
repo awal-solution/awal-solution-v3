@@ -17,27 +17,28 @@ export const needSupportData = [
   {
     id: 2,
     title: 'Q. How can I get a quote for my project?',
-    answer: 'Y.',
+    answer: 'A.',
     des: 'You can request a quote by filling out the contact form on our website or by emailing us directly at contact@awalsolution.com. Provide as much detail as possible about your project, and we will get back to you with a tailored quote.',
     list: [],
   },
   {
     id: 3,
     title: 'Q. What industries does Awal Solution specialize in?',
-    answer: 'W.',
+    answer: 'A.',
     des: 'We have extensive experience working with clients across various industries including e-commerce, healthcare, finance, education, and technology. Our team is skilled in adapting to the specific needs of different sectors.',
     list: [],
   },
   {
     id: 4,
     title: 'Q. How long does it take to complete a project?',
-    answer: 'T.',
+    answer: 'A.',
     des: 'The timeline for each project varies depending on its complexity and requirements. Once we have a clear understanding of your needs, we will provide an estimated timeline. We prioritize delivering high-quality results within the agreed timeframe.',
     list: [],
   },
   {
     id: 5,
-    title: 'Q. Do you offer support and maintenance after the project is completed?',
+    title:
+      'Q. Do you offer support and maintenance after the project is completed?',
     answer: 'A.',
     des: 'Yes, we offer ongoing support and maintenance services to ensure your website or application runs smoothly after launch. Our team is available to address any issues, updates, or changes you may need.',
     list: [],

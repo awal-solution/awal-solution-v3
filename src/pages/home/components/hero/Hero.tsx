@@ -7,6 +7,7 @@ import image02 from '@src/assets/images/hero/shape_image_2-scaled.webp';
 import image03 from '@src/assets/images/hero/shape_image_3.webp';
 import image04 from '@src/assets/images/hero/shape_image_4.webp';
 import titleUnderLine from '@src/assets/images/title_bar/shape_title_under_line.svg';
+import { Link } from 'react-router-dom';
 
 export const Hero = () => {
   return (
@@ -77,7 +78,10 @@ export const Hero = () => {
             <div className='absolute left-2.5 top-1 -z-0 h-10 border-l border-[#0044EB]'></div>
           </ul>
           <div className='flex gap-5'>
-            <button className='group/btn flex items-center gap-1 rounded-full bg-[#0044EB] px-8 py-3'>
+            <Link
+              to='/contact-us'
+              className='group/btn flex items-center gap-1 rounded-full bg-[#0044EB] px-8 py-3'
+            >
               <span className='group-hover/btn:animate-out group-hover/btn:slide-out-to-top group-hover/btn:duration-500'>
                 Contact Us Today!
               </span>
@@ -95,7 +99,7 @@ export const Hero = () => {
                   clipRule='evenodd'
                 />
               </svg>
-            </button>
+            </Link>
           </div>
         </div>
         <div className='flex w-full justify-center lg:w-1/2'>

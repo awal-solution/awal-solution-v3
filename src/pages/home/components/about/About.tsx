@@ -60,8 +60,8 @@ export const About = () => {
               </div>
             </div>
             <Link
-              to='/about'
-              className='group/btn absolute right-5 top-0 flex items-center gap-1 rounded-xl bg-[#0044EB] px-9 py-5'
+              to='/about-us'
+              className='group/btn absolute right-5 top-0 z-40 flex items-center gap-1 rounded-xl bg-[#0044EB] px-9 py-5'
             >
               <span className='group-hover/btn:animate-out group-hover/btn:slide-out-to-top group-hover/btn:duration-500'>
                 Learn More

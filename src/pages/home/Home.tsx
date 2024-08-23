@@ -7,7 +7,7 @@ import { WorkProcess } from '@src/pages/home/components/workProcess/WorkProcess'
 import { OurTech } from '@src/pages/home/components/ourTech/OurTech';
 import { Testimonial } from '@src/pages/home/components/testimonial/Testimonial';
 import { NeedSupport } from '@src/pages/home/components/support/Support';
-import { Article } from '@src/pages/home/components/article/Article';
+// import { Article } from '@src/pages/home/components/article/Article';
 import { Connect } from '@src/pages/home/components/connect/Connect';
 
 export const Home = () => {
@@ -22,7 +22,7 @@ export const Home = () => {
       <OurTech />
       <Testimonial />
       <NeedSupport />
-      <Article />
+      {/* <Article /> */}
       <Connect />
     </>
   );

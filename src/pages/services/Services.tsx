@@ -4,6 +4,7 @@ import { getRecordsApi } from '@src/api/enpoints';
 import { HeroSection } from '@src/components/heroSection/Herosection';
 import { Env } from '@src/constants/environments';
 import whyChoseUs from '@src/assets/images/services/about_image_5-1024x929.webp';
+import serviceImage8 from '@src/assets/images/services/service_image_8.webp';
 //
 import icon1 from '@src/assets/images/services/icons/icon1.svg';
 import icon2 from '@src/assets/images/services/icons/icon2.svg';
@@ -17,7 +18,7 @@ export const Services = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    getRecordsApi('/service').then((res: any) => {
+    getRecordsApi('/services').then((res: any) => {
       setData(res?.data);
     });
   }, []);
@@ -46,13 +47,16 @@ export const Services = () => {
                 challenges, goals, and aspirations. Thats why we offer tailored
                 IT solutions designed.
               </p>
-              <button className='rounded-full border-none bg-[#0044EB] px-7 py-4 text-lg font-bold tracking-[1px] text-white '>
+              <Link
+                to='/contact-us'
+                className='rounded-full border-none bg-[#0044EB] px-7 py-4 text-lg font-bold tracking-[1px] text-white '
+              >
                 Talk To An Expert ↗
-              </button>
+              </Link>
             </div>
             <div>
               <img
-                src='https://wp.xpressbuddy.com/techco/wp-content/uploads/2024/06/service_image_8.webp'
+                src={serviceImage8}
                 alt='Services'
                 className='w-full lg:w-auto'
               />

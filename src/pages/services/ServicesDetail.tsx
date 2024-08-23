@@ -127,7 +127,7 @@ export const ServicesDetail = () => {
   const [data, setData] = useState<any>({});
 
   useEffect(() => {
-    getRecordApi(`/service/${serviceId}`).then((res: any) => {
+    getRecordApi(`/services/${serviceId}`).then((res: any) => {
       setData(res?.data);
     });
   }, [serviceId]);

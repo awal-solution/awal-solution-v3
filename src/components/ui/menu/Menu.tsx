@@ -1,16 +1,12 @@
 import { ReactNode } from 'react';
 
 interface MenuProps {
-  setActive: (item: string | null) => void;
   children: ReactNode;
 }
 
-export const Menu: React.FC<MenuProps> = ({ setActive, children }) => {
+export const Menu: React.FC<MenuProps> = ({ children }) => {
   return (
-    <nav
-      onMouseLeave={() => setActive(null)}
-      className='flex items-center justify-center gap-6 py-6'
-    >
+    <nav className='flex items-center justify-center gap-6 py-6'>
       {children}
     </nav>
   );

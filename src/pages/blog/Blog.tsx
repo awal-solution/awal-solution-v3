@@ -5,7 +5,6 @@ import { HeroSection } from '@src/components/heroSection/Herosection';
 import { Env } from '@src/constants/environments';
 
 const BlogPost = ({ item }: any) => {
-  console.log(item);
   const { imgUrl } = Env;
   return (
     <div className='rounded-2xl bg-white p-7'>
@@ -148,7 +147,7 @@ export const Blog = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    getRecordsApi('/post').then((res: any) => {
+    getRecordsApi('/posts').then((res: any) => {
       console.log(res);
       setData(res?.data);
     });
