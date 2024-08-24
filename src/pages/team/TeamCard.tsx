@@ -6,11 +6,12 @@ import linkedin from '@src/assets/images/social-black-icons/linkedin.svg';
 import insta from '@src/assets/images/social-black-icons/insta.svg';
 import { Env } from '@src/constants/environments';
 
+const { imgUrl } = Env;
+
 export const TeamCard: React.FC<any> = ({ data }) => {
-  const { imgUrl } = Env;
   const navigate = useNavigate();
-  const handleTeamDetail = (id: number) => {
-    navigate(`/team-detail/${id}`, { state: data });
+  const handleTeamDetail = (slug: string) => {
+    navigate(`/team-detail/${slug}`, { state: data });
   };
 
   return (
@@ -22,7 +23,7 @@ export const TeamCard: React.FC<any> = ({ data }) => {
           className='size-full  object-scale-down transition-all duration-300 ease-linear hover:blur-[1px]'
         />
         <button
-          onClick={() => handleTeamDetail(data.id)}
+          onClick={() => handleTeamDetail(data.slug)}
           className='absolute inset-0 mx-auto mt-[40%] flex size-fit items-center  justify-center rounded-full bg-[#0044EB]/0 p-16 transition-all duration-300 ease-linear group-hover:bg-[#0044EB]/100'
         >
           <ArrowUpRight className='text-white opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100' />

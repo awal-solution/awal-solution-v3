@@ -22,15 +22,15 @@ export const Router = () => {
         <Route index element={<Home />} />
         <Route path='home' element={<Home />} />
         <Route path='services' element={<Services />} />
-        <Route path='service-detail/:serviceId' element={<ServicesDetail />} />
+        <Route path='service-detail/:slug' element={<ServicesDetail />} />
         <Route path='project' element={<Project />} />
-        <Route path='project-detail/:projectId' element={<SingleProject />} />
+        <Route path='project-detail/:slug' element={<SingleProject />} />
         <Route path='team' element={<Team />} />
-        <Route path='team-detail/:teamId' element={<TeamDetail />} />
+        <Route path='team-detail/:slug' element={<TeamDetail />} />
         <Route path='contact-us' element={<ContactUs />} />
         <Route path='about-us' element={<About />} />
         <Route path='blog' element={<Posts />} />
-        <Route path='blog-detail/:postId' element={<SinglePost />} />
+        <Route path='blog-detail/:slug' element={<SinglePost />} />
         <Route path='*' element={<NotFound />} />
       </Route>
     </Routes>

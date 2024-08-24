@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import Marquee from 'react-fast-marquee';
 import { getRecordApi } from '@src/api/enpoints';
 import { Env } from '@src/constants/environments';
@@ -7,16 +7,17 @@ import { HeroSection } from '@src/components/heroSection/Herosection';
 
 export const SingleProject = () => {
   const { imgUrl } = Env;
-  const { projectId } = useParams();
+  const { slug } = useParams();
+  const { state } = useLocation();
   const [data, setData] = useState<any>({});
   const [model, setModel] = useState(false);
   const [selectedImage, setSelectedImage] = useState<any>(null);
 
   useEffect(() => {
-    getRecordApi(`/projects/${projectId}`).then((res: any) => {
+    getRecordApi(`/projects/${state.id}`).then((res: any) => {
       setData(res?.data);
     });
-  }, [projectId]);
+  }, [slug, state]);
 
   const handleClick = (imageUrl: string) => {
     setModel(true);

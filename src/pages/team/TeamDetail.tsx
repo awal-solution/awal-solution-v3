@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { getRecordApi } from '@src/api/enpoints';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import { HeroSection } from '@src/components/heroSection/Herosection';
 import { Env } from '@src/constants/environments';
 
@@ -12,16 +11,13 @@ import insta from '@src/assets/images/social-black-icons/insta.svg';
 
 export const TeamDetail = () => {
   const { imgUrl } = Env;
-  const { teamId } = useParams();
+  const { state } = useLocation();
+  const { slug } = useParams();
   const [data, setData] = useState<any>({});
 
   useEffect(() => {
-    getRecordApi(`/teams/${teamId}`).then((res: any) => {
-      setData(res?.data);
-    });
-  }, [teamId]);
-
-  console.log(data);
+    setData(state);
+  }, [slug, state]);
 
   return (
     <>

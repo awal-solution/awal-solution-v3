@@ -12,9 +12,11 @@ export const OurProjects = () => {
     setActiveTab(index);
   };
 
+  //
+
   useEffect(() => {
-    getRecordsApi('/project-categories').then((res: any) => {
-      setData(res?.data);
+    getRecordsApi('/project-categories', { page: 1, perPage: 20 }).then((res: any) => {
+      setData(res?.data?.data);
     });
   }, []);
 

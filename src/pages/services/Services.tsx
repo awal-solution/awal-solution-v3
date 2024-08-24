@@ -1,5 +1,5 @@
 import { Fragment, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { getRecordsApi } from '@src/api/enpoints';
 import { HeroSection } from '@src/components/heroSection/Herosection';
 import { Env } from '@src/constants/environments';
@@ -17,9 +17,14 @@ export const Services = () => {
   const { imgUrl } = Env;
   const [data, setData] = useState([]);
 
+  const navigate = useNavigate();
+  const handleServiceDetail = (item: any) => {
+    navigate(`/service-detail/${item?.slug}`, { state: item });
+  };
+
   useEffect(() => {
-    getRecordsApi('/services').then((res: any) => {
-      setData(res?.data);
+    getRecordsApi('/services', { page: 1, perPage: 20 }).then((res: any) => {
+      setData(res?.data?.data);
     });
   }, []);
 
@@ -84,12 +89,12 @@ export const Services = () => {
                         {item.title}
                       </h2>
                       <div className='flex w-full flex-col-reverse gap-5 lg:flex-row lg:items-center lg:gap-20'>
-                        <Link
-                          to={`/service-detail/${item?.id}`}
+                        <button
+                          onClick={() => handleServiceDetail(item)}
                           className='flex size-12 -rotate-45 items-center justify-center rounded-full border-[0.5px] border-white/25 bg-white p-4 text-2xl text-black duration-300 hover:bg-[#0145EB] hover:text-white'
                         >
                           <span>➔</span>
-                        </Link>
+                        </button>
                         <ul className='flex gap-2'>
                           <li>
                             <button className='rounded-md border-[0.5px] border-white/25 bg-white/10 px-3 py-1 text-white backdrop-blur transition-all duration-500 ease-linear hover:bg-white hover:text-black'>

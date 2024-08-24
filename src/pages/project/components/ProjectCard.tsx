@@ -1,8 +1,12 @@
 import { Env } from '@src/constants/environments';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export const ProjectCard: React.FC<any> = ({ data }) => {
   const { imgUrl } = Env;
+  const navigate = useNavigate();
+  const handleProjectDetail = (item: any) => {
+    navigate(`/project-detail/${item?.slug}`, { state: item });
+  };
 
   return (
     <>
@@ -27,9 +31,9 @@ export const ProjectCard: React.FC<any> = ({ data }) => {
             </svg>
             <span className='pb-4 text-sm'>Technology</span>
           </div>
-          <Link to={`/project-detail/${data?.id}`}>
+          <button onClick={() => handleProjectDetail(data)} className='w-full text-left'>
             <h1 className='text-4xl'>{data?.title}</h1>
-          </Link>
+          </button>
         </div>
       </div>
     </>

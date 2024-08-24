@@ -1,5 +1,5 @@
 import { Fragment, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { getRecordsApi } from '@src/api/enpoints';
 import { HeroSection } from '@src/components/heroSection/Herosection';
 import { Env } from '@src/constants/environments';
@@ -7,6 +7,10 @@ import { Env } from '@src/constants/environments';
 const { imgUrl } = Env;
 
 const PostsCard = ({ item }: any) => {
+  const navigate = useNavigate();
+  const handlePostDetail = (item: any) => {
+    navigate(`/blog-detail/${item?.slug}`, { state: item });
+  };
   return (
     <div className='rounded-2xl bg-white p-7'>
       <div className='h-[400px] overflow-hidden'>
@@ -17,16 +21,11 @@ const PostsCard = ({ item }: any) => {
         />
       </div>
       <PostMeta item={item} />
-      <h3 className='pb-5 font-sans text-3xl'>
-        <Link
-          to={`/blog-detail/${item?.id}`}
-          className='line-clamp-2 text-[#020842] hover:text-[#0044EB]'
-        >
-          {item?.title}
-        </Link>
+      <h3 className='line-clamp-2 pb-5 font-sans text-3xl text-[#020842] hover:text-[#0044EB]'>
+        {item?.title}
       </h3>
       <button className='flex items-center justify-center rounded-full bg-[#020842] px-10 py-3 text-white hover:bg-[#0044EB]'>
-        <Link to={`/blog-detail/${item?.id}`}>READ MORE</Link>
+        <button onClick={() => handlePostDetail(item)}>READ MORE</button>
         <svg xmlns='http://www.w3.org/2000/svg' width='1.5em' height='1.5em' viewBox='0 0 24 24'>
           <path
             fill='white'
@@ -57,9 +56,7 @@ const PostMeta = ({ item }: any) => (
           d='M4.368 14.632L3 16v-2.8A5.64 5.64 0 0 1 2 10c0-3.314 2.91-6 6.5-6 3.254 0 5.95 2.207 6.425 5.088A6.57 6.57 0 0 1 16 9c3.314 0 6 2.462 6 5.5 0 1.125-.368 2.17-1 3.041V20l-1.225-1.225A6.32 6.32 0 0 1 16 20c-2.825 0-5.194-1.79-5.831-4.2-.533.13-1.092.2-1.669.2a6.81 6.81 0 0 1-4.132-1.368M8.5 14c2.52 0 4.5-1.828 4.5-4 0-2.172-1.98-4-4.5-4S4 7.828 4 10c0 2.172 1.98 4 4.5 4m3.546 1.03C12.336 16.687 13.972 18 16 18c2.24 0 4-1.6 4-3.5S18.24 11 16 11c-.389 0-.763.048-1.117.138-.338 1.626-1.387 3.018-2.837 3.891'
         />
       </svg>
-      <a className='text-[#49515B]' href='#'>
-        Comments (0)
-      </a>
+      <div className='text-[#49515B]'>Comments ({item?.post_comments?.length})</div>
     </div>
     <div className='flex items-center gap-2'>
       <svg xmlns='http://www.w3.org/2000/svg' width='1.2em' height='1.2em' viewBox='0 0 24 24'>
@@ -96,6 +93,10 @@ const SearchInput = () => {
 };
 
 const RecentPostCard = ({ item }: any) => {
+  const navigate = useNavigate();
+  const handlePostDetail = (item: any) => {
+    navigate(`/blog-detail/${item?.slug}`, { state: item });
+  };
   return (
     <div className='mb-5 grid grid-cols-3 gap-5 rounded-2xl bg-white p-4 shadow-md transition-shadow hover:shadow-lg'>
       <div className='col-span-1 size-full'>
@@ -107,12 +108,12 @@ const RecentPostCard = ({ item }: any) => {
       </div>
       <div className='col-span-2 flex flex-col'>
         <div className='text-sm text-gray-500'>{item?.created_at}</div>
-        <Link
-          to={`/blog-detail/${item?.id}`}
+        <button
+          onClick={() => handlePostDetail(item)}
           className='mt-2 line-clamp-2 text-lg font-medium text-[#1A202C]'
         >
           {item?.title}
-        </Link>
+        </button>
       </div>
     </div>
   );

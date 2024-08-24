@@ -1,13 +1,13 @@
 import { CircleCheck, Minus, Plus } from 'lucide-react';
 import { HeroSection } from '@src/components/heroSection/Herosection';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import { Fragment, useEffect, useState } from 'react';
-import { getRecordApi } from '@src/api/enpoints';
 import { AccordionPanel, AccordionTitle } from '@src/components/ui';
 import { Env } from '@src/constants/environments';
 
+const { imgUrl } = Env;
+
 const ServicesDetailContent = ({ data }: any) => {
-  const { imgUrl } = Env;
   return (
     <div className='pt-20'>
       <img
@@ -116,15 +116,13 @@ const ServicesOutcome = ({ data }: any) => {
 };
 
 export const ServicesDetail = () => {
-  const { serviceId } = useParams();
-
+  const { slug } = useParams();
+  const { state } = useLocation();
   const [data, setData] = useState<any>({});
 
   useEffect(() => {
-    getRecordApi(`/services/${serviceId}`).then((res: any) => {
-      setData(res?.data);
-    });
-  }, [serviceId]);
+    setData(state);
+  }, [slug, state]);
 
   return (
     <div className='bg-[#E3F0FF]'>
