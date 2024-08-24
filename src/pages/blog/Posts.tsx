@@ -150,7 +150,6 @@ export const Posts = () => {
 
   useEffect(() => {
     getRecordsApi('/posts', { page: 1, perPage: 5 }).then((res: any) => {
-      console.log(res);
       setData(res?.data?.data);
     });
   }, []);

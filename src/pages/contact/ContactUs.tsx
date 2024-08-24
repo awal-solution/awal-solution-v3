@@ -1,6 +1,75 @@
+import { useState } from 'react';
+import { createRecordApi } from '@src/api/enpoints';
 import { HeroSection } from '@src/components/heroSection/Herosection.tsx';
 
 export const ContactUs = () => {
+  const initialFormValues = {
+    full_name: '',
+    email: '',
+    phone_number: '',
+    message: ''
+  };
+
+  const [data, setData] = useState(initialFormValues);
+  const [errors, setErrors] = useState({
+    full_name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+    setData({
+      ...data,
+      [name]: value
+    });
+
+    setErrors({
+      ...errors,
+      [name]: ''
+    });
+  };
+
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email);
+  };
+
+  const handleSubmit = () => {
+    let formIsValid = true;
+    const validationErrors = { full_name: '', email: '', message: '' };
+
+    if (!data.full_name) {
+      validationErrors.full_name = 'Name is required';
+      formIsValid = false;
+    }
+
+    if (!data.email) {
+      validationErrors.email = 'Email is required';
+      formIsValid = false;
+    } else if (!validateEmail(data.email)) {
+      validationErrors.email = 'Invalid email format';
+      formIsValid = false;
+    }
+
+    if (!data.message) {
+      validationErrors.message = 'message is required';
+      formIsValid = false;
+    }
+
+    if (!formIsValid) {
+      setErrors(validationErrors);
+      return;
+    }
+
+    createRecordApi(`/contacts`, data).then((res: any) => {
+      if (res?.code === 200) {
+        window.showToast(res?.message, 'success');
+        setData(initialFormValues);
+      }
+    });
+  };
+
   return (
     <div className='bg-[#E3F0FF]'>
       <HeroSection subHeading={'Get In Touch With Us 😃'} heading={'Contact Us'} />
@@ -98,44 +167,61 @@ export const ContactUs = () => {
           <p className='mt-3 text-sm text-[#49515B] sm:text-base lg:text-lg'>
             Give us chance to serve and bring magic to your brand.
           </p>
-          <form className='mt-6 sm:mt-10'>
+          <div className='mt-6 sm:mt-10'>
             <div className='mb-5 flex flex-col gap-4 md:flex-row'>
               <div className='w-full'>
                 <label className='text-base sm:text-lg lg:text-xl'>Full Name</label>
                 <input
+                  name='full_name'
                   type='text'
                   placeholder='Your Name'
-                  className='shadow-card mt-3 w-full rounded-xl bg-white py-2 pl-3 sm:py-3'
+                  className={`shadow-card mt-3 w-full rounded-xl bg-white py-2 pl-3 sm:py-3 ${errors.full_name && 'border border-red-500'}`}
+                  value={data.full_name}
+                  onChange={handleChange}
                 />
+                {errors.full_name && <p className='text-red-500'>{errors.full_name}</p>}
               </div>
               <div className='w-full'>
                 <label className='text-base placeholder:text-[#696969] sm:text-lg lg:text-xl'>
                   Your Email
                 </label>
                 <input
+                  name='email'
+                  value={data.email}
+                  onChange={handleChange}
                   type='text'
-                  placeholder='AwalSolution@example.com'
-                  className='shadow-card mt-3 w-full rounded-xl bg-white py-2 pl-3 sm:py-3'
+                  placeholder='contact@awalsolution.com'
+                  className={`shadow-card mt-3 w-full rounded-xl bg-white py-2 pl-3 sm:py-3 ${errors.email && 'border border-red-500'}`}
                 />
+                {errors.email && <p className='text-red-500'>{errors.email}</p>}
               </div>
             </div>
             <label className='text-base  sm:text-lg lg:text-xl'>Your Phone</label>
             <input
+              name='phone_number'
+              value={data.phone_number}
+              onChange={handleChange}
               type='text'
               placeholder='+8250-3560 6565'
               className='shadow-card mb-5 mt-3 w-full rounded-xl bg-white py-2 pl-3 sm:py-3'
             />
             <label className='text-base sm:text-lg lg:text-xl'>Message</label>
             <textarea
+              name='message'
+              value={data.message}
+              onChange={handleChange}
               rows={5}
-              cols={40}
               placeholder='How can we help you?'
-              className='shadow-card mt-3 w-full rounded-xl bg-white py-2 pl-3 sm:py-3'
+              className={`shadow-card mt-3 w-full rounded-xl bg-white py-2 pl-3 sm:py-3 ${errors.message && 'border border-red-500'}`}
             ></textarea>
-          </form>
-          <button className='my-5 rounded-[35px] bg-[#0044EB] px-6 py-2 text-base font-bold text-white sm:px-10 sm:py-3 sm:text-lg lg:text-xl'>
+            {errors.message && <p className='text-red-500'>{errors.message}</p>}
+          </div>
+          <button
+            onClick={handleSubmit}
+            type='button'
+            className='my-5 rounded-[35px] bg-[#0044EB] px-6 py-2 text-base font-bold text-white sm:px-10 sm:py-3 sm:text-lg lg:text-xl'
+          >
             Send Message
-            <i className='fa-solid fa-arrow-up-long ml-2 rotate-45 sm:ml-4'></i>
           </button>
         </div>
         <div className='w-full lg:w-1/2'>

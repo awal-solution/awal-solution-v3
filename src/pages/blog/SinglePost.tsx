@@ -136,6 +136,7 @@ const Sidebar = ({ tags }: any) => {
 };
 
 const CommentForm = () => {
+  const postId = useParams();
   const initialFormValues = {
     name: '',
     email: '',
@@ -195,7 +196,7 @@ const CommentForm = () => {
       return;
     }
 
-    createRecordApi(`/posts/comment/${1}`, data).then((res: any) => {
+    createRecordApi(`/posts/comment/${postId}`, data).then((res: any) => {
       if (res?.code === 200) {
         window.showToast(res?.message, 'success');
         setData(initialFormValues);
