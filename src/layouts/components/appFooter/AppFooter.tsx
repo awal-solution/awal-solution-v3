@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import BrandMarquee from 'react-fast-marquee';
 import {
@@ -7,6 +8,79 @@ import {
   socialLinks,
   footerSlider
 } from '@src/data/footer/footer.data';
+import { createRecordApi } from '@src/api/enpoints';
+
+const NewLetterForm = () => {
+  const initialFormValues = {
+    email: ''
+  };
+
+  const [data, setData] = useState(initialFormValues);
+  const [errors, setErrors] = useState<any>({ email: null });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setData({ ...data, [e.target.name]: e.target.value });
+    setErrors({ email: null });
+  };
+
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email);
+  };
+
+  const handleSubmit = () => {
+    let formIsValid = true;
+    const validationErrors: any = { email: null };
+
+    if (!data.email) {
+      validationErrors.email = 'Email is required';
+      formIsValid = false;
+    } else if (!validateEmail(data.email)) {
+      validationErrors.email = 'Invalid email format';
+      formIsValid = false;
+    }
+
+    if (!formIsValid) {
+      setErrors(validationErrors);
+      return;
+    }
+
+    createRecordApi(`/contacts/news-letter`, data).then((res: any) => {
+      if (res?.code === 200) {
+        window.showToast(res?.message, 'success');
+        setData(initialFormValues);
+      }
+    });
+  };
+
+  return (
+    <>
+      <div
+        className={`flex items-center rounded-full bg-[#1B2155] p-1 ${errors.email ? 'border border-red-500' : ''}`}
+      >
+        <div>
+          <img src={newsLetter.mailIcon} alt='img' className='ml-1 size-6' />
+        </div>
+        <input
+          type='email'
+          name='email'
+          value={data.email}
+          onChange={handleChange}
+          className='w-full bg-transparent pl-4 outline-none'
+          placeholder='Enter Your Email'
+        />
+        <button
+          type='button'
+          onClick={handleSubmit}
+          className='rounded-full bg-[#0044EB] px-8 py-3 uppercase text-white'
+        >
+          Send
+        </button>
+      </div>
+      {errors.email && <p className='text-red-500'>{errors.email}</p>}
+    </>
+  );
+};
 
 export const AppFooter = () => {
   return (
@@ -47,26 +121,9 @@ export const AppFooter = () => {
           })}
           <div className='col-span-2 px-2 text-white'>
             <h3 className='mb-6'>{newsLetter.title}</h3>
-            <div>{newsLetter.text}</div>
-            <div className='my-8 flex items-center rounded-full bg-[#1B2155] p-1'>
-              <div>
-                <img src={newsLetter.mailIcon} alt='img' className='ml-1 size-6' />
-              </div>
-              <input
-                type='email'
-                name=''
-                id=''
-                className='w-full  bg-transparent pl-4 outline-none'
-                placeholder='Enter Your Email'
-              />
-              <button
-                type='submit'
-                className='rounded-full bg-[#0044EB] px-8 py-3 uppercase text-white '
-              >
-                Send
-              </button>
-            </div>
-            <div className='flex items-center justify-center gap-5'>
+            <div className='pb-4'>{newsLetter.text}</div>
+            <NewLetterForm />
+            <div className='flex items-center justify-center gap-5 pt-4'>
               {socialLinks?.map((item, index) => {
                 return (
                   <div key={index} className='rounded-full border p-2'>

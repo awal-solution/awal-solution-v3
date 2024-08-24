@@ -4,6 +4,7 @@ import {
   firstCardData,
   contactFormData
 } from '@src/data/home/connect.data';
+import { ContactForm } from '@src/pages/home/components/connect/ContactForm';
 
 export const Connect = () => {
   return (
@@ -65,74 +66,7 @@ export const Connect = () => {
             <div>{contactFormData.subTitle}</div>
           </div>
           <h1 className='py-2 text-4xl'>{contactFormData.title}</h1>
-          <div className='grid grid-cols-2 gap-5 pt-4'>
-            <div className='col-span-2 flex items-center rounded-lg border p-2 md:col-span-1'>
-              <div className=''>
-                <img src={contactFormData.userIcons} alt='' />
-              </div>
-              <input
-                type='text'
-                name=''
-                id=''
-                className='w-full px-5 py-2 outline-none'
-                placeholder='Your Name'
-              />
-            </div>
-            <div className='col-span-2 flex items-center rounded-lg border p-2 md:col-span-1'>
-              <div className=''>
-                <img src={contactFormData.mailIcons} alt='' />
-              </div>
-              <input
-                type='text'
-                name=''
-                id=''
-                className='w-full px-5 py-2 outline-none'
-                placeholder='Your Email'
-              />
-            </div>
-            <div className='col-span-2 flex items-center rounded-lg border p-2 md:col-span-1'>
-              <div className=''>
-                <img src={contactFormData.callIcons} alt='' />
-              </div>
-              <input
-                type='text'
-                name=''
-                id=''
-                className='w-full px-5 py-2 outline-none'
-                placeholder='Your Phone No.'
-              />
-            </div>
-            <div className='col-span-2 flex items-center rounded-lg border p-2 md:col-span-1'>
-              <div className='text-red-500'>
-                <img src={contactFormData.globalIcons} alt='' />
-              </div>
-              <input
-                type='text'
-                name=''
-                id=''
-                className='w-full px-5 py-2 outline-none'
-                placeholder='Your company Name'
-              />
-            </div>
-            <div className='col-span-2 flex rounded-lg border p-2 md:col-span-2'>
-              <div className='mt-1.5'>
-                <img src={contactFormData.commentIcons} alt='' />
-              </div>
-              <textarea
-                className='w-full px-5 py-2 outline-none'
-                placeholder='How can we help you?'
-                rows={4}
-              />
-            </div>
-          </div>
-          <div className='mt-14'>
-            <button className='group/btn flex items-center gap-1 rounded-full bg-[#0044EB] px-10 py-4 uppercase text-white'>
-              <span className='group-hover/btn:animate-out group-hover/btn:slide-out-to-top group-hover/btn:duration-500'>
-                Send Request
-              </span>
-              <img src={contactFormData.arrowIcons} alt='image' />
-            </button>
-          </div>
+          <ContactForm />
         </div>
       </div>
     </section>
