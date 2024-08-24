@@ -5,8 +5,8 @@ import { AppLayout } from '@src/layouts/AppLayout';
 import { Home } from '@src/pages/home/Home';
 import { NotFound } from '@src/pages/404/NotFound';
 import { ContactUs } from '@src/pages/contact/ContactUs';
-import { Blog } from '../pages/blog/Blog';
-import { BlogPost } from '../pages/blog/BlogDetail';
+import { Posts } from '../pages/blog/Posts';
+import { SinglePost } from '../pages/blog/SinglePost';
 import { Project } from '@src/pages/project/Project';
 import { SingleProject } from '@src/pages/project/SingleProject';
 import { Team } from '@src/pages/team/Team';
@@ -29,8 +29,8 @@ export const Router = () => {
         <Route path='team-detail/:teamId' element={<TeamDetail />} />
         <Route path='contact-us' element={<ContactUs />} />
         <Route path='about-us' element={<About />} />
-        <Route path='blog' element={<Blog />} />
-        <Route path='blog-detail/:id' element={<BlogPost />} />
+        <Route path='blog' element={<Posts />} />
+        <Route path='blog-detail/:postId' element={<SinglePost />} />
         <Route path='*' element={<NotFound />} />
       </Route>
     </Routes>

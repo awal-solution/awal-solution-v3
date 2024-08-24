@@ -1,11 +1,12 @@
-import { useEffect, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getRecordsApi } from '@src/api/enpoints';
 import { HeroSection } from '@src/components/heroSection/Herosection';
 import { Env } from '@src/constants/environments';
 
-const BlogPost = ({ item }: any) => {
-  const { imgUrl } = Env;
+const { imgUrl } = Env;
+
+const PostsCard = ({ item }: any) => {
   return (
     <div className='rounded-2xl bg-white p-7'>
       <div className='h-[400px] overflow-hidden'>
@@ -17,12 +18,15 @@ const BlogPost = ({ item }: any) => {
       </div>
       <PostMeta item={item} />
       <h3 className='pb-5 font-sans text-3xl'>
-        <Link to={'#'} className='text-[#020842] hover:text-[#0044EB]'>
+        <Link
+          to={`/blog-detail/${item?.id}`}
+          className='line-clamp-2 text-[#020842] hover:text-[#0044EB]'
+        >
           {item?.title}
         </Link>
       </h3>
       <button className='flex items-center justify-center rounded-full bg-[#020842] px-10 py-3 text-white hover:bg-[#0044EB]'>
-        <div>READ MORE</div>
+        <Link to={`/blog-detail/${item?.id}`}>READ MORE</Link>
         <svg xmlns='http://www.w3.org/2000/svg' width='1.5em' height='1.5em' viewBox='0 0 24 24'>
           <path
             fill='white'
@@ -35,7 +39,7 @@ const BlogPost = ({ item }: any) => {
 };
 
 const PostMeta = ({ item }: any) => (
-  <div className=' flex gap-6 py-5'>
+  <div className='grid-col-1 grid py-5 lg:grid-cols-3'>
     <div className='flex items-center gap-2'>
       <svg xmlns='http://www.w3.org/2000/svg' width='1.2em' height='1.2em' viewBox='0 0 24 24'>
         <g fill='none' stroke='#0044EB' strokeWidth='1.5'>
@@ -75,9 +79,8 @@ const PostMeta = ({ item }: any) => (
   </div>
 );
 
-const Sidebar = () => (
-  <div className=''>
-    <div className='text-lg font-bold uppercase text-[#020842]'>Search</div>
+const SearchInput = () => {
+  return (
     <div className='relative flex pt-3'>
       <input className='w-full rounded-l-full bg-white p-3' type='text' placeholder='Search...' />
       <div className='flex items-center justify-center rounded-r-full bg-[#0044EB] px-3 text-white'>
@@ -89,59 +92,88 @@ const Sidebar = () => (
         </svg>
       </div>
     </div>
-    <div className='py-4'>
-      <div className='text-lg font-bold uppercase text-[#020842]'>Recent Post</div>
-    </div>
-    <div className='w-full rounded-2xl bg-white p-5'>
-      <div className='flex items-center gap-6'>
-        <div>
-          <img
-            className='w-[150px] rounded-md'
-            src='/src/assets/images/post blog .jpg'
-            alt='image'
-          />
-        </div>
-        <div>
-          <div className='pb-3 text-[#49515B]'>June 8, 2024</div>
-          <a className='py-3 text-lg font-medium' href='#'>
-            Unlocking New Possibilities with Advanced Cloud ...
-          </a>
-        </div>
+  );
+};
+
+const RecentPostCard = ({ item }: any) => {
+  return (
+    <div className='mb-5 grid grid-cols-3 gap-5 rounded-2xl bg-white p-4 shadow-md transition-shadow hover:shadow-lg'>
+      <div className='col-span-1 size-full'>
+        <img
+          className='size-full rounded-lg object-cover'
+          src={imgUrl + item?.thumbnail}
+          alt='image'
+        />
+      </div>
+      <div className='col-span-2 flex flex-col'>
+        <div className='text-sm text-gray-500'>{item?.created_at}</div>
+        <Link
+          to={`/blog-detail/${item?.id}`}
+          className='mt-2 line-clamp-2 text-lg font-medium text-[#1A202C]'
+        >
+          {item?.title}
+        </Link>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
-export const Blog = () => {
+const Sidebar = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    getRecordsApi('/posts').then((res: any) => {
-      console.log(res);
+    getRecordsApi('/posts/recent-posts', { page: 1, perPage: 5 }).then((res: any) => {
       setData(res?.data);
     });
   }, []);
 
   return (
-    <>
+    <Fragment>
+      <div className='text-lg font-bold uppercase text-[#020842]'>Search</div>
+      <SearchInput />
+      <div className='py-4 text-lg font-bold uppercase text-[#020842]'>Recent Post</div>
+      <div className='w-full'>
+        {data?.map((item: any, index) => {
+          return (
+            <Fragment key={index}>
+              <RecentPostCard item={item} />
+            </Fragment>
+          );
+        })}
+      </div>
+    </Fragment>
+  );
+};
+
+export const Posts = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getRecordsApi('/posts', { page: 1, perPage: 5 }).then((res: any) => {
+      console.log(res);
+      setData(res?.data?.data);
+    });
+  }, []);
+
+  return (
+    <Fragment>
       <HeroSection heading='Blog' subHeading='Awal Solution 😍' />
       <div className='bg-[#E3F0FF]'>
-        <div className='mx-auto grid max-w-screen-xl grid-cols-3 gap-5 pt-20'>
-          <div className='col-span-2'>
+        <div className='mx-auto grid max-w-screen-xl grid-cols-3 gap-5 px-5 pt-20'>
+          <div className='col-span-3 lg:col-span-2'>
             {data?.map((item: any, index: number) => {
               return (
                 <div key={index} className='mb-5'>
-                  <BlogPost item={item} />
+                  <PostsCard item={item} />
                 </div>
               );
             })}
           </div>
-
-          <div className='col-span-1'>
+          <div className='col-span-3 lg:col-span-1'>
             <Sidebar />
           </div>
         </div>
       </div>
-    </>
+    </Fragment>
   );
 };
