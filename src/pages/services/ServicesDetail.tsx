@@ -126,7 +126,7 @@ export const ServicesDetail = () => {
 
   return (
     <div className='bg-[#E3F0FF]'>
-      <HeroSection heading='IT Management Services' subHeading='Services 😍' />
+      <HeroSection heading={data.title} subHeading='Services 😍' />
       <div className='mx-auto max-w-screen-xl px-5'>
         <ServicesDetailContent data={data} />
         <ServicesProcess data={data} />
