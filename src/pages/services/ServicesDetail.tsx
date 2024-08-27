@@ -127,8 +127,9 @@ export const ServicesDetail = () => {
         console.log(res);
         setData(res?.data);
       });
+    } else {
+      setData(state);
     }
-    setData(state);
   }, [slug, state]);
 
   return (
