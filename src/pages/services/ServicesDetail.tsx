@@ -12,7 +12,7 @@ const ServicesDetailContent = ({ data }: any) => {
   return (
     <div className='pt-20'>
       <img
-        className='g:h-[500px] mb-5 h-[300px] w-full rounded-3xl'
+        className='mb-5 h-[300px] w-full rounded-3xl lg:h-[500px]'
         src={imgUrl + data?.thumbnail}
         alt='image'
       />
