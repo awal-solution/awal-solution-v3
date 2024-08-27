@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link, useLocation, useParams } from 'react-router-dom';
 import { HeroSection } from '@src/components/heroSection/Herosection';
 import { Env } from '@src/constants/environments';
-
+import { getRecordsApi } from '@src/api/enpoints';
 //
 import fb from '@src/assets/images/social-black-icons/facebook.svg';
 import tw from '@src/assets/images/social-black-icons/twitter.svg';
@@ -16,7 +16,13 @@ export const TeamDetail = () => {
   const [data, setData] = useState<any>({});
 
   useEffect(() => {
-    setData(state);
+    if (state === null) {
+      getRecordsApi('/teams', { slug: slug }).then((res: any) => {
+        setData(res?.data);
+      });
+    } else {
+      setData(state);
+    }
   }, [slug, state]);
 
   return (
@@ -46,16 +52,16 @@ export const TeamDetail = () => {
               </p>
               <h2 className='pt-5 text-xl font-semibold'>Social Media</h2>
               <div className='flex gap-3 pt-3'>
-                <Link to={data.facebook} className='group rounded bg-white p-2 hover:bg-blue-500'>
+                <Link to={data?.facebook} className='group rounded bg-white p-2 hover:bg-blue-500'>
                   <img src={fb} alt='icon' />
                 </Link>
-                <Link to={data.linkedin} className='group rounded bg-white p-2 hover:bg-blue-500'>
+                <Link to={data?.linkedin} className='group rounded bg-white p-2 hover:bg-blue-500'>
                   <img src={linkedin} alt='icon' />
                 </Link>
-                <Link to={data.twitter} className='group rounded bg-white p-2 hover:bg-blue-500'>
+                <Link to={data?.twitter} className='group rounded bg-white p-2 hover:bg-blue-500'>
                   <img src={tw} alt='icon' />
                 </Link>
-                <Link to={data.instagram} className='group rounded bg-white p-2 hover:bg-blue-500'>
+                <Link to={data?.instagram} className='group rounded bg-white p-2 hover:bg-blue-500'>
                   <img src={insta} alt='icon' />
                 </Link>
               </div>

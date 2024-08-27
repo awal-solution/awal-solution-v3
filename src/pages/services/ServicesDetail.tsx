@@ -4,6 +4,7 @@ import { useLocation, useParams } from 'react-router-dom';
 import { Fragment, useEffect, useState } from 'react';
 import { AccordionPanel, AccordionTitle } from '@src/components/ui';
 import { Env } from '@src/constants/environments';
+import { getRecordsApi } from '@src/api/enpoints';
 
 const { imgUrl } = Env;
 
@@ -121,12 +122,18 @@ export const ServicesDetail = () => {
   const [data, setData] = useState<any>({});
 
   useEffect(() => {
+    if (state === null) {
+      getRecordsApi('/services', { slug: slug }).then((res: any) => {
+        console.log(res);
+        setData(res?.data);
+      });
+    }
     setData(state);
   }, [slug, state]);
 
   return (
     <div className='bg-[#E3F0FF]'>
-      <HeroSection heading={data.title} subHeading='Services 😍' />
+      <HeroSection heading={data?.title} subHeading='Services 😍' />
       <div className='mx-auto max-w-screen-xl px-5'>
         <ServicesDetailContent data={data} />
         <ServicesProcess data={data} />

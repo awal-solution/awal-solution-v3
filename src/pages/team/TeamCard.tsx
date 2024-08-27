@@ -18,30 +18,30 @@ export const TeamCard: React.FC<any> = ({ data }) => {
     <div className='relative rounded-3xl bg-[#E3F0FF] p-3 md:p-10'>
       <div className='group relative h-[400px] rounded-3xl bg-white pt-10'>
         <img
-          src={imgUrl + data.profile_picture}
+          src={imgUrl + data?.profile_picture}
           alt='Team member'
           className='size-full  object-scale-down transition-all duration-300 ease-linear hover:blur-[1px]'
         />
         <button
-          onClick={() => handleTeamDetail(data.slug)}
+          onClick={() => handleTeamDetail(data?.slug)}
           className='absolute inset-0 mx-auto mt-[40%] flex size-fit items-center  justify-center rounded-full bg-[#0044EB]/0 p-16 transition-all duration-300 ease-linear group-hover:bg-[#0044EB]/100'
         >
           <ArrowUpRight className='text-white opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100' />
         </button>
       </div>
-      <h1 className='pt-5 text-center text-2xl'>{data.first_name + ' ' + data.last_name}</h1>
-      <p className='pt-2 text-center'>{data.role}</p>
+      <h1 className='pt-5 text-center text-2xl'>{data?.first_name + ' ' + data?.last_name}</h1>
+      <p className='pt-2 text-center'>{data?.role}</p>
       <div className='flex justify-center gap-3 pt-3'>
-        <Link to={data.facebook} className='group rounded bg-white p-2 hover:bg-blue-500'>
+        <Link to={data?.facebook} className='group rounded bg-white p-2 hover:bg-blue-500'>
           <img src={fb} alt='icon' />
         </Link>
-        <Link to={data.linkedin} className='group rounded bg-white p-2 hover:bg-blue-500'>
+        <Link to={data?.linkedin} className='group rounded bg-white p-2 hover:bg-blue-500'>
           <img src={linkedin} alt='icon' />
         </Link>
-        <Link to={data.twitter} className='group rounded bg-white p-2 hover:bg-blue-500'>
+        <Link to={data?.twitter} className='group rounded bg-white p-2 hover:bg-blue-500'>
           <img src={tw} alt='icon' />
         </Link>
-        <Link to={data.instagram} className='group rounded bg-white p-2 hover:bg-blue-500'>
+        <Link to={data?.instagram} className='group rounded bg-white p-2 hover:bg-blue-500'>
           <img src={insta} alt='icon' />
         </Link>
       </div>

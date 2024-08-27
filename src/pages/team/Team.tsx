@@ -10,8 +10,8 @@ export const Team = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    getRecordsApi('/teams').then((res: any) => {
-      setData(res?.data);
+    getRecordsApi('/teams', { page: 1, perPage: 20 }).then((res: any) => {
+      setData(res?.data?.data);
     });
   }, []);
 

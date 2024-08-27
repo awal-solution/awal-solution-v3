@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 import Marquee from 'react-fast-marquee';
-import { getRecordApi } from '@src/api/enpoints';
+import { getRecordApi, getRecordsApi } from '@src/api/enpoints';
 import { Env } from '@src/constants/environments';
 import { HeroSection } from '@src/components/heroSection/Herosection';
 
@@ -14,9 +14,15 @@ export const SingleProject = () => {
   const [selectedImage, setSelectedImage] = useState<any>(null);
 
   useEffect(() => {
-    getRecordApi(`/projects/${state.id}`).then((res: any) => {
-      setData(res?.data);
-    });
+    if (state === null) {
+      getRecordsApi('/projects', { slug: slug }).then((res: any) => {
+        setData(res?.data);
+      });
+    } else {
+      getRecordApi(`/projects/${state?.id}`).then((res: any) => {
+        setData(res?.data);
+      });
+    }
   }, [slug, state]);
 
   const handleClick = (imageUrl: string) => {
