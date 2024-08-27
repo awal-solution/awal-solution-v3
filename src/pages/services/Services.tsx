@@ -1,7 +1,6 @@
 import { Fragment, useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { getRecordsApi } from '@src/api/enpoints';
-// import { ServiceContext } from '@src/contexts/services/ServiceContext';
 import { HeroSection } from '@src/components/heroSection/Herosection';
 import { Env } from '@src/constants/environments';
 import whyChoseUs from '@src/assets/images/services/about_image_5-1024x929.webp';
@@ -17,7 +16,6 @@ import icon6 from '@src/assets/images/services/icons/icon6.svg';
 export const Services = () => {
   const { imgUrl } = Env;
   const [data, setData] = useState([]);
-  // const { serData, getAllServices } = useContext(ServiceContext);
 
   const navigate = useNavigate();
   const handleServiceDetail = (item: any) => {
@@ -28,8 +26,6 @@ export const Services = () => {
     getRecordsApi('/services', { page: 1, perPage: 20 }).then((res: any) => {
       setData(res?.data?.data);
     });
-    // getAllServices();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

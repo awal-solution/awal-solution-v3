@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import Marquee from 'react-fast-marquee';
 import { getRecordApi, getRecordsApi } from '@src/api/enpoints';
 import { Env } from '@src/constants/environments';
@@ -9,6 +9,7 @@ export const SingleProject = () => {
   const { imgUrl } = Env;
   const { slug } = useParams();
   const { state } = useLocation();
+  const navigate = useNavigate();
   const [data, setData] = useState<any>({});
   const [model, setModel] = useState(false);
   const [selectedImage, setSelectedImage] = useState<any>(null);
@@ -16,14 +17,18 @@ export const SingleProject = () => {
   useEffect(() => {
     if (state === null) {
       getRecordsApi('/projects', { slug: slug }).then((res: any) => {
-        setData(res?.data);
+        if (res?.data === null) {
+          navigate('/not-found');
+        } else {
+          setData(res?.data);
+        }
       });
     } else {
       getRecordApi(`/projects/${state?.id}`).then((res: any) => {
         setData(res?.data);
       });
     }
-  }, [slug, state]);
+  }, [slug, state, navigate]);
 
   const handleClick = (imageUrl: string) => {
     setModel(true);

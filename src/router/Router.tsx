@@ -31,6 +31,7 @@ export const Router = () => {
         <Route path='about-us' element={<About />} />
         <Route path='blog' element={<Posts />} />
         <Route path='blog-detail/:slug' element={<SinglePost />} />
+        <Route path='/not-found' element={<NotFound />} />
         <Route path='*' element={<NotFound />} />
       </Route>
     </Routes>
