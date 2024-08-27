@@ -12,7 +12,7 @@ const ServicesDetailContent = ({ data }: any) => {
   return (
     <div className='pt-20'>
       <img
-        className='mb-5 h-[500px] w-full rounded-3xl'
+        className='g:h-[500px] mb-5 h-[300px] w-full rounded-3xl'
         src={imgUrl + data?.thumbnail}
         alt='image'
       />
@@ -39,7 +39,7 @@ const ServicesProcess = ({ data }: any) => {
       <h1 className='py-8 text-5xl font-bold'>Services Process</h1>
       <div className='flex flex-col items-center gap-10 md:flex-row'>
         <div className='w-full md:w-1/2'>
-          {data?.process?.map((item: any) => {
+          {data?.process?.map((item: any, index: any) => {
             const isOpen = activeId === item.id;
             return (
               <Fragment key={item.id}>
@@ -48,7 +48,7 @@ const ServicesProcess = ({ data }: any) => {
                   handleToggle={handleToggle}
                   className='flex justify-between border-b border-[#CCE3FF] py-4 text-xl font-bold capitalize hover:text-[#0044EB]'
                 >
-                  0{item.id}. {item.title}
+                  0{index}. {item.title}
                   {isOpen ? <Minus /> : <Plus />}
                 </AccordionTitle>
                 <AccordionPanel isOpen={activeId === item.id} className='bg-[#CCE3FF] p-5'>
