@@ -79,12 +79,14 @@ export const Services = () => {
                     key={index}
                     className={`group relative flex flex-col overflow-hidden rounded-[20px] transition-all duration-300 ease-linear hover:scale-[0.98] ${colSpanClass}`}
                   >
-                    <img
-                      src={imgUrl + item.thumbnail}
-                      alt='Services'
-                      className='h-96 w-full object-cover transition-transform duration-300 ease-linear group-hover:scale-[1.11] '
-                    />
-                    <div className='absolute bottom-0 flex w-full flex-col gap-5 p-5 lg:gap-10 lg:p-10'>
+                    <div className='h-96'>
+                      <img
+                        src={imgUrl + item.thumbnail}
+                        alt='Services'
+                        className='size-full  object-cover transition-transform duration-300 ease-linear group-hover:scale-[1.11] '
+                      />
+                    </div>
+                    <div className='absolute inset-y-0 flex w-full flex-col justify-end gap-5 bg-black/60 p-5 lg:gap-10 lg:p-10'>
                       <h2 className="relative max-w-fit text-[32px] font-bold leading-[40px] tracking-[-1px] text-white  transition-all duration-200 after:absolute after:bottom-0  after:left-0 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 after:ease-in-out after:content-[''] hover:after:w-full">
                         {item.title}
                       </h2>
