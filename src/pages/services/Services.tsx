@@ -82,7 +82,7 @@ export const Services = () => {
                     <img
                       src={imgUrl + item.thumbnail}
                       alt='Services'
-                      className='w-full object-contain transition-transform duration-300 ease-linear group-hover:scale-[1.11] '
+                      className='h-96 w-full object-cover transition-transform duration-300 ease-linear group-hover:scale-[1.11] '
                     />
                     <div className='absolute bottom-0 flex w-full flex-col gap-5 p-5 lg:gap-10 lg:p-10'>
                       <h2 className="relative max-w-fit text-[32px] font-bold leading-[40px] tracking-[-1px] text-white  transition-all duration-200 after:absolute after:bottom-0  after:left-0 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 after:ease-in-out after:content-[''] hover:after:w-full">
