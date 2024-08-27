@@ -48,7 +48,7 @@ const ServicesProcess = ({ data }: any) => {
                   handleToggle={handleToggle}
                   className='flex justify-between border-b border-[#CCE3FF] py-4 text-xl font-bold capitalize hover:text-[#0044EB]'
                 >
-                  0{index}. {item.title}
+                  0{index + 1}. {item.title}
                   {isOpen ? <Minus /> : <Plus />}
                 </AccordionTitle>
                 <AccordionPanel isOpen={activeId === item.id} className='bg-[#CCE3FF] p-5'>
