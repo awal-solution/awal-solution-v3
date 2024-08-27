@@ -1,5 +1,5 @@
 import { Fragment, useEffect, useState } from 'react';
-import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { createRecordApi, getRecordsApi } from '@src/api/enpoints';
 import { Env } from '@src/constants/environments';
 import { HeroSection } from '@src/components/heroSection/Herosection';
@@ -333,23 +333,18 @@ const CommentsList = ({ comments }: any) => {
 export const SinglePost = () => {
   const { imgUrl } = Env;
   const { slug } = useParams();
-  const { state } = useLocation();
   const navigate = useNavigate();
   const [data, setData] = useState<any>({});
 
   useEffect(() => {
-    if (state === null) {
-      getRecordsApi('/posts', { slug: slug }).then((res: any) => {
-        if (res?.data === null) {
-          navigate('/not-found');
-        } else {
-          setData(res?.data);
-        }
-      });
-    } else {
-      setData(state);
-    }
-  }, [slug, state, navigate]);
+    getRecordsApi('/posts', { slug: slug }).then((res: any) => {
+      if (res?.data === null) {
+        navigate('/not-found');
+      } else {
+        setData(res?.data);
+      }
+    });
+  }, [slug, navigate]);
 
   return (
     <Fragment>

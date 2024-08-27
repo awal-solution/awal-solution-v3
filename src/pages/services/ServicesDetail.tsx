@@ -1,6 +1,6 @@
 import { CircleCheck, Minus, Plus } from 'lucide-react';
 import { HeroSection } from '@src/components/heroSection/Herosection';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { Fragment, useEffect, useState } from 'react';
 import { AccordionPanel, AccordionTitle } from '@src/components/ui';
 import { Env } from '@src/constants/environments';
@@ -118,23 +118,18 @@ const ServicesOutcome = ({ data }: any) => {
 
 export const ServicesDetail = () => {
   const { slug } = useParams();
-  const { state } = useLocation();
   const navigate = useNavigate();
   const [data, setData] = useState<any>({});
 
   useEffect(() => {
-    if (state === null) {
-      getRecordsApi('/services', { slug: slug }).then((res: any) => {
-        if (res?.data === null) {
-          navigate('/not-found');
-        } else {
-          setData(res?.data);
-        }
-      });
-    } else {
-      setData(state);
-    }
-  }, [slug, state, navigate]);
+    getRecordsApi('/services', { slug: slug }).then((res: any) => {
+      if (res?.data === null) {
+        navigate('/not-found');
+      } else {
+        setData(res?.data);
+      }
+    });
+  }, [slug, navigate]);
 
   return (
     <div className='bg-[#E3F0FF]'>
