@@ -1,13 +1,26 @@
-import { useState } from 'react';
-import { tabData, sectionHeading, images } from '@src/data/home/tech.data';
+import { useEffect, useState } from 'react';
+import { sectionHeading, images } from '@src/data/home/tech.data';
 import { Tab, TabPanel } from '@src/components/ui';
+import { getRecordsApi } from '@src/api/enpoints';
+import { Env } from '@src/constants/environments';
+
+const { imgUrl } = Env;
 
 export const OurTech = () => {
   const [activeTab, setActiveTab] = useState(1);
+  const [data, setData] = useState([]);
 
   const onTabClick = (index: any) => {
     setActiveTab(index);
   };
+
+  useEffect(() => {
+    getRecordsApi('/skills', { tabs: 'tabs' }).then((res: any) => {
+      setData(res?.data);
+      console.log(res);
+    });
+  }, []);
+
   return (
     <div className='relative bg-[#E3F0FF]'>
       <img
@@ -23,7 +36,7 @@ export const OurTech = () => {
           We Use <span className='text-[#0044EB]'>Technologies</span>
         </h1>
         <ul className='relative z-20 flex justify-between overflow-scroll rounded bg-[#CCE3FF] px-2 py-3'>
-          {tabData?.map((item: any) => {
+          {data?.map((item: any) => {
             const isOpen = activeTab === item.id;
             return (
               <Tab
@@ -39,17 +52,17 @@ export const OurTech = () => {
             );
           })}
         </ul>
-        {tabData?.map((item: any) => {
+        {data?.map((item: any) => {
           return (
             <TabPanel key={item.id} isOpen={activeTab === item.id} className='p-5'>
               <div className='relative z-20 grid grid-cols-3 gap-6 md:grid-cols-6 '>
-                {item?.data?.map((subTab: any, index: any) => {
+                {item?.tab_data?.map((subTab: any, index: any) => {
                   return (
                     <div key={index} className='flex flex-col items-center gap-5'>
                       <div className='flex size-24 items-center justify-center bg-[url(/src/assets/images/shapes/shape_polygon.webp)] bg-cover'>
-                        <img src={subTab.icon} alt='image' className='max-w-10' />
+                        <img src={imgUrl + subTab?.thumbnail} alt='image' className='max-w-10' />
                       </div>
-                      <div>{subTab.name}</div>
+                      <div>{subTab.title}</div>
                     </div>
                   );
                 })}
