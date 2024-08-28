@@ -88,7 +88,7 @@ export const SingleProject = () => {
           <div className='my-5 flex flex-col justify-between border-y border-blue-300 py-2 sm:grid sm:grid-cols-2 lg:flex lg:flex-row lg:justify-between'>
             <div className='flex gap-1 text-lg'>
               <span className='font-bold'>Services:</span>
-              <p className='capitalize'>{data?.projectCategory?.name}</p>
+              <p className='capitalize'>{data?.project_categories?.name}</p>
             </div>
             <div className='flex gap-1 text-lg'>
               <span className='font-bold'>Client:</span>
