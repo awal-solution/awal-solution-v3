@@ -76,7 +76,7 @@ export const Hero = () => {
           <div className='flex gap-5'>
             <Link
               to='/contact-us'
-              className='group/btn flex items-center gap-1 rounded-full bg-[#0044EB] px-8 py-3'
+              className='group/btn flex items-center gap-1 rounded-full bg-[#0044EB] px-6 py-3 md:px-8'
             >
               <span className='group-hover/btn:animate-out group-hover/btn:slide-out-to-top group-hover/btn:duration-500'>
                 Contact Us Today!

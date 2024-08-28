@@ -35,7 +35,7 @@ export const OurTech = () => {
         <h1 className='py-10 text-center text-5xl font-bold'>
           We Use <span className='text-[#0044EB]'>Technologies</span>
         </h1>
-        <ul className='relative z-20 flex justify-between overflow-scroll rounded bg-[#CCE3FF] px-2 py-3'>
+        <ul className='relative z-20 flex overflow-scroll rounded bg-[#CCE3FF] px-2 py-3'>
           {data?.map((item: any) => {
             const isOpen = activeTab === item.id;
             return (
