@@ -105,11 +105,10 @@ export const SingleProject = () => {
           <div className='mt-5 grid grid-cols-2 gap-5  sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-8'>
             {data?.skills?.map((item: any, index: number) => {
               return (
-                <div
-                  key={index}
-                  className='flex flex-col items-center justify-center gap-3 rounded-lg bg-white px-3 py-2'
-                >
-                  <img src={imgUrl + item.thumbnail} alt='image' className='size-16' />
+                <div key={index} className='flex flex-col  gap-5'>
+                  <div className='flex size-24 items-center justify-center bg-[url(/src/assets/images/shapes/shape_polygon.webp)] bg-cover'>
+                    <img src={imgUrl + item?.thumbnail} alt='image' className='max-w-10' />
+                  </div>
                   <div>{item?.title}</div>
                 </div>
               );
