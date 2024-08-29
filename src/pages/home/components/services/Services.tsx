@@ -1,6 +1,28 @@
 import { serviceImages, sectionHeading, servicesCard } from '@src/data/home/services.data';
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 export const Services = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: false });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start((i) => ({
+        opacity: 1,
+        x: 0,
+        transition: { duration: 2, ease: 'easeInOut', delay: i * 0.2 }
+      }));
+    } else {
+      controls.start((i) => ({
+        opacity: 0,
+        x: i % 3 === 0 ? -500 : i % 3 === 2 ? 500 : 0,
+        transition: { duration: 0.8, ease: 'easeInOut' }
+      }));
+    }
+  }, [controls, inView]);
+
   return (
     <section className='relative bg-[#E3F0FF] pb-12'>
       <div className='flex justify-end'>
@@ -34,11 +56,14 @@ export const Services = () => {
       <h1 className='pb-8 text-center text-3xl font-bold text-[#020842] md:text-5xl'>
         How We Can <span className='text-[#0044EB]'>Help</span> You
       </h1>
-      <div className='mx-auto grid max-w-screen-xl grid-cols-1 gap-8 p-3 md:grid-cols-3'>
+      <div className='mx-auto grid max-w-screen-xl grid-cols-1 gap-8 p-3 md:grid-cols-3' ref={ref}>
         {servicesCard?.map((item, index) => {
           return (
-            <div
+            <motion.div
               key={index}
+              custom={index}
+              initial={{ opacity: 0, x: index % 3 === 0 ? -500 : index % 3 === 2 ? 500 : 0 }}
+              animate={controls}
               className='service_card_clip_path shadow-card rounded-xl bg-white p-10'
             >
               <img src={item.icon} alt='card icon' className='pb-8' />
@@ -73,7 +98,7 @@ export const Services = () => {
                   );
                 })}
               </ul>
-            </div>
+            </motion.div>
           );
         })}
       </div>
