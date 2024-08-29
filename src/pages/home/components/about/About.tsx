@@ -17,50 +17,46 @@ export const About = () => {
           </h1>
           <p className='text-white'>{aboutData.des}</p>
         </div>
-        <div className='col-span-5 flex flex-col gap-5 md:col-span-3 md:flex-row'>
-          <div>
-            <img src={aboutImages.manPicture} alt='man image' className='max-w-48 rounded-xl' />
+        <div className='relative col-span-5 flex flex-col gap-5 md:col-span-3 md:flex-row'>
+          <div className='my-auto w-full lg:ml-auto lg:max-w-96'>
+            <img src={aboutImages.aboutMissionPic2} alt='man image' className='rounded-xl' />
           </div>
-          <div className='relative grow rounded-lg'>
-            <img
-              src={aboutImages.customerShape}
-              alt='image'
-              className='relative z-20 size-full object-fill'
-            />
-            <img src={aboutImages.globe} alt='globe' className='absolute bottom-10 left-6' />
-            <img
-              src={aboutImages.shapeLine}
-              alt='bottom'
-              className='absolute -bottom-12 z-10 w-3/4'
-            />
-            <div className='absolute inset-x-0 bottom-0 z-20 flex h-full items-end justify-around pl-20 text-black'>
-              <div>
-                <h3 className='mb-3 text-5xl font-bold'>{aboutData.title1}</h3>
-                <p className='text-[#49515B]'>{aboutData.p1}</p>
-              </div>
-              <div>
-                <h3 className='mb-3 text-5xl font-bold'>{aboutData.title2}</h3>
-                <p className='text-[#49515B]'>{aboutData.p2}</p>
-              </div>
+          <div className='absolute bottom-0 left-10 hidden max-w-96 lg:block'>
+            <img src={aboutImages.aboutMissionPic1} alt='man image' className='rounded-xl' />
+          </div>
+        </div>
+        <div className='col-span-5 flex flex-col items-center gap-20 md:flex-row'>
+          <div className='flex gap-16 text-white'>
+            <div>
+              <h3 className='mb-3 text-5xl font-bold'>{aboutData.title1}</h3>
+              <p>{aboutData.p1}</p>
             </div>
-            <Link
-              to='/about-us'
-              className='group/btn absolute right-5 top-0 z-40 flex items-center gap-1 rounded-xl bg-[#0044EB] px-9 py-5'
-            >
-              <span className='group-hover/btn:animate-out group-hover/btn:slide-out-to-top group-hover/btn:duration-500'>
-                Learn More
-              </span>
-
-              <svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 15 15'>
-                <path
-                  fill='currentColor'
-                  fillRule='evenodd'
-                  d='M3.646 11.354a.5.5 0 0 1 0-.707L10.293 4H6a.5.5 0 0 1 0-1h5.5a.5.5 0 0 1 .5.5V9a.5.5 0 0 1-1 0V4.707l-6.646 6.647a.5.5 0 0 1-.708 0'
-                  clipRule='evenodd'
-                />
-              </svg>
-            </Link>
+            <div>
+              <h3 className='mb-3 text-5xl font-bold'>{aboutData.title2}</h3>
+              <p>{aboutData.p2}</p>
+            </div>
           </div>
+          <Link
+            to='/about-us'
+            className='group/btn flex items-center justify-center gap-1 rounded-xl bg-[#0044EB] px-4 py-5 text-white'
+          >
+            <span className='group-hover/btn:animate-out group-hover/btn:slide-out-to-top text-lg group-hover/btn:duration-500'>
+              Learn More
+            </span>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='1.5em'
+              height='1.5em'
+              viewBox='0 0 15 15'
+            >
+              <path
+                fill='currentColor'
+                fillRule='evenodd'
+                d='M3.646 11.354a.5.5 0 0 1 0-.707L10.293 4H6a.5.5 0 0 1 0-1h5.5a.5.5 0 0 1 .5.5V9a.5.5 0 0 1-1 0V4.707l-6.646 6.647a.5.5 0 0 1-.708 0'
+                clipRule='evenodd'
+              />
+            </svg>
+          </Link>
         </div>
       </div>
     </section>

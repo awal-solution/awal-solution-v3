@@ -1,5 +1,6 @@
 import title_bar from '@src/assets/images/title_bar/shape_title_under_line.svg';
-import manPicture from '@src/assets/images/about_image_6.webp';
+import aboutMissionPic1 from '@src/assets/images/home/home_about.webp';
+import aboutMissionPic2 from '@src/assets/images/home/home_about2.webp';
 import customerShape from '@src/assets/images/shapes/shape_bg_1.webp';
 import angleShape from '@src/assets/images/shapes/shape_space_2.svg';
 import shapeLine from '@src/assets/images/shapes/shape_line.webp';
@@ -10,7 +11,8 @@ export const sectionHeading = { title: 'ABOUT US', image: title_bar };
 
 export const aboutImages = {
   angleShape,
-  manPicture,
+  aboutMissionPic1,
+  aboutMissionPic2,
   customerShape,
   shapeLine,
   globe
